@@ -1,47 +1,31 @@
 # Minimum Boilerplate Theme
-Use this template to start a new Store Framework Theme from zero.
 
+The minimum Boilerplate Theme is basic store front model based on the VTEX IO Store Framework.
 
-## Table of Contents
-- [Getting Started](#getting-started)
-  * [Step 1. Complete the basic setup](#step-1-complete-the-basic-setup)
-  * [Step 3. Create a workspace](#step-3-create-a-workspace)
-  * [Step 3. Clone this resitory](#step-3-clone-this-resitory)
-  * [Step 4. Prepare your Manifest.json](#step-4-prepare-your-manifestjson)
-  * [Step 5. Install required apps](#step-5-install-required-apps)
-  * [Step 6. Uninstall any installed theme](#step-6-uninstall-any-installed-theme)
-  * [Step 7. Run and preview your store](#step-7-run-and-preview-your-store)
-- [Tips](#tips)
+It should be used only when you want to start a new store theme without any pre-set configurations, as is the case with [Store Theme](https://github.com/vtex-apps/store-theme). 
 
-## Getting Started
+While Store Theme gives developers a ready-to-go default store front structure, the Minimum Boilerplate Theme will enable you to build you store freely from scratch.
 
-### Step 1. Complete the basic setup
-Go to the [Basic Setup Guide](https://vtex.io/docs/getting-started/build-stores-with-vtex-io/2) in the VTEX IO docs and complete it.
+## Configuration
 
-You should have the VTEX command line interface installed and
-where to go after you finish.
+### Step 1 -  Basic setup
 
-### Step 3. Create a workspace
-It is a good practice to always begin a development session in an environment
-separated from production. We call then workspace.
+Access the VTEX IO [basic setup guide](https://vtex.io/docs/getting-started/build-stores-with-vtex-io/2) and follow all the given steps. 
 
-Create a workspace with the following command:
+By the end of the setup, you should have the VTEX command line interface (Toolbelt) installed along with a developer workspace you can work in.
 
-```bash
-vtex use <YOUR_NAME>
-```
+### Step 2 - Cloning the Minimum Boilerplate Theme repository
 
-Replace `<YOUR_NAME>` for your workspace name.
+[Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository to your local files to be able to effectively start working on it.
 
-### Step 3. Clone this resitory
-Get this repository and continue the following steps on a
-terminal inside its directory.
+Then, access the repository's directory using your terminal. 
 
-### Step 4. Prepare your Manifest.json
-The vendor is the account you are working on, and the name is
-anything you want to name your theme after.
+### Step 3 - Editing the `Manifest.json`
 
-i.e:
+Once in the repository directory, it is time to edit the Minimum Boilerplate `manifest.json` file. 
+
+Once in are in the file, you must replace the `vendor` and `account` values. `vendor` is the account name you are working on and `account` is anything you want to name your theme. For example:
+
 ```json
 {
   "vendor": "storecomponents",
@@ -49,49 +33,30 @@ i.e:
 }
 ```
 
-### Step 5. Install required apps
-To use Store Framework to build your stores, you need to have
-both `vtex.store-sitemap` and `vtex.store` installed.
+### Step 4 -  Installing required apps
 
-Run `vtex list` and check if you can find those app installed.
+In order to use Store Framework and work on your store theme, it is needed to have both `vtex.store-sitemap` and `vtex.store` installed.
 
-If they aren't installed, run the following to install:
+Run  `vtex list`  and check whether those apps are already installed. 
 
-```bash
-vtex install vtex.store-sitemap vtex.store -f
-```
+If they aren't, run the following command to install them: `vtex install vtex.store-sitemap vtex.store -f`
 
-### Step 6. Uninstall any installed theme
-Run `vtex list` and check if you have any theme installed. It
-is common to have `vtex.store-theme` installed when you are
-just starting, so check if it is there.
+### Step 5 -  Uninstalling any existing theme
 
-To uninstall a theme, simply copy the name of theme and use the command `vtex uninstall`
+By running `vtex list`,  you can verify if any theme is installed.
 
-i.e.
-```bash
+It is common to already have a `vtex.store-theme`  installed when you start the store's front development process. 
+
+Therefore, if you find it in the app's list, copy its name and use it together with the command `vtex uninstall`. For example:
+
+```json
 vtex uninstall vtex.store-theme
 ```
 
-### Step 7. Run and preview your store
-To start your development session, you want to send all your local files to VTEX where it will build the store everytime you edit a file.
+### Step 6- Run and preview your store
 
-You will do that with:
-```bash
-vtex link
-```
+Then time has come to upload all the changes you made in your local files to the platform. For that, use the `vtex link` command. 
 
-After you read the message `App linked successfully`, run the following command in another terminal window:
-```bash
-vtex browse
-```
-This will open a browser window with your linked store in it.
+If the process runs without any errors, the following message will be displayed: `App linked successfully`. Then, run the `vtex browse` command to open a browser window having your linked store in it.
 
-## Tips
-
-Our blocks files use the `.jsonc` extension, which is just a JSON that accepts comments.
-
-If you are workin gwith the `.jsonc` extension, install a json interpreter in
-your IDE that does accept it so you can still get json validation highlights.
-
-
+This will enable you to see the applied changes in real time, through the account and workspace in which you are working.
