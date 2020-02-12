@@ -1,7 +1,7 @@
 {
   "vendor": "<YOUR_COMPANY_ACCOUNT_NAME>",
   "name": "<YOUR_THEME'S_NAME>",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "builders": {
     "styles": "1.x",
     "store": "0.x",
