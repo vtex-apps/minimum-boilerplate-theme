@@ -1,9 +1,9 @@
 {
-  "vendor": "<YOUR_COMPANY_ACCOUNT_NAME>",
-  "name": "<YOUR_THEME'S_NAME>",
-  "version": "0.0.0",
+  "vendor": "vtex",
+  "name": "minimumtheme",
+  "version": "0.0.1",
   "builders": {
-    "styles": "1.x",
+    "styles": "2.x",
     "store": "0.x",
     "docs": "0.x"
   },
@@ -33,7 +33,18 @@
     "vtex.locale-switcher": "0.x",
     "vtex.product-quantity": "1.x",
     "vtex.product-identifier": "0.x",
-    "vtex.breadcrumb": "1.x"
+    "vtex.product-specification-badges": "0.x",
+    "vtex.product-review-interfaces": "1.x",
+    "vtex.telemarketing": "2.x",
+    "vtex.order-placed": "2.x",
+    "vtex.stack-layout": "0.x",
+    "vtex.tab-layout": "0.x",
+    "vtex.responsive-layout": "0.x",
+    "vtex.slider-layout": "0.x",
+    "vtex.iframe": "0.x",
+    "vtex.breadcrumb": "1.x",
+    "vtex.sticky-layout": "0.x",
+    "vtex.add-to-cart-button": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
