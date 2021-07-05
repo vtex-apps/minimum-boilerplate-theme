@@ -10,7 +10,7 @@ While Store Theme gives developers a ready-to-go default store front structure, 
 
 ### Step 1 -  Basic setup
 
-Access the VTEX IO [basic setup guide](https://vtex.io/docs/getting-started/build-stores-with-store-framework/2) and follow all the given steps. 
+Access the VTEX IO [basic setup guide](https://vtex.io/docs/getting-started/build-stores-with-store-framework/1) and follow all the given steps. 
 
 By the end of the setup, you should have the VTEX command line interface (Toolbelt) installed along with a developer workspace you can work in.
 
@@ -24,7 +24,7 @@ Then, access the repository's directory using your terminal.
 
 Once in the repository directory, it is time to edit the Minimum Boilerplate `manifest.json` file. 
 
-Once in are in the file, you must replace the `vendor` and `account` values. `vendor` is the account name you are working on and `account` is anything you want to name your theme. For example:
+Once you are in the file, you must replace the `vendor` and `account` values. `vendor` is the account name you are working on and `account` is anything you want to name your theme. For example:
 
 ```json
 {
