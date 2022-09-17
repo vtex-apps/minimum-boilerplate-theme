@@ -1,0 +1,71 @@
+{
+  "store.home": {
+    "blocks": [
+      "responsive-layout.desktop"
+    ]
+  },
+  "responsive-layout.desktop": {
+    "children": [
+      "list-context.image-list#hero-banner-desk",
+      "flex-layout.row#product-list-home"
+    ]
+  },
+  "responsive-layout.tablet": {
+    "children": []
+  },
+  "responsive-layout.phone": {
+    "children": []
+  },
+  "list-context.image-list#hero-banner-desk": {
+    "children": [
+      "slider-layout#hero-banner"
+    ],
+    "props": {
+      "preload": true,
+      "height": 650,
+      "images": [
+        {
+          "image": "https://thenorthface.vteximg.com.br/arquivos/ids/195472/BannerPrincipal_UltimoDia.png?v=637988450126130000",
+          "description": "shop now"
+        }
+      ]
+    }
+  },
+  "slider-layout#hero-banner": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true
+    }
+  },
+
+  "flex-layout.row#product-list-home":{
+    "props": {
+      "blockClass": ["listProductHome"]
+    },
+    "children":["flex-layout.col#product-link1"]
+  },
+
+  "flex-layout.col#product-link1": {
+    "props": {
+      "blockClass": ["product-link"]
+    },
+    "children": ["image#product-link1", "link.product#product-link1"]
+  },
+  "image#product-link1": {
+    "props": {
+      "src": "https://storecomponents.vteximg.com.br/arquivos/box.png",
+      "maxHeight": 24
+    }
+  },
+  "link.product#product-link1": {
+    "props": {
+      "href": "/product-link1/",
+      "label": "FEMININO"
+    }
+  }
+  
+}

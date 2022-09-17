@@ -1,0 +1,154 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [
+      // "vtex.menu@2.x:menu#websites",
+      "sticky-layout#desktop",
+      "notification.bar"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#desktop"]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "fullWidth": true,
+      "blockClass": "headerDesktop"
+    },
+    "children": [
+      "flex-layout.row#logo-desktop"
+    ]
+  },
+  "flex-layout.row#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "preventHorizontalStretch": true,
+      "blockClass": "container_logoMenu"
+    },
+    "children": ["flex-layout.col#header-logo", "flex-layout.col#header-logo-menu"
+  ]
+  },
+  "flex-layout.col#header-logo": {
+    "children": ["logo"],
+    "props": {
+      "blockClass": ["col-header-logo"]
+    }
+  },
+  "flex-layout.col#header-logo-menu":{
+    "children":["vtex.menu@2.x:menu#websites"],
+    "props": {
+      "blockClass" : ["col-header-logo-menu"]
+    }
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://marcas-logos.net/wp-content/uploads/2020/03/NORTH-FACE-LOGO.png",
+      "width": "180"
+    }
+  },
+  "vtex.menu@2.x:menu#websites": {
+    "children": [
+      "menu-item#new-arrivals", "menu-item#masc", "menu-item#femi", "menu-item#acessorios", "menu-item#equipamentos", "menu-item#calcados"
+    ]
+  },
+  "menu-item#new-arrivals": {
+    "props": {
+      "id": "menu-item-new-arrivals",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "NEW ARRIVALS",
+        "text": "NEW ARRIVALS"
+      }
+    }
+  },
+  "menu-item#masc": {
+    "props": {
+      "id": "menu-item-masc",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "MASCULINO",
+        "text": "MASCULINO"
+      }
+    }
+  },
+  "menu-item#femi": {
+    "props": {
+      "id": "menu-item-femi",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "FEMININO",
+        "text": "FEMININO"
+      }
+    }
+  },
+  "menu-item#acessorios": {
+    "props": {
+      "id": "menu-item-acessorios",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "ACESSÓRIOS",
+        "text": "ACESSÓRIOS"
+      }
+    }
+  },
+  "menu-item#equipamentos": {
+    "props": {
+      "id": "menu-item-equipamentos",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "EQUIPAMENTOS",
+        "text": "EQUIPAMENTOS"
+      }
+    }
+  },
+  "menu-item#calcados": {
+    "props": {
+      "id": "menu-item-calcados",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "CALÇADOS",
+        "text": "CALÇADOS"
+      }
+    }
+  },
+  "notification.bar":{
+    "props":{
+      "content": "FIQUE POR DENTRO DAS NOVIDADE EM SHOP NOW"
+    }
+  }
+}
