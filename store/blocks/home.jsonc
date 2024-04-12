@@ -1,15 +1,203 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "rich-text",
+      "info-card#button-right",
+      "info-card#button-left",
+      "flex-layout.row",
+      "slider-layout#home",
+      "responsive-layout.desktop#desktop",
+      "responsive-layout.mobile#mobile",
+      "tab-layout#home",
+      "modal-trigger#first"
     ]
   },
   "rich-text": { 
     "props": { 
-      "text": "VTEX Store Framework",
+      "text": "Hello World!",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-1"
     }
+  },
+  "info-card#button-right":{
+    "props":{
+      "isFullModeStyle": false,
+        "textPosition": "right",
+        "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
+        "headline": "Vintage Pink",
+        "subhead": "Give your kitchen a boho style adding vintage apparels.<br>Available until January 2020.",
+        "callToActionMode": "button",
+        "callToActionText": "Explore",
+        "callToActionUrl": "/sale/d",
+        "textAlignment": "center"
+    }
+  },
+  "info-card#button-left":{
+    "props":{
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
+      "headline": "Shining chrome",
+      "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.",
+      "callToActionMode": "link",
+      "callToActionText": "Go to Collection",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center"
+    }
+  },
+  "flex-layout.row":{
+    "children": [
+      "info-card#rethink",
+      "rich-text#deletar"
+    ]
+  },
+
+ "info-card#rethink": {
+    "props": {
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/utensilios-cozinha-min.png",
+      "isFullModeStyle": true,
+      "headline": "Time to rethink your kitchen",
+      "callToActionText": "Discover",
+      "textPosition": "center"
+    }
+  },
+
+  "rich-text#deletar": {
+    "props": {
+      "text": "I'll be deleted soon"
+    }
+  },
+  
+  "slider-layout#home": {
+    "children": ["image#brand1","image#brand2","image#brand3","image#brand4","image#brand5","image#brand6"],
+    "props": {
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      }
+    }
+  },
+
+  "image#brand1":{
+    "props":{
+      "src":"https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square1.png",
+      "maxHeight":24
+    }
+  },
+  "image#brand2":{
+    "props":{
+      "src":"https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square2.png",
+      "maxHeight":24
+    }
+  },
+  "image#brand3":{
+    "props":{
+      "src":"https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square3.png",
+      "maxHeight":24
+    }
+  },
+  "image#brand4":{
+    "props":{
+      "src":"https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square4.png",
+      "maxHeight":24
+    }
+  },
+  "image#brand5":{
+    "props":{
+      "src":"https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square5.png",
+      "maxHeight":24
+    }
+  },
+  "image#brand6":{
+    "props":{
+      "src":"https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square6.png",
+      "maxHeight":24
+    }
+  },
+  "responsive-layout.desktop#desktop":{
+    "children": ["rich-text#desktop"]
+  },
+  "responsive-layout.mobile#mobile":{
+    "children":["rich-text#mobile"]
+  },
+  
+"rich-text#desktop": {
+  "props": {
+    "text": "# Your Coffee, Your Way \n ### New Coffee Makers Collection (I'm on desktop)",
+    "textPosition": "CENTER",
+    "textAlignment": "CENTER"
   }
+},
+
+"rich-text#mobile": {
+  "props": {
+    "text": "# Your Coffee, Your Way \n ### New Coffee Makers Collection (I'm on mobile)",
+    "textPosition": "CENTER",
+    "textAlignment": "CENTER"
+  }
+},
+"tab-layout#home":{
+  "children":["tab-list#home","tab-content#home"]
+},
+"tab-list#home":{
+  "children":["tab-list.item#home1","tab-list.item#home2"]
+},
+"tab-list.item#home1":{
+  "props":{
+    "tabId": "majorAppliances",
+    "defaultActiveTab":true,
+    "label": "Major Appliances"
+  }
+},
+"tab-list.item#home2":{
+  "props":{
+    "tabId": "electronics",
+    "label": "Electronics"
+  }
+},
+"tab-content#home":{
+  "children":["tab-content.item#home1","tab-content.item#home2"]
+},
+"tab-content.item#home1":{
+  "children":["rich-text#home1"],
+  "props":{
+    "tabId": "majorAppliances"
+  }  
+},
+"rich-text#home1":{
+  "props":{
+    "text": "The tab selected is Major Appliances",
+    "textPosition":"CENTER",
+    "font":"t-heading-3"
+  }  
+},
+"tab-content.item#home2":{
+  "children":["rich-text#home2"],
+  "props":{
+    "tabId":"electronics"
+  }  
+},
+"rich-text#home2":{
+  "props":{
+    "text":"The tab selected is Electronics",
+  "textPosition":"CENTER",
+  "font":"t-heading-3"
+  }
+  
+},
+"modal-trigger#first":{
+  "children":["rich-text#trigger","modal-layout#first"]
+},
+"rich-text#trigger":{
+  "props":{
+    "text": "Click me"
+  }
+},
+"modal-layout#first":{
+  "props":{
+    "text":"Hello"
+  }
+}
+
 }
