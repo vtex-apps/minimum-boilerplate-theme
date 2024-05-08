@@ -9,8 +9,19 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
+.flexRow--topbar-interactions {
+  max-width: 1440px;
+  position: relative;
+  width: 100%;
+  height: 32px;
+  margin: 0 auto;
+}
+
 .flexRow--topbar-wrapper {
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .flexRow--brand-switcher-container {

@@ -1,13 +1,19 @@
 {
   "header-row#topbar": {
     "children": [
-      "flex-layout.row#brand-switcher",
-      "flex-layout.row#topbar",
-      "link#help-center"
+      "flex-layout.row#topbar-interactions",
+      "flex-layout.row#topbar"
     ],
     "props": {
       "blockClass": ["topbar-container"]
     }
+  },
+  "flex-layout.row#topbar-interactions": {
+    "props": {
+      "blockClass": "topbar-interactions",
+      "preventHorizontalStretch": true
+    },
+    "children": ["flex-layout.row#brand-switcher", "link#help-center"]
   },
   "flex-layout.row#brand-switcher": {
     "children": ["link#roland", "link#boss"],
