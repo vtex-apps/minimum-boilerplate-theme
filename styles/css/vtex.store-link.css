@@ -35,3 +35,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.link--link-roland .label, .link--link-boss .label {
+  width: 48px;
+  height: 24px;
+  display: block;
+}
+.link--link-roland .label--link-roland {
+  font-size: 0;
+  background-image: url("assets/svgs/roland-button.svg");
+}
+.link--link-boss .label--link-boss {
+  font-size: 0;
+  background-image: url("assets/svgs/boss-button.svg");
+}

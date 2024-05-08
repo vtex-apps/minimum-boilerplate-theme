@@ -1,3 +1,16 @@
-.flexRow--topbar-container {
+.flexRow--topbar-wrapper {
   width: 100%;
+}
+
+.flexRow--brand-switcher-container {
+  position: absolute;
+  left: 32px;
+  bottom: 0;
+  z-index: 1;
+
+  .flexRowContent--brand-switcher-container {
+    display: flex;
+    gap: 4px;
+  }
+
 }

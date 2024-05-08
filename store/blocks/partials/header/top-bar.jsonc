@@ -1,11 +1,39 @@
 {
   "header-row#topbar": {
-    "children": ["flex-layout.row#topbar", "link#help-center"]
+    "children": [
+      "flex-layout.row#brand-switcher",
+      "flex-layout.row#topbar",
+      "link#help-center"
+    ],
+    "props": {
+      "blockClass": ["topbar-container"]
+    }
+  },
+  "flex-layout.row#brand-switcher": {
+    "children": ["link#roland", "link#boss"],
+    "props": {
+      "blockClass": ["brand-switcher-container"]
+    }
+  },
+  "link#roland": {
+    "title": "Central de Ajuda",
+    "props": {
+      "href": "/",
+      "label": "roland",
+      "blockClass": ["link-roland"]
+    }
+  },
+  "link#boss": {
+    "props": {
+      "href": "/",
+      "label": "boss",
+      "blockClass": ["link-boss"]
+    }
   },
   "flex-layout.row#topbar": {
     "children": ["list-context.topbar"],
     "props": {
-      "blockClass": ["topbar-container"]
+      "blockClass": ["topbar-wrapper"]
     }
   },
   "link#help-center": {
