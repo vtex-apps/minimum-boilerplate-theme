@@ -1,0 +1,22 @@
+{
+  "header-row#main": {
+    "children": ["flex-layout.row#main-header"],
+    "props": {
+      "blockClass": ["main-container"]
+    }
+  },
+  "flex-layout.row#main-header": {
+    "props": {
+      "blockClass": "main-header",
+      "preventHorizontalStretch": true
+    },
+    "children": ["image#logo"]
+  },
+  "image#logo": {
+    "props": {
+      "src": "assets/svgs/roland-logo.svg",
+      "blockClass": "logo",
+      "link": "/"
+    }
+  }
+}

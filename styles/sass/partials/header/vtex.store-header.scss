@@ -1,3 +1,12 @@
 .headerRowBackground--topbar-container {
   position: relative;
 }
+
+.headerRowContainer--main-container {
+  display: flex;
+  width: 1440px;
+  padding: 16px 32px;
+  margin: 0 auto;
+  align-items: center;
+  background: #FFF;
+}

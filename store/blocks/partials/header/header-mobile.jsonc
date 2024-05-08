@@ -1,3 +1,5 @@
 {
-    "header-layout.mobile": {}
+  "header-layout.mobile": {
+    "children": ["header-row#topbar"]
+  }
 }
