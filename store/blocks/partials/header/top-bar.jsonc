@@ -1,0 +1,48 @@
+{
+  "header-row#topbar": {
+    "children": ["flex-layout.row#topbar", "link#help-center"]
+  },
+  "flex-layout.row#topbar": {
+    "children": ["list-context.topbar"],
+    "props": {
+      "blockClass": ["topbar-container"]
+    }
+  },
+  "link#help-center": {
+    "props": {
+      "href": "https://www.roland.com/backstage/login",
+      "label": "Central de ajuda",
+      "blockClass": "help-center"
+    }
+  },
+  "list-context.topbar": {
+    "children": ["slider-layout#topbar"],
+    "props": {
+      "items": [
+        {
+          "active": true,
+          "backgroundColor": "#27272A",
+          "color": "#FFF",
+          "text": "Frete grátis nas compras acima de R$199"
+        }
+      ]
+    }
+  },
+  "slider-layout#topbar": {
+    "props": {
+      "blockClass": "topbar-slider",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": true
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never"
+    }
+  }
+}

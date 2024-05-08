@@ -1,0 +1,19 @@
+.topbarContetWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32px;
+}
+
+.contentText {
+  color: var(--Gray-Scale-White, #fff);
+
+  /* text-sm/semibold */
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.14px;
+}

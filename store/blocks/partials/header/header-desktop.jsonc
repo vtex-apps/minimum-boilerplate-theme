@@ -1,0 +1,5 @@
+{
+  "header-layout.desktop": {
+    "children": ["header-row#topbar"]
+  }
+}
