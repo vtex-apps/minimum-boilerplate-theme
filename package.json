@@ -1,11 +1,11 @@
 {
-  "name": "liz-store",
+  "name": "roland-store",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint --ext js,jsx,ts,tsx .",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
-    "build": "gulp mount && gulp watch"
+    "build": "gulp build"
   },
   "husky": {
     "hooks": {
@@ -36,7 +36,9 @@
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "sass": "^1.53.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-wait": "0.0.2"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
