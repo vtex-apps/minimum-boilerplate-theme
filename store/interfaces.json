@@ -1,0 +1,7 @@
+{
+  "list-context.topbar": {
+    "component": "Topbar",
+    "composition": "children",
+    "allowed": "*"
+  }
+}

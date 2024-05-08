@@ -1,0 +1,50 @@
+{
+  "name": "liz-store",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
+    "build": "gulp mount && gulp watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@vtex/prettier-config": "^0.3.6",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.4",
+    "eslint": "^7.16.0",
+    "eslint-config-vtex": "^12.9.3",
+    "eslint-config-vtex-react": "^6.7.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "sass": "^1.53.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "formik": "^2.2.9",
+    "react-input-mask": "^2.0.4",
+    "react-markdown": "^8.0.3",
+    "react-slick": "^0.29.0",
+    "yup": "^1.0.0"
+  },
+  "version": "0.0.0"
+}
