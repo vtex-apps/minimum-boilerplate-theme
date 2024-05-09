@@ -1,0 +1,46 @@
+/*
+0 - 600PX: Phone
+600 - 900px: Table portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our nortal styles apply
+1800px + : Big desktop
+*/
+/* Media Query M3 */
+/* Colors */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
+/* Grid breakpoints */
+.container :global(.vtex-button) {
+  border: none;
+  background-color: transparent;
+}
+.container :global(.vtex-button):hover {
+  background-color: var(--Gray-Scale-White, #FFF);
+}
+.container :global(.vtex-button) :global(.vtex-button__label) {
+  padding: 0 !important;
+}
+.container .loginIcon .profileIcon {
+  display: none;
+}
+.container .label {
+  color: var(--Gray-Scale-Black, #000);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: math-auto;
+}
+.container .label::before {
+  content: "";
+  background-image: url("assets/svgs/login-icon.svg");
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: block;
+}

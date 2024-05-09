@@ -1,20 +1,19 @@
 {
-  "search-bar#desktop": {
+  "search-bar#desktop-new": {
     "title": "Barra de Busca",
-    "blocks": ["autocomplete-result-list.v2"],
+    "blocks": ["autocomplete-result-list.v2#search-bar"],
     "props": {
       "openAutocompleteOnFocus": true,
       "placeholder": "Busque por produtos...",
       "blockClass": "search-bar"
     }
   },
-  "autocomplete-result-list.v2": {
+  "autocomplete-result-list.v2#search-bar": {
+    "blocks": ["product-summary.shelf#search-result"],
     "props": {
-      "blockClass": "autocomplete-result-list",
       "maxSuggestedTerms": 5,
       "maxTopSearches": 5,
       "productLayout": "HORIZONTAL"
-    },
-    "blocks": ["product-summary.shelf#search-result"]
+    }
   }
 }

@@ -94,5 +94,77 @@
     }
 
 
+    .tileList {
+      .tileListTitle {
+        margin:0 {
+          top: 12px;
+          left: 12px;
+        }
+
+        padding: 0 {
+          bottom: 12px;
+        }
+
+
+        color: var(--text-neutral-bold, #18181B);
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        text-transform: math-auto;
+      }
+
+      .tileListList {
+        .tileListItem {
+          .element {
+            width: 100%;
+            padding: 20px;
+
+            .imageContainer {
+              margin-right: 24px;
+
+              .image {
+                width: 48px;
+                height: 48px;
+              }
+            }
+
+            .information {
+              margin: 0;
+
+              .productBrand {
+                overflow: hidden;
+                color: var(--text-neutral-subtle, #3F3F46);
+                text-overflow: ellipsis;
+                font-family: "Proxima Nova";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 16px;
+                letter-spacing: -0.12px;
+              }
+
+              .priceContainer {
+                .sellingPrice {
+                  overflow: hidden;
+                  color: var(--text-neutral-bold, #18181B);
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  font-family: "Proxima Nova";
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 20px;
+                  letter-spacing: -0.14px;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
   }
 }

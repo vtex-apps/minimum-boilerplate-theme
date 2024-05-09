@@ -1,5 +1,8 @@
 {
   "product-summary.shelf#search-result": {
+    "props": {
+      "blockClass": "product-summary-search-result"
+    },
     "children": [
       "product-summary-image#search-result",
       "flex-layout.col#product-informations",
@@ -9,8 +12,8 @@
   "add-to-cart-button#search-result": {
     "props": {
       "blockClass": "add-to-cart-button-search-result",
-      "onClickBehavior": "add-to-cart",
-      "customPixelEventId": "addToCart"
+      "customPixelEventId": "addToCart",
+      "text": "Continuar para o carrinho"
     }
   },
   "flex-layout.col#product-informations": {
