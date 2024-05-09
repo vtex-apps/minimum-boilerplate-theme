@@ -1,11 +1,22 @@
 {
   "header-row#main": {
-    "children": ["image#logo", "search-bar#desktop", "login#desktop"],
+    "children": [
+      "image#logo",
+      "search-bar#desktop-new",
+      "login#desktop",
+      "link#wishlist"
+    ],
     "props": {
       "blockClass": ["main-container"]
     }
   },
-
+  "link#wishlist": {
+    "props": {
+      "href": "/account/#/wishlist",
+      "label": "Meus favoritos",
+      "blockClass": "wishlist"
+    }
+  },
   "image#logo": {
     "props": {
       "src": "assets/svgs/roland-logo.svg",
@@ -19,8 +30,8 @@
     "title": "Login Desktop",
     "props": {
       "showIconProfile": true,
-      "iconLabel": "",
-      "labelClasses": ["login-icon"],
+      "iconLabel": "Minha conta",
+      "labelClasses": ["vtex-login-2-x-loginIcon"],
       "providerPasswordButtonLabel": "Entrar com e-mail",
       "emailAndPasswordTitle": "Entrar com e-mail e senha",
       "accessCodeTitle": "Receber código de acesso por e-mail",

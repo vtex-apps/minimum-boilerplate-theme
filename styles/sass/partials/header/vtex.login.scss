@@ -1,0 +1,47 @@
+.container {
+
+  :global(.vtex-button) {
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      background-color: var(--Gray-Scale-White, #FFF);
+    }
+
+    :global(.vtex-button__label) {
+      padding: 0 !important;
+    }
+  }
+
+  .loginIcon {
+    .profileIcon {
+      display: none;
+    }
+  }
+
+  .label {
+    color: var(--Gray-Scale-Black, #000);
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-transform: math-auto;
+
+    &::before {
+      content: '';
+      background-image: url("assets/svgs/login-icon.svg");
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      display: block;
+    }
+
+
+  }
+}
