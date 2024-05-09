@@ -1,0 +1,17 @@
+{
+  "search-bar#desktop": {
+    "title": "Barra de Busca",
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "placeholder": "Busque por produtos...",
+      "blockClass": "search-bar"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "props": {
+      "blockClass": "autocomplete-result-list"
+    },
+    "blocks": ["product-summary.shelf#search-result"]
+  }
+}

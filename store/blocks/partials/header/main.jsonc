@@ -1,22 +1,32 @@
 {
   "header-row#main": {
-    "children": ["flex-layout.row#main-header"],
+    "children": ["image#logo", "search-bar#desktop"],
     "props": {
       "blockClass": ["main-container"]
     }
   },
-  "flex-layout.row#main-header": {
-    "props": {
-      "blockClass": "main-header",
-      "preventHorizontalStretch": true
-    },
-    "children": ["image#logo"]
-  },
+
   "image#logo": {
     "props": {
       "src": "assets/svgs/roland-logo.svg",
       "blockClass": "logo",
-      "link": "/"
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "login#desktop": {
+    "title": "Login Desktop",
+    "props": {
+      "showIconProfile": true,
+      "iconLabel": "",
+      "labelClasses": ["login-icon"],
+      "providerPasswordButtonLabel": "Entrar com e-mail",
+      "emailAndPasswordTitle": "Entrar com e-mail e senha",
+      "accessCodeTitle": "Receber código de acesso por e-mail",
+      "emailPraceholder": "EX:@MAIL.COM.BR",
+      "passwordPlaceholder": "adicionar sua senha",
+      "showPasswordVerificationIntoTooltip": true
     }
   }
 }

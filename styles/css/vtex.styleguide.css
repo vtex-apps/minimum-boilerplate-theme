@@ -9,16 +9,3 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
-.headerRowBackground--topbar-container {
-  position: relative;
-}
-
-.headerRowContainer--main-container {
-  display: flex;
-  width: 1440px;
-  padding: 16px 32px;
-  margin: 0 auto;
-  align-items: center;
-  background: #FFF;
-  gap: 48px;
-}
