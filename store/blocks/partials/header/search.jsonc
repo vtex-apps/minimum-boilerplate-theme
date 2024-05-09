@@ -10,7 +10,10 @@
   },
   "autocomplete-result-list.v2": {
     "props": {
-      "blockClass": "autocomplete-result-list"
+      "blockClass": "autocomplete-result-list",
+      "maxSuggestedTerms": 5,
+      "maxTopSearches": 5,
+      "productLayout": "HORIZONTAL"
     },
     "blocks": ["product-summary.shelf#search-result"]
   }

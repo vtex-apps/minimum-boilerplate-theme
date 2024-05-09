@@ -1,6 +1,6 @@
 {
   "header-row#main": {
-    "children": ["image#logo", "search-bar#desktop"],
+    "children": ["image#logo", "search-bar#desktop", "login#desktop"],
     "props": {
       "blockClass": ["main-container"]
     }
