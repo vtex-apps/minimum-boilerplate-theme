@@ -1,0 +1,19 @@
+{
+  "minicart.v2": {
+    "props": {
+      "MinicartIcon": "image#minicart-icon",
+      "variation": "drawer",
+      "customPixelEventName": "addToCart",
+      "itemCountMode": "total",
+      "maxDrawerWidth": "364"
+    },
+    "children": ["minicart-base-content"]
+  },
+  "image#minicart-icon": {
+    "title": "Icone do Minicart",
+    "props": {
+      "src": "assets/svgs/minicart-icon.svg",
+      "maxHeight": 24
+    }
+  }
+}

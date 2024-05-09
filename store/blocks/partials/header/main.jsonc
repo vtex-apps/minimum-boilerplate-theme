@@ -4,7 +4,8 @@
       "image#logo",
       "search-bar#desktop-new",
       "login#desktop",
-      "link#wishlist"
+      "link#wishlist",
+      "minicart.v2"
     ],
     "props": {
       "blockClass": ["main-container"]
