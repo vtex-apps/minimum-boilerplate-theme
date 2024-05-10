@@ -76,5 +76,4 @@ jspm_packages/
 
 .scannerwork
 
-styles/css
-.css
+styles/css/*.css
