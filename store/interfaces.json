@@ -3,5 +3,8 @@
     "component": "Topbar",
     "composition": "children",
     "allowed": "*"
+  },
+  "menu": {
+    "component": "Menu"
   }
 }
