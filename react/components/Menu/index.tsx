@@ -10,15 +10,17 @@ import { MenuProvider } from './context'
 
 // Types
 import type { MenuRoot } from './typing'
+import type { ReactNode } from 'react'
 
 interface MenuProps {
   departments: MenuRoot
+  children: ReactNode
 }
 
-const Menu = ({ departments }: MenuProps) => {
+const Menu = ({ departments, children }: MenuProps) => {
   return (
     <MenuProvider value={departments}>
-      <MenuContent />
+      <MenuContent>{children}</MenuContent>
     </MenuProvider>
   )
 }

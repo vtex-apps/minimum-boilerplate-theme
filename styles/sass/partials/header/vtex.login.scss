@@ -19,6 +19,37 @@
     }
   }
 
+  .profile {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: '';
+      background-image: url("assets/svgs/login-icon.svg");
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      display: block;
+    }
+
+    &::after {
+      content: "Minha conta";
+      color: var(--Gray-Scale-Black, #000);
+
+      /* text-base/medium */
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      text-transform: math-auto;
+      font-weight: 500;
+      line-height: 24px;
+      /* 150% */
+      letter-spacing: -0.16px;
+    }
+  }
+
   .label {
     color: var(--Gray-Scale-Black, #000);
     font-family: "Proxima Nova";

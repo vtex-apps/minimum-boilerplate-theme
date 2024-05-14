@@ -8,6 +8,15 @@
       "blockClass": "search-bar"
     }
   },
+  "search-bar#sticky": {
+    "title": "Barra de Busca",
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "placeholder": "Buscar...",
+      "blockClass": ["search-bar", "search-bar--sticky"]
+    }
+  },
   "autocomplete-result-list.v2": {
     "blocks": ["product-summary.shelf#search-result"],
     "props": {

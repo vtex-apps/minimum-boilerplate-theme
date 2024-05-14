@@ -7,6 +7,39 @@
   z-index: 2;
 }
 
+.stickyMenu .menuList {
+  gap: 16px;
+}
+
+.logo {
+  opacity: 0;
+  max-width: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.stickyMenu .logo {
+  opacity: 1;
+  max-width: 100%;
+  margin-right: 16px;
+  height: 28px;
+}
+
+.stickyMenu .menuItem {
+  padding-top: 16px;
+}
+
+.stickyMenu .menuItem {
+  padding-bottom: 16px;
+}
+
+.stickyMenu .menuWrapper {
+  align-items: center;
+}
+
+.stickyMenu :global(.vtex-login-2-x-profile)::after {
+  display: none;
+}
+
 .menuButton {
   background: transparent;
   background-image: url('data:image/svg+xml,<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.625 10.5001H18.375" stroke="%23101820" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 5.25H18.375" stroke="%23101820" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 15.75H18.375" stroke="%23101820" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
@@ -27,6 +60,43 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 32px;
+  display: flex;
+}
+
+.userInteractions {
+  opacity: 0;
+  max-width: 0;
+  transition: opacity 0.1s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userInteractions.sticky {
+  opacity: 1;
+  max-width: 100%;
+  align-items: center;
+}
+
+.userInteractions :global(.vtex-store-components-3-x-searchBarContainer) {
+  max-width: 152px;
+  margin: 0 24px;
+}
+
+.userInteractions :global(.vtex-store-link-0-x-label--wishlist) {
+  font-size: 0 !important;
+  width: 48px;
+}
+
+.userInteractions :global(.vtex-login-2-x-profile) {
+  font-size: 0;
+  width: 48px;
+}
+
+.userInteractions :global(.vtex-login-2-x-profile)::before {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99967 19.1667C15.0623 19.1667 19.1663 15.0627 19.1663 10C19.1663 4.93743 15.0623 0.833374 9.99967 0.833374C4.93706 0.833374 0.833008 4.93743 0.833008 10C0.833008 15.0627 4.93706 19.1667 9.99967 19.1667Z" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.0759 14.0742C13.9575 13.7762 13.7737 13.5085 13.5381 13.2909V13.2909C13.1412 12.922 12.6194 12.7168 12.0775 12.7165H7.92709C7.38489 12.7168 6.86285 12.922 6.46551 13.2909V13.2909C6.23048 13.509 6.0468 13.7765 5.92773 14.0742" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.0016 10.5094C11.2673 10.5094 12.2933 9.48334 12.2933 8.21769C12.2933 6.95204 11.2673 5.92603 10.0016 5.92603C8.73598 5.92603 7.70996 6.95204 7.70996 8.21769C7.70996 9.48334 8.73598 10.5094 10.0016 10.5094Z" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .closeButton {

@@ -1,5 +1,9 @@
 {
   "header-layout.desktop": {
     "children": ["header-row#topbar", "header-row#main-desktop", "menu"]
+  },
+  "menu": {
+    "title": "Menu Customizado - Desktop",
+    "children": ["search-bar#sticky", "login#desktop", "minicart.v2"]
   }
 }
