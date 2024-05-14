@@ -38,3 +38,10 @@
   width: 16px;
   height: 16px;
 }
+
+@media screen and (max-width: 1025px) {
+  .minicartWrapperContainer {
+    position: absolute;
+    right: 16px;
+  }
+}

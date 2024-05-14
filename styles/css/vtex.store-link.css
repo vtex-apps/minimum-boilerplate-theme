@@ -17,7 +17,7 @@
   justify-content: center;
   text-decoration: none;
   gap: 8px;
-  z-index: 1;
+  z-index: 999;
   top: 4px;
 }
 .link--help-center .label--help-center {

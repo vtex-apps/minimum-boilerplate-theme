@@ -256,7 +256,7 @@
   border-radius: var(--radius-rounded-lg, 8px);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .menuContainer {
     width: fit-content;
   }
@@ -265,6 +265,7 @@
     position: fixed;
     height: 100vh;
     max-width: 312px;
+    flex-direction: column;
     width: 100%;
     top: 0;
     left: 0;
@@ -273,6 +274,7 @@
     padding: 24px;
     z-index: 9999;
     padding-top: 60px;
+    justify-items: start;
   }
 
   .menuWrapper.open {
@@ -315,6 +317,7 @@
     font-weight: 600;
     line-height: 24px;
     letter-spacing: -0.16px;
+    width: 100%;
     padding: 12px 0;
     display: block;
     margin-top: 16px;
@@ -365,6 +368,9 @@
     background-color: #f4f4f5;
   }
 
+  .logo {
+    height: 0;
+  }
   .categoryWrapper {
     transform: translate(-100%, 0);
     max-height: 100%;

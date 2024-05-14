@@ -64,3 +64,9 @@
     border: none;
   }
 }
+
+@media screen and (max-width: 1025px) {
+  .imageElementLink--logo {
+    max-width: 111px;
+  }
+}

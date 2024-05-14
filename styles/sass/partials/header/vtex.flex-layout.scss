@@ -5,7 +5,7 @@
   height: 32px;
   margin: 0 auto;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1025px) {
     display: none;
   }
 }
@@ -22,7 +22,7 @@
   position: absolute;
   left: 32px;
   bottom: 0;
-  z-index: 1;
+  z-index: 999;
 
   .flexRowContent--brand-switcher-container {
     display: flex;

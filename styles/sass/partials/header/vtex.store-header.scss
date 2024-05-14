@@ -13,9 +13,22 @@
   justify-content: space-between;
 }
 
-
-.headerStickyRow--topbar-container {
-  @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
+  .headerStickyRow--topbar-container {
     height: 32px;
+
+
+
   }
+
+  .headerStickyRow--search-container {
+    padding: 0 16px 12px 16px;
+  }
+
+  .headerRowContainer--main-container {
+    padding: 12px 16px;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
 }

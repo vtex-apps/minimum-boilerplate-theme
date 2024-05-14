@@ -77,3 +77,7 @@ jspm_packages/
 .scannerwork
 
 styles/css/*.css
+
+styles/css
+**/*.sass-cache/
+**/*.css.map
