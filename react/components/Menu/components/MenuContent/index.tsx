@@ -55,6 +55,7 @@ const MenuContent = () => {
               categories,
               departmentImageDesktop,
               departmentThumbImageMobile,
+              departmentImageMobile,
             } = department
 
             const hasCategories = categories && categories.length > 0
@@ -77,11 +78,22 @@ const MenuContent = () => {
                 {hasCategories && (
                   <div className={departmentClasses}>
                     <div className={styles.departmentTitleWrapper}>
+                      <button
+                        className={styles.hideCategory}
+                        onClick={() => setActiveDepartment(null)}
+                      />
                       <h3 className={styles.departmentTitle}>{name}</h3>
                       <a href={link} className={styles.viewAllLink}>
                         Ver tudo em {name}
                       </a>
                     </div>
+                    {isMobile && (
+                      <img
+                        className={styles.departmentImageMobile}
+                        src={departmentImageMobile?.src}
+                        alt={name}
+                      />
+                    )}
                     <div className={styles.subMenuCategoryContent}>
                       <ul className={styles.subMenuCategoryList}>
                         {categories?.map((category) => {
@@ -123,16 +135,17 @@ const MenuContent = () => {
         </ul>
         {isMobile && <button className={styles.brandSwitcherMobile} />}
       </div>
-      {activeDepartment !== null && (
-        <div
-          className={styles.menuOverlay}
-          role="button"
-          tabIndex={0}
-          onClick={() => {
-            setActiveDepartment(null)
-          }}
-        />
-      )}
+      {activeDepartment !== null ||
+        (menuOpen && (
+          <div
+            className={styles.menuOverlay}
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              setActiveDepartment(null)
+            }}
+          />
+        ))}
     </div>
   )
 }
