@@ -1,18 +1,18 @@
 {
-  "search-bar#desktop-new": {
+  "search-bar": {
     "title": "Barra de Busca",
-    "blocks": ["autocomplete-result-list.v2#search-bar"],
+    "blocks": ["autocomplete-result-list.v2"],
     "props": {
       "openAutocompleteOnFocus": true,
       "placeholder": "Busque por produtos...",
       "blockClass": "search-bar"
     }
   },
-  "autocomplete-result-list.v2#search-bar": {
+  "autocomplete-result-list.v2": {
     "blocks": ["product-summary.shelf#search-result"],
     "props": {
       "maxSuggestedTerms": 5,
-      "maxTopSearches": 5,
+      "maxTopSearches": 10,
       "productLayout": "HORIZONTAL"
     }
   }

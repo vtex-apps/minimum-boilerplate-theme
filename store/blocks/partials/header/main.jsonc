@@ -1,12 +1,18 @@
 {
-  "header-row#main": {
+  "header-row#main-desktop": {
     "children": [
       "image#logo",
-      "search-bar#desktop-new",
+      "search-bar",
       "login#desktop",
       "link#wishlist",
       "minicart.v2"
     ],
+    "props": {
+      "blockClass": ["main-container", "desktop"]
+    }
+  },
+  "header-row#main-mobile": {
+    "children": ["menu#mobile", "image#logo", "minicart.v2"],
     "props": {
       "blockClass": ["main-container"]
     }
@@ -19,6 +25,7 @@
     }
   },
   "image#logo": {
+    "title": "Logo da loja",
     "props": {
       "src": "assets/svgs/roland-logo.svg",
       "blockClass": "logo",

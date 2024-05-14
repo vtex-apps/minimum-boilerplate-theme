@@ -8,23 +8,48 @@ import styles from './styles.css'
 
 // Hooks
 import { useMenu } from '../../../../hooks/useMenu'
-import type { MenuDepartment } from '../../typing'
 
-const MenuDesktop = () => {
+// @ts-ignore
+import { useDevice } from 'vtex.device-detector'
+
+// Types
+import type { MenuDepartment } from '../../typing'
+import LoginMobile from '../LoginMobile'
+
+const MenuContent = () => {
+  const { isMobile } = useDevice()
   const { departments } = useMenu()
+  const [menuOpen, setMenuOpen] = useState(false)
   const [activeDepartment, setActiveDepartment] = useState<string | null>(null)
 
   console.log('departments', departments)
 
   if (!departments) return null
 
+  const menuClasses = classnames(styles.menuWrapper, {
+    [styles.open]: isMobile && menuOpen,
+  })
+
   return (
     <div className={styles.menuContainer}>
-      <div className={styles.menuWrapper}>
+      {isMobile && (
+        <button
+          className={styles.menuButton}
+          onClick={() => setMenuOpen(!menuOpen)}
+        />
+      )}
+      <div className={menuClasses}>
+        {isMobile && <LoginMobile />}
+        {isMobile && <span className={styles.listTitleMobile}>Categorias</span>}
         <ul className={styles.menuList}>
           {(departments as MenuDepartment[])?.map((department) => {
-            const { name, link, categories, departmentImageDesktop } =
-              department
+            const {
+              name,
+              link,
+              categories,
+              departmentImageDesktop,
+              departmentThumbImageMobile,
+            } = department
 
             const hasCategories = categories && categories.length > 0
             const isActive = activeDepartment === name
@@ -38,7 +63,10 @@ const MenuDesktop = () => {
                 <button
                   onClick={() => setActiveDepartment(isActive ? null : name)}
                 >
-                  {name}
+                  {isMobile && (
+                    <img src={departmentThumbImageMobile.src} alt={name} />
+                  )}
+                  <span>{name}</span>
                 </button>
                 {hasCategories && (
                   <div className={departmentClasses}>
@@ -102,4 +130,4 @@ const MenuDesktop = () => {
   )
 }
 
-export default MenuDesktop
+export default MenuContent

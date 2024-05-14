@@ -1,5 +1,5 @@
 {
   "header-layout.desktop": {
-    "children": ["header-row#topbar", "header-row#main", "menu"]
+    "children": ["header-row#topbar", "header-row#main-desktop", "menu"]
   }
 }

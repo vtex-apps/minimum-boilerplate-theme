@@ -1,5 +1,19 @@
 {
   "header-layout.mobile": {
-    "children": ["header-row#topbar"]
+    "children": [
+      "header-row#topbar",
+      "header-row#main-mobile",
+      "header-row#search-mobile"
+    ]
+  },
+  "header-row#search-mobile": {
+    "children": ["search-bar"],
+    "props": {
+      "blockClass": ["search-container"]
+    }
+  },
+  "menu#mobile": {
+    "title": "Menu Customizado - Mobile",
+    "children": []
   }
 }

@@ -5,6 +5,8 @@
     "allowed": "*"
   },
   "menu": {
-    "component": "Menu"
+    "component": "Menu",
+    "composition": "children",
+    "allowed": "*"
   }
 }

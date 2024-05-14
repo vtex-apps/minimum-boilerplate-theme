@@ -21,6 +21,8 @@
     "vtex.styleguide": "9.x",
     "vtex.slider": "0.x",
     "vtex.carousel": "2.x",
+    "vtex.device-detector": "0.x",
+    "vtex.order-manager": "0.x",
     "vtex.shelf": "1.x",
     "vtex.menu": "2.x",
     "vtex.minicart": "2.x",

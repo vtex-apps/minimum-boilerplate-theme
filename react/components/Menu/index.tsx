@@ -2,32 +2,23 @@
 import React from 'react'
 
 // Components
-// @ts-ignore
-import { useRuntime } from 'vtex.render-runtime'
-
-// Hooks
-import MenuMobile from './components/MenuMobile'
-import MenuDesktop from './components/MenuDesktop'
+import MenuContent from './components/MenuContent'
 
 // Schema
 import { MENU_SCHEMA } from './schema'
 import { MenuProvider } from './context'
 
 // Types
-import { MenuRoot } from './typing'
+import type { MenuRoot } from './typing'
 
 interface MenuProps {
   departments: MenuRoot
 }
 
 const Menu = ({ departments }: MenuProps) => {
-  const {
-    deviceInfo: { isMobile },
-  } = useRuntime()
-
   return (
     <MenuProvider value={departments}>
-      {isMobile ? <MenuMobile /> : <MenuDesktop />}
+      <MenuContent />
     </MenuProvider>
   )
 }

@@ -47,6 +47,21 @@
   line-height: 20px;
   letter-spacing: -0.14px;
 }
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList {
+  max-height: 216px;
+  overflow: scroll;
+  margin-right: 4px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList::-webkit-scrollbar {
+  width: 4px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: var(--border-brand-primary-base, #EE8146);
+}
 .biggy-autocomplete-wrapper .biggy-autocomplete .itemListItem .itemListSubItem {
   display: none;
 }

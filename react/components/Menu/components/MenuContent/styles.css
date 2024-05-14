@@ -7,6 +7,14 @@
   z-index: 2;
 }
 
+.menuButton {
+  background: transparent;
+  background-image: url('data:image/svg+xml,<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.625 10.5001H18.375" stroke="%23101820" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 5.25H18.375" stroke="%23101820" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 15.75H18.375" stroke="%23101820" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
+  width: 21px;
+  height: 21px;
+  border: none;
+}
+
 .menuOverlay {
   width: 100%;
   height: 100vw;
@@ -158,4 +166,73 @@
 
 .departmentImage img {
   border-radius: var(--radius-rounded-lg, 8px);
+}
+
+@media screen and (max-width: 1024px) {
+  .menuContainer {
+    width: fit-content;
+  }
+  .menuWrapper {
+    transform: translate(-100%, 0);
+    position: fixed;
+    height: 100vh;
+    max-width: 312px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    padding: 24px;
+  }
+
+  .menuWrapper.open {
+    transform: translate(0, 0);
+  }
+
+  .menuList {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .menuItem {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .listTitleMobile {
+    color: #000;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    padding: 12px 0;
+    display: block;
+  }
+
+  .menuItem button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .menuItem button span {
+    width: 100%;
+    text-align: left;
+  }
+
+  .menuItem button::after {
+    content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12L10 8L6 4" stroke="%235A5A66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+
+  .menuItem button img {
+    width: 54px;
+    height: 40px;
+    border-radius: var(--radius-rounded, 4px);
+  }
 }

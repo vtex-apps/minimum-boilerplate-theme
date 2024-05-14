@@ -1,5 +1,6 @@
 .headerRowBackground--topbar-container {
   position: relative;
+  height: 32px;
 }
 
 .headerRowContainer--main-container {
@@ -10,4 +11,11 @@
   align-items: center;
   background: #FFF;
   justify-content: space-between;
+}
+
+
+.headerStickyRow--topbar-container {
+  @media screen and (max-width: 1024px) {
+    height: 32px;
+  }
 }

@@ -12,6 +12,7 @@
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05),
       0px 8px 16px 0px rgba(0, 0, 0, 0.05);
 
+
     .itemList--suggestion {
       max-width: 232px;
 
@@ -26,7 +27,10 @@
       padding-left: 20px;
       font-size: 0;
       text-transform: unset;
-      padding-top: 20px;
+
+      padding : {
+        top: 20px;
+      }
 
       &::before {
         content: 'Termos sugeridos';
@@ -37,6 +41,27 @@
         font-weight: 500;
         line-height: 20px;
         letter-spacing: -0.14px;
+      }
+    }
+
+    .itemListList {
+      max-height: 216px;
+      overflow: scroll;
+      margin-right: 4px;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: var(--radius-rounded-full, 9999px);
+        background: var(--border-brand-primary-base, #EE8146);
+
+
       }
     }
 
