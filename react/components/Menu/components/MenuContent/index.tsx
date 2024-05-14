@@ -39,6 +39,12 @@ const MenuContent = () => {
         />
       )}
       <div className={menuClasses}>
+        {isMobile && (
+          <button
+            className={styles.closeButton}
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
         {isMobile && <LoginMobile />}
         {isMobile && <span className={styles.listTitleMobile}>Categorias</span>}
         <ul className={styles.menuList}>
@@ -115,6 +121,7 @@ const MenuContent = () => {
             )
           })}
         </ul>
+        {isMobile && <button className={styles.brandSwitcherMobile} />}
       </div>
       {activeDepartment !== null && (
         <div
