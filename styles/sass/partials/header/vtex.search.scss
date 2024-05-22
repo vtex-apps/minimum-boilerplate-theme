@@ -168,51 +168,36 @@
       }
 
       .tileListList {
+        flex-direction: column !important;
+
         .tileListItem {
-          .element {
-            width: 100%;
-            padding: 20px;
+          :global(.vtex-product-summary-2-x-containerNormal) {
+            display: flex;
+          }
+        }
+      }
 
-            .imageContainer {
-              margin-right: 24px;
+      .tileListFooter {
+        position: absolute;
+        top: 0;
+        right: 24px;
 
-              .image {
-                width: 48px;
-                height: 48px;
-              }
-            }
+        .tileListSeeMore {
+          font-size: 0;
 
-            .information {
-              margin: 0;
-
-              .productBrand {
-                overflow: hidden;
-                color: var(--text-neutral-subtle, #3F3F46);
-                text-overflow: ellipsis;
-                font-family: "Proxima Nova";
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 16px;
-                letter-spacing: -0.12px;
-              }
-
-              .priceContainer {
-                .sellingPrice {
-                  overflow: hidden;
-                  color: var(--text-neutral-bold, #18181B);
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                  font-family: "Proxima Nova";
-                  font-size: 14px;
-                  font-style: normal;
-                  font-weight: 600;
-                  line-height: 20px;
-                  letter-spacing: -0.14px;
-                }
-              }
-            }
-
+          &::before {
+            content: "Ver tudo";
+            border-radius: var(--radius-rounded-sm, 2px);
+            border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+            background: var(--Gray-Scale-White, #FFF);
+            color: var(--text-neutral-subtle, #3F3F46);
+            font-family: "Proxima Nova";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            padding: 4px 16px;
+            line-height: 20px;
+            letter-spacing: -0.14px;
           }
         }
       }

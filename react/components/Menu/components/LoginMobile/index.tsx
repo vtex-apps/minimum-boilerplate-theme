@@ -13,6 +13,8 @@ const LoginMobile = () => {
     orderForm: { loggedIn, clientProfileData },
   } = useOrderForm() ?? {}
 
+  console.log('loggedIn', loggedIn)
+
   return (
     <div className={styles.loginMobileWrapper}>
       <div className={styles.userWrapper}>
@@ -48,18 +50,22 @@ const LoginMobile = () => {
               <a href="/account">Minha conta</a>
             )}
           </li>
-          <li>
-            <a href="/account#/wishlist">Meus favoritos</a>
-          </li>
-          <li>
-            <a href="/account">Minha conta</a>
-          </li>
-          <li>
-            <a href="/central-de-ajuda">Fale conosco</a>
-          </li>
-          <li>
-            <a href="/logout">Sair</a>
-          </li>
+          {loggedIn && (
+            <>
+              <li>
+                <a href="/account#/wishlist">Meus favoritos</a>
+              </li>
+              <li>
+                <a href="/account">Minha conta</a>
+              </li>
+              <li>
+                <a href="/central-de-ajuda">Fale conosco</a>
+              </li>
+              <li>
+                <a href="/logout">Sair</a>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </div>

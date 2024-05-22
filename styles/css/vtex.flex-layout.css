@@ -48,3 +48,205 @@
 .flexRow--main-header {
   width: 100%;
 }
+
+.flexRow--header-row-container {
+  width: 100%;
+  padding-top: 20px;
+}
+.flexRow--header-row-container :global(.vtex-store-components-3-x-container) {
+  width: 100%;
+  margin: 0;
+  max-width: unset;
+  padding: 0;
+}
+
+.flexRowContent--minicart-footer {
+  padding-bottom: 0;
+}
+
+.flexCol--minicart-footer {
+  border-top: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  background: var(--bg-neutral-subtlest-base, #FFF);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-5, 20px) var(--spacing-6, 24px) var(--spacing-6, 24px) var(--spacing-6, 24px);
+}
+
+.flexRow--product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  min-height: 148px;
+  position: relative;
+}
+.flexRow--product:last-child:not(:first-child) {
+  border-bottom: none;
+}
+
+.flexRowContent--product {
+  padding: 0;
+}
+
+.flexRowContent--minicart-product-bottom {
+  gap: 10px;
+  align-items: center;
+  margin-top: 0;
+}
+@media screen and (max-width: 768px) {
+  .flexRowContent--minicart-product-bottom {
+    margin: 0;
+    display: flex;
+  }
+}
+
+.flexRowContent--minicart-product-name {
+  margin: 0;
+}
+
+.flexRow--header-icons {
+  display: flex;
+  align-items: center;
+}
+.flexRow--header-icons .flexRowContent--header-icons {
+  height: 22px;
+}
+@media (min-width: 1300px) {
+  .flexRow--header-icons .flexRowContent--header-icons {
+    margin-left: 30px;
+  }
+}
+.flexRow--header-icons .flexRowContent--header-icons .stretchChildrenWidth {
+  max-height: 22px;
+}
+.flexRow--header-icons .flexRowContent--header-icons :global(.vtex-render-runtime-8-x-lazyload),
+.flexRow--header-icons .flexRowContent--header-icons :global(.vtex-render-runtime-8-x-lazyload):first-child,
+.flexRow--header-icons .flexRowContent--header-icons :global(.vtex-render-runtime-8-x-lazyload):last-child {
+  height: 22px;
+}
+
+.flexRow--right-side-menu {
+  flex: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.flexRowContent--right-side-menu {
+  max-width: 97vw;
+}
+
+.flexRowContent--right-side-menu .stretchChildrenWidth:first-child {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.flexRowContent--header-icons {
+  height: 100%;
+}
+
+.flexColChild--default-empty-state:last-child {
+  width: 100%;
+}
+
+.flexRow--menu-mobile {
+  flex: 1;
+}
+
+.flexRow--right-side-menu--boss :global(.vtex-input-prefix__group),
+.flexRow--right-side-menu--vmoda :global(.vtex-input-prefix__group) {
+  border: 1px solid #fff !important;
+}
+.flexRow--right-side-menu--boss :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input), .flexRow--right-side-menu--boss :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder,
+.flexRow--right-side-menu--vmoda :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
+.flexRow--right-side-menu--vmoda :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #fff !important;
+}
+.flexRow--right-side-menu--boss :global(.vtex-minicart-2-x-minicartQuantityBadge),
+.flexRow--right-side-menu--vmoda :global(.vtex-minicart-2-x-minicartQuantityBadge) {
+  background: #000 !important;
+  color: #000 !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  .flexRowContent--header-icons {
+    margin-right: 10px;
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 430px) {
+  .flexRowContent--header-icons .stretchChildrenWidth {
+    margin-right: 0px;
+  }
+  .flexRowContent--header-icons .stretchChildrenWidth:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 290px) {
+  .flexRowContent--header-icons .stretchChildrenWidth {
+    margin-right: 0px;
+  }
+  .flexRowContent--header-icons .stretchChildrenWidth:last-child {
+    margin-right: 0;
+  }
+}
+
+.flexRow--minicart-footer {
+  margin-top: 14px;
+}
+
+.flexCol--default-empty-state {
+  margin: 0 auto;
+  max-width: 290px;
+}
+
+.flexColChild--default-empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexRow--navigation-row {
+  box-shadow: 0 0 1em #222;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 21px;
+  margin: 0 auto;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .flexRow--navigation-row {
+    padding: 10px 0 5px;
+  }
+}
+.flexRow--navigation-row :global(.vtex-store-components-3-x-container) {
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .flexRow--navigation-row :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+    margin: 0;
+  }
+}
+.flexRow--navigation-row :global(.vtex-store-components-3-x-container) .flexRowContent--navigation-row {
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+@media (max-width: 720px) {
+  .flexRow--navigation-row :global(.vtex-store-components-3-x-container) .flexRowContent--navigation-row {
+    justify-content: center;
+  }
+}
+
+.flexRow--navigation-row--fixed {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  z-index: 99999;
+  background: #fff;
+  top: 0;
+  box-shadow: 0 0 1em #222;
+}

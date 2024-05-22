@@ -4,6 +4,6 @@
   },
   "menu": {
     "title": "Menu Customizado - Desktop",
-    "children": ["search-bar#sticky", "login#desktop", "minicart.v2"]
+    "children": ["search-bar#sticky", "login#desktop", "minicart.v2#new"]
   }
 }

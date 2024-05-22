@@ -7,13 +7,34 @@
   z-index: 2;
 }
 
+.staticDepartment {
+  position: absolute;
+  right: 32px;
+  bottom: 0;
+  color: var(--Gray-Scale-White, #FFF);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; 
+  letter-spacing: -0.16px;
+  text-decoration: none;
+  border-radius: var(--radius-rounded-sm, 2px);
+  padding: 4px 8px;
+}
+
 .stickyMenu .menuList {
   gap: 16px;
 }
 
+
+.stickyMenu .staticDepartment {
+  display: none;
+}
 .logo {
   opacity: 0;
   max-width: 0;
+  z-index: -1;
   transition: opacity 0.1s ease-in-out;
 }
 
@@ -22,6 +43,7 @@
   max-width: 100%;
   margin-right: 16px;
   height: 28px;
+  z-index: 1;
 }
 
 .stickyMenu .menuItem {
@@ -61,18 +83,20 @@
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
+  position: relative;
 }
 
 .userInteractions {
+  display: none;
   opacity: 0;
   max-width: 0;
   transition: opacity 0.1s ease-in-out;
-  display: flex;
   justify-content: space-between;
 }
 
 .userInteractions.sticky {
   opacity: 1;
+  display: flex;
   max-width: 100%;
   align-items: center;
 }
@@ -92,6 +116,9 @@
   width: 48px;
 }
 
+.userInteractions :global(.vtex-login-2-x-label) {
+  font-size: 0 !important;
+}
 .userInteractions :global(.vtex-login-2-x-profile)::before {
   content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99967 19.1667C15.0623 19.1667 19.1663 15.0627 19.1663 10C19.1663 4.93743 15.0623 0.833374 9.99967 0.833374C4.93706 0.833374 0.833008 4.93743 0.833008 10C0.833008 15.0627 4.93706 19.1667 9.99967 19.1667Z" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.0759 14.0742C13.9575 13.7762 13.7737 13.5085 13.5381 13.2909V13.2909C13.1412 12.922 12.6194 12.7168 12.0775 12.7165H7.92709C7.38489 12.7168 6.86285 12.922 6.46551 13.2909V13.2909C6.23048 13.509 6.0468 13.7765 5.92773 14.0742" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.0016 10.5094C11.2673 10.5094 12.2933 9.48334 12.2933 8.21769C12.2933 6.95204 11.2673 5.92603 10.0016 5.92603C8.73598 5.92603 7.70996 6.95204 7.70996 8.21769C7.70996 9.48334 8.73598 10.5094 10.0016 10.5094Z" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   width: 20px;
@@ -420,5 +447,27 @@
     height: 100vh;
     position: fixed;
     top: 0;
+  }
+
+  .helpCenterMobile {
+    color: var(--icon-brand-secondary-inverse, #5A5A66);
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    
+  }
+
+  .helpCenterMobile::after {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 20H19C20.105 20 21 19.105 21 18V6C21 4.895 20.105 4 19 4H5C3.895 4 3 4.895 3 6V18C3 19.105 3.895 20 5 20H10L12 22L14 20Z" stroke="%235A5A66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.884 13.684C13.707 15.861 10.177 15.861 8 13.684" stroke="%235A5A66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 8.68396V9.68396" stroke="%235A5A66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8.68396V9.68396" stroke="%235A5A66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    display: block;
+    width: 24px;
+    height: 24px;
   }
 }

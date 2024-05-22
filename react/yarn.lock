@@ -4898,9 +4898,9 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-"roland.store-theme@https://sel1424v1--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@0.0.1+build1715369489/public/@types/roland.store-theme":
+"roland.store-theme@https://sel1424v1--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@0.0.1+build1715717759/public/@types/roland.store-theme":
   version "0.0.1"
-  resolved "https://sel1424v1--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@0.0.1+build1715369489/public/@types/roland.store-theme#da00e590206579d28c8f0abcf729d7b339a732ae"
+  resolved "https://sel1424v1--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@0.0.1+build1715717759/public/@types/roland.store-theme#a2e4478027e8a44f6284c343fd191b8305cfc2f0"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -5582,6 +5582,10 @@ verror@1.10.0:
   version "2.12.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.carousel@2.12.1/public/@types/vtex.carousel#f99139a9d22227fa239192a058defd13f8cc50be"
 
+"vtex.device-detector@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.device-detector@0.2.6/public/@types/vtex.device-detector":
+  version "0.2.6"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.device-detector@0.2.6/public/@types/vtex.device-detector#3219242fa5c2f14023d33c3549c2d8de93c76d1f"
+
 "vtex.flex-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.21.3/public/@types/vtex.flex-layout":
   version "0.21.3"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.21.3/public/@types/vtex.flex-layout#407f0e310545ff006f08afb35f5d38ace4546435"
@@ -5613,6 +5617,10 @@ verror@1.10.0:
 "vtex.my-account@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account@1.27.1/public/@types/vtex.my-account":
   version "1.27.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account@1.27.1/public/@types/vtex.my-account#bb94dc0514950137df740439a599d3f413624d75"
+
+"vtex.order-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager":
+  version "0.12.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager#2cf6a9d2a31bc503b783c257695b0d17c09b5696"
 
 "vtex.order-placed@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.17.2/public/@types/vtex.order-placed":
   version "2.17.2"

@@ -5,14 +5,14 @@
       "search-bar",
       "login#desktop",
       "link#wishlist",
-      "minicart.v2"
+      "minicart.v2#new"
     ],
     "props": {
       "blockClass": ["main-container", "desktop"]
     }
   },
   "header-row#main-mobile": {
-    "children": ["menu#mobile", "image#logo", "minicart.v2"],
+    "children": ["menu#mobile", "image#logo", "minicart.v2#new"],
     "props": {
       "blockClass": ["main-container"]
     }

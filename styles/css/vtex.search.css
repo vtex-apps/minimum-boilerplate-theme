@@ -142,40 +142,31 @@
   letter-spacing: -0.14px;
   text-transform: math-auto;
 }
-.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem .element {
-  width: 100%;
-  padding: 20px;
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList {
+  flex-direction: column !important;
 }
-.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem .element .imageContainer {
-  margin-right: 24px;
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem :global(.vtex-product-summary-2-x-containerNormal) {
+  display: flex;
 }
-.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem .element .imageContainer .image {
-  width: 48px;
-  height: 48px;
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter {
+  position: absolute;
+  top: 0;
+  right: 24px;
 }
-.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem .element .information {
-  margin: 0;
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore {
+  font-size: 0;
 }
-.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem .element .information .productBrand {
-  overflow: hidden;
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore::before {
+  content: "Ver tudo";
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+  background: var(--Gray-Scale-White, #FFF);
   color: var(--text-neutral-subtle, #3F3F46);
-  text-overflow: ellipsis;
-  font-family: "Proxima Nova";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: -0.12px;
-}
-.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem .element .information .priceContainer .sellingPrice {
-  overflow: hidden;
-  color: var(--text-neutral-bold, #18181B);
-  text-overflow: ellipsis;
-  white-space: nowrap;
   font-family: "Proxima Nova";
   font-size: 14px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
+  padding: 4px 16px;
   line-height: 20px;
   letter-spacing: -0.14px;
 }

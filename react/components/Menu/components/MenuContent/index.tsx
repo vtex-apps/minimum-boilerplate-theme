@@ -19,16 +19,17 @@ import LoginMobile from '../LoginMobile'
 
 interface MenuContentProps {
   children: ReactNode
+  staticLink: any
 }
 
-const MenuContent = ({ children }: MenuContentProps) => {
+const MenuContent = ({ children, staticLink }: MenuContentProps) => {
   const [activeDepartment, setActiveDepartment] = useState<string | null>(null)
   const [menuOpen, setMenuOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
   const { departments } = useMenu()
   const { isMobile } = useDevice()
 
-  console.log(departments)
+  console.log(staticLink)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -181,8 +182,29 @@ const MenuContent = ({ children }: MenuContentProps) => {
           })}
         </ul>
         {isMobile && <button className={styles.brandSwitcherMobile} />}
+        {isMobile && (
+          <a
+            href="https://www.roland.com/backstage/login"
+            className={styles.helpCenterMobile}
+          >
+            Central de Ajuda
+          </a>
+        )}
         {!isMobile && <div className={stickyClassNames}>{children}</div>}
+        {!isMobile && staticLink.active && (
+          <a
+            href={staticLink.link}
+            className={styles.staticDepartment}
+            style={{
+              backgroundColor: staticLink.backgroundColor,
+              color: staticLink.color,
+            }}
+          >
+            {staticLink.name}
+          </a>
+        )}
       </div>
+
       {(menuOpen || activeDepartment !== null) && (
         <div
           className={styles.menuOverlay}

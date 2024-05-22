@@ -1,0 +1,210 @@
+.removeButton {
+  padding: 0;
+
+}
+
+
+
+.productName--minicart-product-name {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #3F3F46;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+  max-width: 188px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.productImage {
+  max-height: 100px;
+  // border: 1px solid #e5e5e5;
+  // box-sizing: border-box;
+  // border-radius: 5px;
+}
+
+.price {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+.quantitySelectorContainer {
+  width: auto !important;
+
+  & :global(.vtex-input-prefix__group) {
+    width: 94px;
+    border: 1px solid $color-black;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+}
+
+.quantityDropdownContainer,
+.quantityDropdownMobileContainer {
+  & :global(.vtex-dropdown__container) {
+    width: 80px;
+    height: 40px;
+    border-radius: 2px;
+    padding: 10px 12px 10px 16px;
+    border: 1px solid var(--border-input-base, #D4D4D8);
+
+    & :global(.vtex-dropdown__arrow) {
+      position: relative;
+      visibility: hidden;
+
+      &::before {
+        content: url("assets/svgs/arrow-down.svg");
+        width: 10px;
+        height: 18px;
+        position: absolute;
+        right: 5px;
+        top: 1px;
+        visibility: visible;
+      }
+    }
+  }
+
+  & :global(.vtex-dropdown__caption) {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+
+    color: #18181B;
+  }
+}
+
+.productPriceCurrency--minicart-price {
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #71717A;
+}
+
+.price--minicart-price {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #18181B;
+
+}
+
+.productBrandName--minicart-product-brand {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: left;
+
+  color: #2B2B3A;
+
+  margin-bottom: 4px;
+}
+
+.removeButtonContainer {
+  padding: 12px;
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #FDF2EC;
+    border-radius: 2px;
+
+
+    .removeButton {
+      &::before {
+        content: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 1H9M1 3H13M11.6667 3L11.1991 10.0129C11.129 11.065 11.0939 11.5911 10.8667 11.99C10.6666 12.3412 10.3648 12.6235 10.0011 12.7998C9.58798 13 9.06073 13 8.00623 13H5.99377C4.93927 13 4.41202 13 3.99889 12.7998C3.63517 12.6235 3.33339 12.3412 3.13332 11.99C2.90607 11.5911 2.871 11.065 2.80086 10.0129L2.33333 3M5.66667 6V9.33333M8.33333 6V9.33333" stroke="%23EE8146" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+      }
+    }
+  }
+
+  .removeButton {
+
+
+    &::before {
+      content: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 1H9M1 3H13M11.6667 3L11.1991 10.0129C11.129 11.065 11.0939 11.5911 10.8667 11.99C10.6666 12.3412 10.3648 12.6235 10.0011 12.7998C9.58798 13 9.06073 13 8.00623 13H5.99377C4.93927 13 4.41202 13 3.99889 12.7998C3.63517 12.6235 3.33339 12.3412 3.13332 11.99C2.90607 11.5911 2.871 11.065 2.80086 10.0129L2.33333 3M5.66667 6V9.33333M8.33333 6V9.33333" stroke="%2327272A" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      position: relative;
+      top: 3px;
+      width: 16px;
+      display: block;
+      height: 16px;
+    }
+
+
+    .deleteIcon {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 12px;
+    top: 20px;
+  }
+}
+
+.quantitySelectorWrapper {
+  height: 36px;
+
+  .quantitySelectorButton {
+    padding: 0;
+    width: 32px;
+
+    &:global(.vtex-product-list-0-x-quantitySelectorDecrease),
+    &:global(.vtex-product-list-0-x-quantitySelectorIncrease) {
+      background-color: #fff;
+    }
+  }
+
+  .inputContainer {
+    width: 30px;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #808080
+  }
+}
+
+:global(.vtex-minicart-2-x-minicartContentContainer) .productImageContainer {
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--minicart-product-image {
+    height: 100%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {}

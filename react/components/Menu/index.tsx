@@ -15,12 +15,13 @@ import type { ReactNode } from 'react'
 interface MenuProps {
   departments: MenuRoot
   children: ReactNode
+  staticLink: any
 }
 
-const Menu = ({ departments, children }: MenuProps) => {
+const Menu = ({ departments, children, staticLink }: MenuProps) => {
   return (
     <MenuProvider value={departments}>
-      <MenuContent>{children}</MenuContent>
+      <MenuContent staticLink={staticLink}>{children}</MenuContent>
     </MenuProvider>
   )
 }

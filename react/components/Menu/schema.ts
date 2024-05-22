@@ -82,5 +82,37 @@ export const MENU_SCHEMA = {
         },
       },
     },
+    staticLink: {
+      title: 'Link estático',
+      type: 'object',
+      properties: {
+        active: {
+          title: 'Departamento estático ativo',
+          type: 'boolean',
+        },
+        name: {
+          title: 'Nome do Departamento',
+          type: 'string',
+        },
+        link: {
+          title: 'Link do Departamento',
+          type: 'string',
+        },
+        color: {
+          title: 'Cor do texto',
+          type: 'string',
+          widget: {
+            'ui:widget': 'color',
+          },
+        },
+        backgroundColor: {
+          title: 'Cor de fundo',
+          type: 'string',
+          widget: {
+            'ui:widget': 'color',
+          },
+        },
+      },
+    },
   },
 }

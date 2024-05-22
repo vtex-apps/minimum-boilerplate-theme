@@ -8,5 +8,11 @@
     "component": "Menu",
     "composition": "children",
     "allowed": "*"
+  },
+  "minicart-installments-custom": {
+    "component": "MinicartInstallmentsCustom"
+  },
+  "b8-shipping-bar": {
+    "component": "ShippingBar"
   }
 }

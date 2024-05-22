@@ -1,0 +1,19 @@
+.container--desconto-pix-boleto {
+  float: right;
+  margin-top: 4px;
+}
+
+.paragraph--desconto-pix-boleto {
+  color: var(--text-neutral-subtlest, #71717A);
+  text-align: right;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: -0.12px;
+
+  margin: 0;
+  margin-top: 4px;
+}

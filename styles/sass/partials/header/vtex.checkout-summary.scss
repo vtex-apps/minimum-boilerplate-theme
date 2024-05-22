@@ -1,0 +1,46 @@
+.summarySmallDisclaimer {
+    display: none;
+}
+
+.summaryItemLabel {
+    color: var(--text-neutral-bold, #18181B);
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+}
+
+.summarySmallContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.summaryItemContainer--minicart-totalizers {
+    margin: 0;
+    display: none;
+}
+
+.summaryItemContainer--minicart-totalizers:last-child {
+    display: flex;
+}
+
+.summarySmallContent .summaryItemContainer {
+
+
+    .price {
+        color: var(--text-neutral-bold, #18181B);
+        text-align: right;
+
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: -0.16px;
+    }
+}
+

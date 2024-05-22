@@ -1,0 +1,32 @@
+:global(.vtex-flex-layout-0-x-flexRowContent--minicart-footer) .closeIconButton--keeping-buy {
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+  background: var(--Gray-Scale-White, #FFF);
+
+  color: #3F3F46;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+
+
+  width: 100%;
+  margin-top: 8px;
+
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.14px;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #F4F4F5;
+  }
+
+}
