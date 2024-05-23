@@ -260,7 +260,7 @@
     }
   },
   "flex-layout.row#price": {
-    "children": ["price#minicart"],
+    "children": ["custom-price-minicart"],
     "props": {
       "blockClass": "price-mobile-minicart",
       "preventHorizontalStretch": true

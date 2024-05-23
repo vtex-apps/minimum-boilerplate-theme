@@ -14,5 +14,8 @@
   },
   "b8-shipping-bar": {
     "component": "ShippingBar"
+  },
+  "custom-price-minicart": {
+    "component": "MinicartCustomPrice"
   }
 }

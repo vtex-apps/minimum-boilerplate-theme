@@ -18,6 +18,7 @@
     }
   },
   "link#wishlist": {
+    "title": "Wishlist",
     "props": {
       "href": "/account/#/wishlist",
       "label": "Meus favoritos",

@@ -1,0 +1,39 @@
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.oldPrice {
+  overflow: hidden;
+  color: var(--text-neutral-subtlest, #71717A);
+  text-overflow: ellipsis;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.12px;
+  text-decoration: line-through;
+}
+
+.sellingPrice {
+  overflow: hidden;
+  color: var(--text-neutral-bold, #18181B);
+  text-overflow: ellipsis;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.14px;
+}
+
+.price, .priceLoading {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.12px;
+}

@@ -1,10 +1,18 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .minicartContainer {
   .minicartIconContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
+   
+
+    :global(.vtex-store-components-3-x-imageElement) {
+       width: 24px;
+       min-height: 24px;
+    }
 
     .minicartQuantityBadge {
       border-radius: var(--radius-rounded-3xl, 24px);
@@ -189,7 +197,7 @@
   transition: ease-in 0.2s all;
 
   &:hover {
-    background-color: #2B2B3A;
+    background-color: #424250;
   }
 
   &::before {
@@ -264,7 +272,7 @@
 
 @media (max-width: 1100px) {
   .drawer {
-    max-width: 312px !important;
+    max-width: 360px !important;
   }
 
   .closeIconContainer {

@@ -22,7 +22,7 @@
     }
   },
   "link#roland": {
-    "title": "Central de Ajuda",
+    "title": "Link para ROLAND",
     "props": {
       "href": "/",
       "label": "roland",
@@ -30,6 +30,7 @@
     }
   },
   "link#boss": {
+    "title": "Link para BOSS",
     "props": {
       "href": "/",
       "label": "boss",
@@ -43,6 +44,7 @@
     }
   },
   "link#help-center": {
+    "title": "Central de Ajuda",
     "props": {
       "href": "https://www.roland.com/backstage/login",
       "label": "Central de ajuda",

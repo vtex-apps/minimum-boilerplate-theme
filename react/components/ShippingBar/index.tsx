@@ -22,11 +22,6 @@ const ShippingBar = ({
 
     const differenceToMinValue = (orderForm?.value - minValue * 100) / 100;
 
-    console.log("values", {
-        minValue,
-        orderFormValue: orderForm?.value,
-        differenceToMinValue,
-    });
 
     const parseMarkdown = (text: string) => {
         return text
