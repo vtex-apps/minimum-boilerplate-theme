@@ -155,6 +155,7 @@
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore {
   font-size: 0;
+  text-decoration: none;
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore::before {
   content: "Ver tudo";

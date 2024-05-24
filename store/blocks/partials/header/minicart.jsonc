@@ -2,7 +2,8 @@
   "minicart.v2#new": {
     "props": {
       "customPixelEventName": "addToCart",
-      "MinicartIcon": "image#minicart-icon"
+      "MinicartIcon": "image#minicart-icon",
+      "quantityDisplay": "always"
     },
     "children": ["minicart-base-content"]
   },
@@ -66,45 +67,15 @@
       "blockClass": "minicart-summary"
     },
     "children": [
-      "flex-layout.col#minicart-totalizers",
-      "rich-text#desconto-pix-boleto",
-      "minicart-installments-custom"
+      "b8-minicart-summary"
     ]
   },
-  "minicart-installments-custom": {
+  "b8-minicart-summary": {
     "props": {
       "blockClass": "minicart-installments"
     }
   },
-  "flex-layout.col#minicart-totalizers": {
-    "props": {
-      "blockClass": "minicart-totalizers-wrapper"
-    },
-    "children": ["summary-totalizers#minicart"]
-  },
-  "summary-totalizers#minicart": {
-    "props": {
-      "showTotal": true,
-      "showOriginalTotal": false,
-      "showDiscounts": false,
-      "showDeliveryTotal": false,
-      "blockClass": "minicart-totalizers"
-    }
-  },
-  "rich-text#desconto-pix-boleto": {
-    "title": "[minicart] Frase desconto Pix/Boleto",
-    "props": {
-      "blockClass": "desconto-pix-boleto",
-      "text": "10% de desconto no boleto ou PIX ou em até"
-    }
-  },
-  "summary-installments#minicart": {
-    "props": {
-      "blockClass": "minicart-installments",
-      "message": "{installmentsNumber}x de {installmentValue}",
-      "markers": []
-    }
-  },
+  
   "minicart-empty-state": {
     "children": ["flex-layout.row#empty-state"]
   },

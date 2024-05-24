@@ -51,6 +51,8 @@
     box-sizing: border-box;
     border-radius: 30px;
   }
+
+
 }
 
 .quantityDropdownContainer,
@@ -62,6 +64,10 @@
     padding: 10px 12px 10px 16px;
     border: 1px solid var(--border-input-base, #D4D4D8);
 
+    @media screen and (max-width: 1024px) {
+      width: auto;
+    }
+ 
     & :global(.vtex-dropdown__arrow) {
       position: relative;
       visibility: hidden;

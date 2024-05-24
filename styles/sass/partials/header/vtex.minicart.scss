@@ -53,6 +53,7 @@
   z-index: 9999999;
   max-width: 360px !important;
   height: fit-content;
+
 }
 
 
@@ -227,6 +228,7 @@
 }
 
 
+
 .unitListPrice {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -237,9 +239,10 @@
 
 .minicartProductListContainer {
   padding: 0;
-
+  max-height: 100%;
   @media screen and (min-width: 1026px) {
     min-height: 296px;
+    
   }
 
 
@@ -261,8 +264,7 @@
 .opened .minicartSideBarContentWrapper {
 
   @media screen and (min-width: 768px) {
-    height: fit-content !important;
-
+    padding-bottom: 24px;
   }
 }
 
@@ -272,7 +274,7 @@
 
 @media (max-width: 1100px) {
   .drawer {
-    max-width: 360px !important;
+    max-width: 312px !important;
   }
 
   .closeIconContainer {

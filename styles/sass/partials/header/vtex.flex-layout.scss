@@ -61,7 +61,11 @@
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);
 
   padding: var(--spacing-5, 20px) var(--spacing-6, 24px) var(--spacing-6, 24px) var(--spacing-6, 24px);
+
+  
 }
+
+
 
 .flexRow--product {
   display: flex;
@@ -75,6 +79,8 @@
   &:last-child:not(:first-child) {
     border-bottom: none;
   }
+
+  
 }
 
 .flexRowContent--product {

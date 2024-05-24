@@ -1,0 +1,76 @@
+.minicartSummary {
+    width: 100%;
+}
+
+
+.subtotalTitle {
+    width: 100%;
+    float: left;
+    color: var(--text-neutral-bold, #18181B);
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    letter-spacing: -0.16px;
+}
+
+.pixText {
+    color: var(--text-neutral-subtlest, #71717A);
+    text-align: right;
+    width: 100%;
+    display: block;
+    /* text-xs/semibold */
+    font-family: "Proxima Nova";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: -0.12px;
+    margin-bottom: 4px;
+}
+
+.totalPrice {
+    color: var(--text-neutral-subtlest, #71717A);
+    text-align: right;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+    letter-spacing: -0.14px;
+    text-decoration: line-through;
+}
+
+.priceWithDiscount {
+    color: var(--text-neutral-bold, #18181B);
+    text-align: right;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.16px;
+}
+
+
+.subtotalWrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+.installments {
+    color: var(--text-neutral-bold, #18181B);
+    text-align: right;
+    font-family: "Proxima Nova";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.12px;
+    margin: 0;
+}

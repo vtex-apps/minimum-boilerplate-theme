@@ -32,3 +32,17 @@
   }
 
 }
+
+.closeIconButton--keeping-buy-empty-state {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+  color: var(--text-inverse-bold, #FFF);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  width: 100%;
+  margin-top: 32px;
+}

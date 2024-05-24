@@ -6,6 +6,10 @@
   height: 32px;
 }
 
+.topbarContetWrapper a {
+  text-decoration: none;
+}
+
 .contentText {
   color: var(--Gray-Scale-White, #fff);
 

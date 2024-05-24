@@ -1,7 +1,7 @@
 {
   "header-layout.mobile": {
     "children": [
-      "header-row#topbar",
+      "header-row#topbar-mobile",
       "header-row#main-mobile",
       "header-row#search-mobile"
     ]

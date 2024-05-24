@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 // Dependencies
 import type { ReactNode } from 'react'
@@ -29,17 +30,59 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
   const { departments } = useMenu()
   const { isMobile } = useDevice()
 
-  console.log(staticLink)
-
   useEffect(() => {
+    let timerId: number | null = null
+
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 100)
+      const duplicatedMinicartElement = document.querySelectorAll(
+        '.vtex-minicart-2-x-drawer'
+      )?.[1]
+
+      const duplicatedMinicartOverlay = document.querySelectorAll(
+        '.vtex-minicart-2-x-overlay'
+      )?.[1]
+
+      if (duplicatedMinicartElement && duplicatedMinicartOverlay) {
+        duplicatedMinicartElement.remove()
+        duplicatedMinicartOverlay.remove()
+      }
+
+      if (timerId !== null) {
+        clearTimeout(timerId)
+      }
+
+      timerId = window.setTimeout(() => {
+        setIsSticky(window.scrollY > 100)
+      }, 100)
     }
 
     window.addEventListener('scroll', handleScroll)
 
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      if (timerId !== null) {
+        clearTimeout(timerId)
+      }
+
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
+
+  useEffect(() => {
+    const element = document.querySelector('.render-provider') as HTMLDivElement
+    const body = document.querySelector('body') as HTMLBodyElement
+
+    if (isMobile) {
+      if (menuOpen) {
+        body.style.overflow = 'hidden'
+        element.style.overflow = 'hidden'
+      } else {
+        body.style.overflow = 'unset'
+        element.style.overflow = 'unset'
+      }
+    }
+  }, [menuOpen, isMobile])
+
+  useEffect(() => {}, [])
 
   const stickyClassNames = classnames(styles.userInteractions, {
     [styles.sticky]: isSticky,

@@ -1,6 +1,6 @@
 {
   "header-layout.desktop": {
-    "children": ["header-row#topbar", "header-row#main-desktop", "menu"]
+    "children": ["header-row#topbar-desktop", "header-row#main-desktop", "menu"]
   },
   "menu": {
     "title": "Menu Customizado - Desktop",

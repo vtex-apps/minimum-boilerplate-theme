@@ -4,11 +4,12 @@ import React from 'react'
 import { useListContext, ListContextProvider } from 'vtex.list-context'
 import TopbarContent from './components/TopbarContent'
 
-const Topbar = ({ items, children }: any) => {
+const Topbar = ({ items, children, showSearchBar }: any) => {
   const { list } = useListContext() || []
+
+  if (!showSearchBar) return null
   const topbarContentItems = items.map((item: any, index: number) => {
-    const { backgroundColor, color, text, active, link } = item
-    if (!active) return null
+    const { backgroundColor, color, text, link } = item
 
     return (
       <TopbarContent
@@ -40,7 +41,7 @@ Topbar.schema = {
     showSearchBar: {
       title: 'Mostrar topbar?',
       type: 'boolean',
-      default: true,
+      default: false,
     },
     items: {
       title: 'Itens do Topbar',
@@ -48,10 +49,9 @@ Topbar.schema = {
       items: {
         type: 'object',
         properties: {
-          active: {
-            title: 'Mostrar no topbar?',
-            type: 'boolean',
-            default: true,
+          __editorItemTitle: {
+            title: 'Nome para organização',
+            type: 'string',
           },
           link: {
             title: 'Link',
