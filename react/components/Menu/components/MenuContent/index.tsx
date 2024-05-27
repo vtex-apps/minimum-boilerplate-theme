@@ -72,12 +72,12 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
     const body = document.querySelector('body') as HTMLBodyElement
 
     if (isMobile) {
+      element.style.overflow = 'hidden'
+
       if (menuOpen) {
         body.style.overflow = 'hidden'
-        element.style.overflow = 'hidden'
       } else {
         body.style.overflow = 'unset'
-        element.style.overflow = 'unset'
       }
     }
   }, [menuOpen, isMobile])

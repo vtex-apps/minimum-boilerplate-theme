@@ -14,12 +14,14 @@ const { useOrderForm } = OrderForm
 const MinicartSummary: React.FC = () => {
   const client = useApolloClient()
   const {
-    orderForm: { totalizers, items },
+    orderForm: { items },
   } = useOrderForm()
 
-  const [productsPrice, setProductsPrice] = useState<number>(0)
+  const [spotPriceTotal, setSpotPriceTotal] = useState<number>(0)
+  const [priceTotal, setPriceTotal] = useState<number>(0)
+  const [listPriceTotal, setListPriceTotal] = useState<number>(0)
 
-  const fetchProductPriceById = useCallback(
+  const fetchProductPricesById = useCallback(
     async (productId: string) => {
       const { data } = await client.query({
         query: GET_PRODUCT_BY_ID,
@@ -27,71 +29,78 @@ const MinicartSummary: React.FC = () => {
       })
 
       if (data?.product?.items) {
-        return data.product.items.reduce((acc: number, productItem: any) => {
-          const itemPrice = productItem?.sellers?.[0]?.commertialOffer?.Price
+        return data.product.items.reduce(
+          (
+            acc: { spotPrice: number; price: number; listPrice: number },
+            productItem: any
+          ) => {
+            const itemSpotPrice =
+              productItem?.sellers?.[0]?.commertialOffer?.spotPrice ?? 0
 
-          return acc + itemPrice
-        }, 0)
+            const itemPrice =
+              productItem?.sellers?.[0]?.commertialOffer?.Price ?? 0
+
+            const itemListPrice =
+              productItem?.sellers?.[0]?.commertialOffer?.ListPrice ?? 0
+
+            return {
+              spotPrice: acc.spotPrice + itemSpotPrice,
+              price: acc.price + itemPrice,
+              listPrice: acc.listPrice + itemListPrice,
+            }
+          },
+          { spotPrice: 0, price: 0, listPrice: 0 }
+        )
       }
 
-      return 0
+      return { spotPrice: 0, price: 0, listPrice: 0 }
     },
     [client]
   )
 
-  const fetchProductsPrice = useCallback(async () => {
+  const fetchProductsPrices = useCallback(async () => {
+    let totalSpotPrice = 0
     let totalPrice = 0
+    let totalListPrice = 0
 
     for (const item of items) {
-      const productPrice = await fetchProductPriceById(item.productId)
+      const { spotPrice, price, listPrice } = await fetchProductPricesById(
+        item.productId
+      )
 
-      totalPrice += productPrice
+      totalSpotPrice += spotPrice
+      totalPrice += price
+      totalListPrice += listPrice
     }
 
-    setProductsPrice(totalPrice)
-  }, [items, fetchProductPriceById])
+    setSpotPriceTotal(totalSpotPrice) // Assuming prices are in cents and converting to dollars
+    setPriceTotal(totalPrice)
+    setListPriceTotal(totalListPrice)
+  }, [items, fetchProductPricesById])
 
   useEffect(() => {
-    fetchProductsPrice()
-  }, [items, fetchProductsPrice])
-
-  const totalItems = totalizers.find(
-    (totalizer: any) => totalizer.id === 'Items'
-  )
-
-  const discountItems = totalizers.find(
-    (totalizer: any) => totalizer.id === 'Discounts'
-  )
-
-  const totalItemsValue = totalItems ? totalItems.value / 100 : 0
-  const priceWithDiscount = totalItems
-    ? (totalItems.value - Math.abs(discountItems?.value ?? 0)) / 100
-    : 0
+    fetchProductsPrices()
+  }, [items, fetchProductsPrices])
 
   const maxInstallments = 10
-
-  if (totalItemsValue === 0) return null
 
   return (
     <div className={styles.minicartSummary}>
       <div className={styles.subtotalWrapper}>
         <span className={styles.subtotalTitle}>Subtotal</span>
         <span className={styles.totalPrice}>
-          <FormattedCurrency value={totalItemsValue} />
+          <FormattedCurrency value={listPriceTotal} />
         </span>
-        {discountItems && (
-          <span className={styles.priceWithDiscount}>
-            <FormattedCurrency value={priceWithDiscount} />
-          </span>
-        )}
+        <span className={styles.priceWithDiscount}>
+          <FormattedCurrency value={spotPriceTotal} />
+        </span>
       </div>
 
       <span className={styles.pixText}>no pix ou boleto</span>
-
       <p className={styles.installments}>
         ou{' '}
         <b>
-          <FormattedCurrency value={productsPrice} />
+          <FormattedCurrency value={priceTotal} />
         </b>{' '}
         em até <b>{maxInstallments}x sem juros</b>
       </p>
