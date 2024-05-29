@@ -6,14 +6,18 @@ import { OrderForm } from 'vtex.order-manager'
 // Styles
 import styles from './styles.css'
 
+// Queries
+import GET_USER_PROFILE from '../../../../graphql/queries/getUserProfile.gql'
+import { useQuery } from 'react-apollo'
+
 const { useOrderForm } = OrderForm
 
 const LoginMobile = () => {
   const {
-    orderForm: { loggedIn, clientProfileData },
+    orderForm: { loggedIn },
   } = useOrderForm() ?? {}
 
-  console.log('loggedIn', loggedIn)
+  const { data } = useQuery(GET_USER_PROFILE, { ssr: false })
 
   return (
     <div className={styles.loginMobileWrapper}>
@@ -45,7 +49,7 @@ const LoginMobile = () => {
               </defs>
             </svg>
             {loggedIn ? (
-              <span>Hello, {clientProfileData?.firstName} </span>
+              <span>Hello, {data?.profile?.firstName} </span>
             ) : (
               <a href="/account">Minha conta</a>
             )}

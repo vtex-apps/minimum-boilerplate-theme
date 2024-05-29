@@ -11,7 +11,6 @@
 /* Grid breakpoints */
 .headerRowBackground--topbar-container {
   position: relative;
-  height: 32px;
 }
 
 .headerRowContainer--main-container {
@@ -29,9 +28,6 @@
 }
 
 @media screen and (max-width: 1025px) {
-  .headerStickyRow--topbar-container {
-    height: 32px;
-  }
   .headerStickyRow--search-container {
     padding: 0 16px 12px 16px;
   }

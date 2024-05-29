@@ -1,6 +1,5 @@
-query getProductById($identifier: ProductUniqueIdentifier)
-@context(provider: "vtex.search-graphql") {
-  product(identifier: $identifier) {
+query getProductById($identifier: ProductUniqueIdentifier) {
+  product(identifier: $identifier) @context(provider: "vtex.search-graphql") {
     items {
       sellers {
         commertialOffer {

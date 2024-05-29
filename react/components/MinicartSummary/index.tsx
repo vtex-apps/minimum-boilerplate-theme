@@ -73,7 +73,7 @@ const MinicartSummary: React.FC = () => {
       totalListPrice += listPrice
     }
 
-    setSpotPriceTotal(totalSpotPrice) // Assuming prices are in cents and converting to dollars
+    setSpotPriceTotal(totalSpotPrice)
     setPriceTotal(totalPrice)
     setListPriceTotal(totalListPrice)
   }, [items, fetchProductPricesById])

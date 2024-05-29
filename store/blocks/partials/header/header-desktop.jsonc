@@ -1,5 +1,6 @@
 {
   "header-layout.desktop": {
+    "title": "Header Desktop",
     "children": ["header-row#topbar-desktop", "header-row#main-desktop", "menu"]
   },
   "menu": {

@@ -82,13 +82,9 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
     }
   }, [menuOpen, isMobile])
 
-  useEffect(() => {}, [])
-
   const stickyClassNames = classnames(styles.userInteractions, {
     [styles.sticky]: isSticky,
   })
-
-  if (!departments) return null
 
   const menuClasses = classnames(styles.menuWrapper, {
     [styles.open]: isMobile && menuOpen,
@@ -97,6 +93,11 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
   const containerClasses = classnames(styles.menuContainer, {
     [styles.stickyMenu]: !isMobile && isSticky,
   })
+
+  const handleMenuClose = () => {
+    setMenuOpen(false)
+    setActiveDepartment(null)
+  }
 
   return (
     <div className={containerClasses}>
@@ -126,10 +127,7 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
           </svg>
         </a>
         {isMobile && (
-          <button
-            className={styles.closeButton}
-            onClick={() => setMenuOpen(false)}
-          />
+          <button className={styles.closeButton} onClick={handleMenuClose} />
         )}
         {isMobile && <LoginMobile />}
         {isMobile && <span className={styles.listTitleMobile}>Categorias</span>}
