@@ -1,5 +1,5 @@
 {
-  "header-layout.mobile": {
+  "header-layout.mobile#roland": {
     "title": "Header Mobile",
     "children": [
       "header-row#topbar-mobile",
@@ -8,10 +8,11 @@
     ]
   },
   "header-row#search-mobile": {
-    "children": ["search-bar"],
     "props": {
       "blockClass": ["search-container"]
-    }
+    },
+    "children": ["search-bar"]
+
   },
   "menu#mobile": {
     "title": "Menu Customizado - Mobile"

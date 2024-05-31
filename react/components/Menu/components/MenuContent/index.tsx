@@ -34,7 +34,15 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
     let timerId: number | null = null
 
     const handleScroll = () => {
-      const duplicatedMinicartElement = document.querySelectorAll(
+      const originalCartElement = document.querySelector(
+        '.vtex-store-header-2-x-headerRowContainer--main-container .vtex-minicart-2-x-minicartContainer .vtex-button'
+      ) as HTMLButtonElement
+
+      const duplicatedCartElement = document.querySelector(
+        `.${styles.userInteractions} .vtex-minicart-2-x-minicartContainer .vtex-button`
+      )
+
+      const duplicatedMinicartDrawerElement = document.querySelectorAll(
         '.vtex-minicart-2-x-drawer'
       )?.[1]
 
@@ -42,9 +50,19 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
         '.vtex-minicart-2-x-overlay'
       )?.[1]
 
-      if (duplicatedMinicartElement && duplicatedMinicartOverlay) {
-        duplicatedMinicartElement.remove()
+      if (
+        duplicatedMinicartDrawerElement &&
+        duplicatedMinicartOverlay &&
+        duplicatedCartElement &&
+        originalCartElement
+      ) {
+        duplicatedMinicartDrawerElement.remove()
         duplicatedMinicartOverlay.remove()
+        duplicatedCartElement.addEventListener('click', (evt) => {
+          evt.preventDefault()
+          evt.stopPropagation()
+          originalCartElement.click()
+        })
       }
 
       if (timerId !== null) {
@@ -52,7 +70,7 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
       }
 
       timerId = window.setTimeout(() => {
-        setIsSticky(window.scrollY > 100)
+        setIsSticky(window.scrollY > 80)
       }, 100)
     }
 
@@ -232,7 +250,7 @@ const MenuContent = ({ children, staticLink }: MenuContentProps) => {
           </a>
         )}
         {!isMobile && <div className={stickyClassNames}>{children}</div>}
-        {!isMobile && staticLink.active && (
+        {!isMobile && staticLink?.active && (
           <a
             href={staticLink.link}
             className={styles.staticDepartment}

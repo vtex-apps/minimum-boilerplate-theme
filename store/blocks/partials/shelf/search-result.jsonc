@@ -4,6 +4,16 @@
       "blockClass": "product-summary-search-result"
     },
     "children": [
+      "flex-layout.row#search-product"
+    ]
+  },
+  "flex-layout.row#search-product": {
+    "props": {
+      "blockClass": "search-bar-product",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
       "product-summary-image#search-result",
       "flex-layout.col#product-informations",
       "add-to-cart-button#search-result"
@@ -12,8 +22,7 @@
   "add-to-cart-button#search-result": {
     "props": {
       "blockClass": "add-to-cart-button-search-result",
-      "customPixelEventId": "addToCart",
-      "text": "Continuar para o carrinho"
+      "customPixelEventId": "addToCart"
     }
   },
   "flex-layout.col#product-informations": {
@@ -22,7 +31,7 @@
     },
     "children": [
       "product-summary-name#search-result",
-      "product-spot-price#search-result"
+      "flex-layout.row#product-price"
     ]
   },
   "product-summary-image#search-result": {
@@ -37,9 +46,25 @@
       "tag": "h3"
     }
   },
+  "flex-layout.row#product-price": {
+    "props": {
+      "blockClass": "product-price-search-result"
+    },
+    "children": [
+      "product-selling-price#search-result",
+      "product-spot-price#search-result"
+    ]
+  },
   "product-spot-price#search-result": {
     "props": {
-      "blockClass": "product-summary-price-search-result"
+      "blockClass": "product-summary-spot-price-search-result",
+      "message": "{spotPriceValue}"
+    }
+  },
+  "product-selling-price#search-result": {
+    "props": {
+      "blockClass": "product-summary-price-search-result",
+      "message": "{sellingPriceValue}"
     }
   }
 }

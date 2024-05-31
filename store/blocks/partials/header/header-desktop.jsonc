@@ -1,5 +1,5 @@
 {
-  "header-layout.desktop": {
+  "header-layout.desktop#roland": {
     "title": "Header Desktop",
     "children": ["header-row#topbar-desktop", "header-row#main-desktop", "menu"]
   },

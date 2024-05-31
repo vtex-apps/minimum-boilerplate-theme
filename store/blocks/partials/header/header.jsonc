@@ -1,6 +1,0 @@
-{
-  "header": {
-    "title": "Header",
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
-  }
-}

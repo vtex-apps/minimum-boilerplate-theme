@@ -18,6 +18,9 @@
     width: 91vw;
   }
 }
+.biggy-autocomplete-wrapper .itemList--history {
+  display: none;
+}
 .biggy-autocomplete-wrapper .biggy-autocomplete {
   flex-direction: row !important;
   left: 17px;
@@ -51,10 +54,9 @@
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .itemListTitle {
   margin: 0;
-  padding-left: 20px;
+  padding: 20px;
   font-size: 0;
   text-transform: unset;
-  padding-top: 20px;
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .itemListTitle::before {
   content: "Termos sugeridos";
@@ -143,15 +145,40 @@
   text-transform: math-auto;
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList {
+  margin: 0;
+  margin-top: 12px;
   flex-direction: column !important;
+  max-height: 282px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList::-webkit-scrollbar {
+  width: 4px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList::-webkit-scrollbar-thumb {
+  background-color: #D4D4D8;
+  border-radius: 20px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList::-webkit-scrollbar-track {
+  background: transparent;
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem :global(.vtex-product-summary-2-x-containerNormal) {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList {
+    max-height: 285px;
+  }
+}
 .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter {
   position: absolute;
   top: 0;
-  right: 24px;
+  right: 20px;
+}
+@media screen and (max-width: 768px) {
+  .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter {
+    right: 12px;
+  }
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore {
   font-size: 0;

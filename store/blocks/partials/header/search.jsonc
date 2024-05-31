@@ -1,28 +1,29 @@
 {
   "search-bar": {
-    "blocks": ["autocomplete-result-list.v2"],
+    "blocks": ["autocomplete-result-list.v2#roland"],
     "title": "Barra de Busca",
     "props": {
       "openAutocompleteOnFocus": true,
       "placeholder": "Busque por produtos...",
-      "blockClass": "search-bar"
+      "blockClass": "search-bar",
+      "autoFocus": true
     }
   },
   "search-bar#sticky": {
     "title": "Barra de Busca",
-    "blocks": ["autocomplete-result-list.v2"],
+    "blocks": ["autocomplete-result-list.v2#roland"],
     "props": {
       "openAutocompleteOnFocus": true,
       "placeholder": "Buscar...",
       "blockClass": ["search-bar", "search-bar--sticky"]
     }
   },
-  "autocomplete-result-list.v2": {
+  "autocomplete-result-list.v2#roland": {
     "blocks": ["product-summary.shelf#search-result"],
     "props": {
-      "maxSuggestedTerms": 5,
-      "maxTopSearches": 10,
-      "productLayout": "HORIZONTAL"
+      "productLayout": "VERTICAL",
+      "maxSuggestedTerms": 4,
+      "maxSuggestedProducts": 5
     }
   }
 }

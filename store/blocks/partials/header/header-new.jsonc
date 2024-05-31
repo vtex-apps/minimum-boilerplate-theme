@@ -1,0 +1,6 @@
+{
+  "header": {
+    "title": "Header",
+    "blocks": ["header-layout.desktop#roland", "header-layout.mobile#roland"]
+  }
+}

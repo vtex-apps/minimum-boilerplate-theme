@@ -5,6 +5,10 @@
     width: 91vw;
   }
 
+  .itemList--history {
+    display: none;
+  }
+
   .biggy-autocomplete {
     flex-direction: row !important;
     left: 17px;
@@ -41,15 +45,9 @@
 
     .itemListTitle {
       margin: 0;
-      padding-left: 20px;
+      padding: 20px;
       font-size: 0;
       text-transform: unset;
-
-      padding : {
-        top: 20px;
-      }
-
-
 
       &::before {
         content: 'Termos sugeridos';
@@ -168,19 +166,48 @@
       }
 
       .tileListList {
+        margin: 0 {
+          top: 12px;
+        }
         flex-direction: column !important;
+        max-height: 282px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #D4D4D8;
+          border-radius: 20px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
 
         .tileListItem {
           :global(.vtex-product-summary-2-x-containerNormal) {
             display: flex;
           }
         }
+
+        @media screen and (max-width: 768px) {
+          max-height: 285px;
+          
+        }
       }
 
       .tileListFooter {
         position: absolute;
         top: 0;
-        right: 24px;
+        right: 20px;
+
+        @media screen and (max-width: 768px) {
+          right: 12px;
+        }
 
         .tileListSeeMore {
           font-size: 0;

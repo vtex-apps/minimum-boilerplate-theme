@@ -7,6 +7,11 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
     "build": "gulp build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
       "eslint --fix",
