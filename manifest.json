@@ -60,7 +60,8 @@
     "vtex.format-currency": "0.x",
     "vtex.search-graphql": "0.x",
     "vtex.product-context": "0.x",
-    "vtex.store-graphql": "2.x"
+    "vtex.store-graphql": "2.x",
+    "vtex.store-image": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -37,7 +37,7 @@
   "product-summary-image#search-result": {
     "props": {
       "blockClass": "product-summary-image-search-result",
-      "showBadge": true
+      "showBadge": false
     }
   },
   "product-summary-name#search-result": {

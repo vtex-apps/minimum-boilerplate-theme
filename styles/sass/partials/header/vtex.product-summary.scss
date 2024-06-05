@@ -5,6 +5,10 @@
 
 .imageWrapper--product-summary-image-search-result {
   margin-right: 24px;
+
+  @media screen and (max-width: 414px) {
+    margin-right: 13px;
+  } 
 }
 
 .container--product-summary-search-result {

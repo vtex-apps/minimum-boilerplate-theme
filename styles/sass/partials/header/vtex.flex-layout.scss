@@ -21,6 +21,10 @@
 .flexCol--product-informations-search-result {
   align-items: flex-start;
   gap: 4px;
+
+  @media screen and (max-width: 768px) {
+   margin-right: 63px;
+  }
 }
 
 .flexRowContent--search-bar-product {
@@ -46,6 +50,8 @@
     &:hover {
       background-color: #424250;
     }
+
+    
   };
 
   @media screen and (max-width: 768px) {

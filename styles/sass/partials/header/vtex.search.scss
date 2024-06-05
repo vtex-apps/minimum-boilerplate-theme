@@ -226,6 +226,14 @@
             padding: 4px 16px;
             line-height: 20px;
             letter-spacing: -0.14px;
+            transition: all 0.1s ease-in-out;
+          }
+
+          &:hover::before {
+            border-radius: var(--radius-rounded-sm, 2px);
+            border: 1.25px solid var(--border-brand-primary-base, #0064FF);
+            background: var(--bg-brand-primary-subtlest-hover, #E2EDF7);
+            color: #0064FF;
           }
         }
       }

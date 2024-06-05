@@ -4,7 +4,6 @@
     "children": ["header-row#topbar-desktop", "header-row#main-desktop", "menu"]
   },
   "menu": {
-    "title": "Menu Customizado - Desktop",
-    "children": ["search-bar#sticky", "login#desktop", "minicart.v2#new"]
+    "title": "Menu Customizado - Desktop"
   }
 }

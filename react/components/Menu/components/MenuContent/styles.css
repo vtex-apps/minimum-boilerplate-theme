@@ -1,10 +1,11 @@
 .menuContainer {
   width: 100%;
   position: sticky;
-  top: 0;
+  top: 72px;
   background: var(--Gray-Scale-White, #fff);
 
-  z-index: 999;
+  z-index: 99;
+  border-bottom: 1px solid var(--border-neutral-subtlest, #E4E4E7);
 }
 
 .staticDepartment {
@@ -301,6 +302,7 @@
 @media screen and (max-width: 1025px) {
   .menuContainer {
     width: fit-content;
+    border-bottom: none;
   }
   .menuWrapper {
     transform: translate(-100%, 0);

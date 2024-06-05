@@ -10,18 +10,16 @@ import { MenuProvider } from './context'
 
 // Types
 import type { MenuRoot } from './typing'
-import type { ReactNode } from 'react'
 
 interface MenuProps {
   departments: MenuRoot
-  children: ReactNode
   staticLink: any
 }
 
-const Menu = ({ departments, children, staticLink }: MenuProps) => {
+const Menu = ({ departments, staticLink }: MenuProps) => {
   return (
     <MenuProvider value={departments}>
-      <MenuContent staticLink={staticLink}>{children}</MenuContent>
+      <MenuContent staticLink={staticLink} />
     </MenuProvider>
   )
 }
