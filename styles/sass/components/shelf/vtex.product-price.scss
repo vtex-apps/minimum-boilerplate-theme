@@ -1,0 +1,70 @@
+.spotPriceSavings--product-summary-price {
+  color:  #3F3F46;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.newSpotPriceValue--product-summary-price {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  color: #18181B;
+  letter-spacing: -0.2px;
+}
+
+.spotPriceSavingsPercentage--product-summary-price {
+  color: #FF5A00;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  padding: 4px 8px;
+  border-radius:  2px;
+  border: 2px solid  #FF5A00;
+  max-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  &::before {
+    content: '-'
+  }
+}
+
+.installments--product-card-installments {
+  color:  #18181B;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.installmentsTotalValue--product-card-installments,
+.installmentsNumber--product-card-installments,
+.installmentValue--product-card-installments {
+  font-weight: 600;
+}
+
+.installmentsNumber--product-card-installments {
+  &::after {
+    content: 'x'!important;
+  }
+}

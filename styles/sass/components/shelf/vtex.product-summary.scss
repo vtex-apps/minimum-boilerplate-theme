@@ -1,0 +1,54 @@
+.container--product-summary-general {
+  border-radius: 2px;
+  background:  #FFF;
+  padding: 16px;
+  max-width: 332px!important;
+  width: 100%;
+  margin-left: 0;
+}
+
+.imageWrapper--product-summary-image {
+  height: 268px;
+  margin-bottom: 12px;
+}
+
+.element--product-summary-general {
+  align-items: flex-start;
+  position: relative;
+  padding: 0;
+}
+
+.productBrandContainer--product-summary-brand {
+  color:  #FF5A00;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin-bottom: 8px;
+}
+
+.nameContainer--product-summary-name {
+  padding: 0;
+}
+
+.brandName--product-summary-name {
+  overflow: hidden;
+  height: 40px;
+  color:  #18181B;
+  text-overflow: ellipsis;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin-bottom: 8px;
+  text-align: left;
+  display: flex;
+}
+
+.image--product-summary-image {
+  object-fit: contain;
+}

@@ -1,0 +1,207 @@
+.evaluationContainer {
+    padding: 0 15px;
+    margin-bottom: 60px;
+    z-index: 0;
+}
+
+.evaluationContainer h2 {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    display: table;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 15px auto;
+    padding: 10px;
+    z-index: 2;
+    letter-spacing: 0.5px;
+}
+@media (min-width: 980px) {
+    .fullContainer {
+        max-width: 75%;
+        margin: auto;
+    }
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contentContainer > div {
+    padding: 9px;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (min-width: 980px) {
+    .contentContainer::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #cccccc;
+        position: relative;
+        top: 18px;
+    }
+
+    .contentContainer > div {
+        width: 300px;
+    }
+}
+
+.review {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.reviewActive {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+}
+
+.avaliation_container {
+    margin-bottom: 50px;
+    padding: 0 30px;
+}
+
+.trustvox_selo {
+}
+
+:global(.trustvox-shelf-container) {
+    text-align: left;
+}
+
+:global(.trustvox-certificate__fixed-tiny) {
+    background-size: auto !important;
+    background-position: -12px !important;
+}
+
+:global(.ts-store-opinions-widget) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+:global(.ts-audited) {
+    display: flex;
+    justify-content: center !important;
+    flex-direction: column;
+    width: auto !important;
+    margin: 30px !important;
+    padding-right: 20px !important;
+}
+:global(.ts-768px) {
+    display: flex;
+    justify-content: center;
+}
+
+:global(.ts-next-slide) {
+    right: -65px !important;
+}
+:global(.ts-prev-slide) {
+    left: -30px !important;
+}
+:global(.ts-prev-slide)::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    display: block;
+    top: 0;
+    left: -14px;
+    position: absolute;
+}
+:global(.ts-next-slide)::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    display: block;
+    top: 0;
+    right: -14px;
+    position: absolute;
+}
+:global(.ts-frame) {
+    width: 920px !important;
+}
+:global(.ts-trust-gray),
+:global(.ts-opinion) {
+    width: 297px !important;
+}
+:global(.ts-trust-gray) {
+    background: #ffffff !important;
+    border: 1px solid #ced0ca !important;
+    border-radius: 6px !important;
+}
+:global(.ts-store-opinions-widget) {
+    max-width: 1300px;
+}
+
+:gobal(.ts-customer-questions-form) h2 {
+    margin: 0;
+}
+:global(.ts-customer-questions){
+    display: none !important;
+}
+
+@media only screen and(max-width:1025px) {
+    :global(.trustvox-certificate__fixed-tiny) {
+        width: 100px !important;
+        background-size: auto !important;
+        background-position: -5px !important;
+    }
+}
+@media (max-width: 1025px) {
+    :global(.ts-store-opinions-widget) {
+        width: 610px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    :global(#_trustvox_colt),
+    :global(.ts-slider) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    :global(.ts-audited) {
+        align-items: center;
+    }
+    :global(.ts-slider) {
+        width: 610px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    :global(.ts-audited) {
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 500px) {
+    :global(.ts-store-opinions-widget) {
+        width: 300px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    :global(#_trustvox_colt),
+    :global(.ts-slider) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    :global(.ts-audited) {
+        align-items: center;
+    }
+    :global(.ts-trust-gray),
+    :global(.ts-opinion) {
+        width: 230px !important;
+    }
+}
+
+:global(.trustvox-shelf-container) {
+    display: table;
+}

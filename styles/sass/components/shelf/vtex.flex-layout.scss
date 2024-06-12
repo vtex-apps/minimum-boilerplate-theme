@@ -1,0 +1,25 @@
+.flexRowContent--shelf-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexCol--shelf-container {
+  padding: 48px 32px {
+    right: 16px;
+  };
+}
+
+.flexRow--shelf-container {
+  background: #F4F4F5;
+}
+
+.flexRow--shelf-title-container {
+  margin-bottom: 32px;
+}
+
+.flexRowContent--product-card-actions {
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+
+}

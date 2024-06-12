@@ -17,5 +17,8 @@
   },
   "custom-price-minicart": {
     "component": "MinicartCustomPrice"
+  },
+  "trust-vox-stars": {
+    "component": "TrustVoxStars"
   }
 }
