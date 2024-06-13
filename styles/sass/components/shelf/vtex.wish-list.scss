@@ -15,5 +15,14 @@
       width: 20px;
       height: 20px;
     }
+
+    .wishlistIcon--wishlist-product-card.fill {
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="%23FF5A00"><path d="M13.4272 2.5C16.3624 2.5 18.3346 5.29375 18.3346 7.9C18.3346 13.1781 10.1495 17.5 10.0013 17.5C9.85315 17.5 1.66797 13.1781 1.66797 7.9C1.66797 5.29375 3.64019 2.5 6.57538 2.5C8.26056 2.5 9.36241 3.35312 10.0013 4.10312C10.6402 3.35312 11.742 2.5 13.4272 2.5Z" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') !important;
+
+    }
+
+    
   }
+
+  
 }

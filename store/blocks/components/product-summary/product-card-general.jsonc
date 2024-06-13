@@ -9,10 +9,17 @@
       "product-summary-image#product-card",
       "product-summary-brand#product-card",
       "product-summary-name#product-card",
-      "trust-vox-stars",
+      "flex-layout.row#product-card-stars",
       "flex-layout.row#product-card-price",
       "flex-layout.row#product-card-actions"
     ]
+  },
+  "flex-layout.row#product-card-stars": {
+    "title": "Linha: Estrelas do Produto",
+    "children": ["trust-vox-stars"],
+    "props": {
+      "blockClass": "product-card-stars"
+    }
   },
   "product-summary-image#product-card": {
     "title": "Imagem: Sumário de Produto",

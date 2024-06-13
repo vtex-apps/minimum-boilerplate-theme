@@ -9,19 +9,25 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
-.flexRow--home-content-container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 .flexRowContent--shelf-title-container {
   display: flex;
   justify-content: space-between;
 }
 
+.flexRow--product-card-stars {
+  margin-bottom: 12px;
+}
+
 .flexCol--shelf-container {
   padding: 48px 32px;
   padding-right: 16px;
+}
+@media screen and (max-width: 768px) {
+  .flexCol--shelf-container {
+    padding: 16px;
+    padding-bottom: 32px;
+    padding-right: 8px;
+  }
 }
 
 .flexRow--shelf-container {
@@ -31,11 +37,27 @@
 .flexRow--shelf-title-container {
   margin-bottom: 32px;
 }
+@media screen and (max-width: 768px) {
+  .flexRow--shelf-title-container {
+    margin-bottom: 24px;
+  }
+}
 
 .flexRowContent--product-card-actions {
   align-items: center;
   margin-top: 12px;
   gap: 12px;
+}
+@media screen and (max-width: 768px) {
+  .flexRowContent--product-card-actions {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.flexRowContent--home-content-container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .flexRow--topbar-interactions {

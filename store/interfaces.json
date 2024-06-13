@@ -20,5 +20,8 @@
   },
   "trust-vox-stars": {
     "component": "TrustVoxStars"
+  },
+  "add-to-cart-event": {
+    "component": "HandleAddToCartPixelEvent"
   }
 }
