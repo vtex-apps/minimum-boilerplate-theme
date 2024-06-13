@@ -1,0 +1,110 @@
+{
+  "flex-layout.col#explore-our-categories-content": {
+    "title": "Coluna: Conteúdo de categorias",
+    "props": {
+      "blockClass": "explore-our-categories-content"
+    },
+    "children": [
+      "rich-text#our-categories-title",
+      "responsive-layout.desktop#our-categories-cards-section",
+      "responsive-layout.mobile#our-categories-cards-section"
+    ]
+  },
+  "responsive-layout.desktop#our-categories-cards-section": {
+    "title": "Desktop: Cards de categorias",
+    "children": ["flex-layout.row#our-categories-cards-section"]
+  },
+  "responsive-layout.mobile#our-categories-cards-section": {
+    "title": "Mobile: Cards de categorias",
+    "children": ["flex-layout.col#our-categories-cards-section"]
+  },
+  "flex-layout.col#our-categories-cards-section": {
+    "title": "Coluna: Cards de categorias",
+    "props": {
+      "blockClass": "our-categories-cards-section"
+    },
+    "children": [
+      "info-card#our-categories-main-image",
+      "flex-layout.row#our-categories-cards"
+    ]
+  },
+  "flex-layout.row#our-categories-cards-section": {
+    "title": "Linha: Cards de categorias",
+    "props": {
+      "blockClass": "our-categories-cards-section"
+    },
+    "children": [
+      "info-card#our-categories-main-image",
+      "flex-layout.row#our-categories-cards"
+    ]
+  },
+  "flex-layout.row#our-categories-cards": {
+    "title": "Linha: Cards de categorias",
+    "props": {
+      "blockClass": "our-categories-cards-content",
+      "fullWidth": true,
+      "colSizing": "auto"
+    },
+    "children": [
+      "info-card#our-categories-card-1",
+      "info-card#our-categories-card-2",
+      "info-card#our-categories-card-3",
+      "info-card#our-categories-card-4"
+    ]
+  },
+  "rich-text#our-categories-title": {
+    "title": "Título de categorias",
+    "props": {
+      "blockClass": "our-categories-title",
+      "text": "Explore nossas categorias"
+    }
+  },
+  "info-card#our-categories-main-image": {
+    "title": "Imagem principal de categorias",
+    "props": {
+      "blockClass": "our-categories-main-image",
+      "imageUrl": "/arquivos/roland-piano.png",
+      "callToActionText": "Seu piano ideal \n está aqui, confira"
+    }
+  },
+  "info-card#our-categories-card-1": {
+    "title": "Card de categoria 1",
+    "props": {
+      "blockClass": "our-categories-card",
+      "imageUrl": "/arquivos/teclados-roland.png",
+      "callToActionText": "Teclados",
+      "callToActionUrl": "/roland/teclados",
+      "imageActionUrl": "/roland/teclados"
+    }
+  },
+  "info-card#our-categories-card-2": {
+    "title": "Card de categoria 2",
+    "props": {
+      "blockClass": "our-categories-card",
+      "imageUrl": "/arquivos/caixas-roland.png",
+      "callToActionText": "Pianos",
+      "callToActionUrl": "/roland/pianos",
+      "imageActionUrl": "/roland/pianos"
+    }
+  },
+  "info-card#our-categories-card-3": {
+    "title": "Card de categoria 3",
+    "props": {
+      "blockClass": "our-categories-card",
+      "imageUrl": "/arquivos/baterias-e-percurssao.png",
+      "callToActionText": "Baterias e Percussão",
+      "callToActionUrl": "/roland/baterias-e-percussão",
+      "imageActionUrl": "/roland/baterias-e-percussão"
+    }
+  },
+  "info-card#our-categories-card-4": {
+    "title": "Card de categoria 4",
+    "props": {
+      "blockClass": "our-categories-card",
+      "imageUrl": "/arquivos/producao-musical.png",
+      "callToActionText": "Produção Musical",
+      "callToActionUrl": "/roland/fones-de-ouvido",
+      "imageActionUrl": "/roland/fones-de-ouvido"
+    }
+  }
+}

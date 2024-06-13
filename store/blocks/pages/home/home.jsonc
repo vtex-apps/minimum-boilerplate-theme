@@ -2,7 +2,8 @@
   "store.home": {
     "blocks": [
       "flex-layout.row#main-banner",
-      "flex-layout.row#simple-shelf-container-1"
+      "flex-layout.row#simple-shelf-container-1",
+      "flex-layout.row#explore-our-categories"
     ],
     "props": {
       "blockClass": "home"
@@ -17,5 +18,13 @@
       "blockClass": ["main-banner"]
     },
     "children": ["list-context.image-list#home.slider-main"]
+  },
+  "flex-layout.row#explore-our-categories": {
+    "title": "Linha: Expore nossas categorias",
+    "props": {
+      "blockClass": ["explore-our-categories", "home-content-container"],
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#explore-our-categories-content"]
   }
 }
