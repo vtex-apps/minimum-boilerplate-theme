@@ -138,6 +138,13 @@
   height: 100%;
 }
 
+.imageElement--simple-banner-image {
+  padding: 48px 32px;
+}
+.imageElement--simple-banner-image.imageElement--mobile {
+  padding: 16px;
+}
+
 .container {
   width: 100%;
   max-width: 100%;

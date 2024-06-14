@@ -1,0 +1,40 @@
+{
+  "flex-layout.row#simple-banner": {
+    "title": "Banner Simples",
+    "props": {
+      "blockClass": ["simple-banner", "home-content-container"],
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "responsive-layout.desktop#simple-banner",
+      "responsive-layout.mobile#simple-banner"
+    ]
+  },
+  "responsive-layout.desktop#simple-banner": {
+    "title": "Desktop",
+    "children": ["image#desktop-simple-banner"]
+  },
+  "responsive-layout.mobile#simple-banner": {
+    "title": "Mobile",
+    "children": ["image#mobile-simple-banner"]
+  },
+  "image#desktop-simple-banner": {
+    "title": "Imagem",
+    "props": {
+      "src": "/arquivos/simple-banner-desktop-home.png",
+      "alt": "Banner simples desktop",
+      "link": "#",
+      "blockClass": ["simple-banner-image", "desktop"]
+    }
+  },
+  "image#mobile-simple-banner": {
+    "title": "Imagem",
+    "props": {
+      "src": "/arquivos/simple-banner-mobile.png",
+      "alt": "Banner simples mobile",
+      "link": "#",
+      "blockClass": ["simple-banner-image", "mobile"]
+    }
+  }
+}
