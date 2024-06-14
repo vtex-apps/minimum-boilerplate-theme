@@ -13,6 +13,11 @@
   text-decoration: none;
   margin-right: 17px;
 }
+@media screen and (max-width: 768px) {
+  .link--section-title {
+    margin-right: 8px;
+  }
+}
 
 .label--section-title {
   color: #000;
