@@ -10,6 +10,11 @@
   align-items: center;
   gap: 4px;
   margin-bottom: 2px;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 0;
+  }
 }
 
 .newSpotPriceValue--product-summary-price {
@@ -19,6 +24,13 @@
   line-height: 28px;
   color: #18181B;
   letter-spacing: -0.2px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
 }
 
 .spotPriceSavingsPercentage--product-summary-price {
@@ -28,7 +40,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 16px;
-  padding: 4px 8px;
+  padding: 2px 8px;
   border-radius:  2px;
   border: 2px solid  #FF5A00;
   max-width: 43px;
@@ -39,6 +51,12 @@
 
   &::before {
     content: '-'
+  }
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    right: 0;
+    margin-top: 21px;
   }
 }
 
@@ -54,6 +72,12 @@
   &::before,
   &::after {
     display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: left;
+    height: 50px;
   }
 }
 

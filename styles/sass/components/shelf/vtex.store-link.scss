@@ -1,6 +1,10 @@
 .link--section-title {
   text-decoration: none;
   margin-right: 17px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 8px;
+  }
 }
 .label--section-title {
   color:  #000;
