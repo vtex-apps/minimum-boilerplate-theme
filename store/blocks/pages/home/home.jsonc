@@ -1,11 +1,13 @@
 {
   "store.home": {
     "blocks": [
+      "global-styles",
       "flex-layout.row#main-banner",
       "flex-layout.row#simple-shelf-container-1",
       "flex-layout.row#explore-our-categories",
       "flex-layout.row#simple-shelf-container-1",
-      "flex-layout.row#simple-banner"
+      "flex-layout.row#simple-banner",
+      "flex-layout.row#blog-posts"
     ],
     "props": {
       "blockClass": "home"
@@ -28,5 +30,13 @@
       "fullWidth": true
     },
     "children": ["flex-layout.col#explore-our-categories-content"]
+  },
+  "flex-layout.row#blog-posts": {
+    "title": "Blog Posts",
+    "props": {
+      "blockClass": ["blog-posts", "home-content-container"],
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#blog-posts-content"]
   }
 }

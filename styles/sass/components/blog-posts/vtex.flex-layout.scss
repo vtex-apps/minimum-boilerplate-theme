@@ -1,0 +1,13 @@
+.flexRow--blog-posts {
+  background:  #18181B;
+  padding: 48px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 24px 16px;
+  }
+}
+
+.flexCol--blog-posts-content {
+  max-width: 1248px;
+  margin: 0 auto;
+}

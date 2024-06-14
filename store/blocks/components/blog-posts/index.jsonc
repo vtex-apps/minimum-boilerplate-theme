@@ -1,0 +1,34 @@
+{
+  "flex-layout.col#blog-posts-content": {
+    "title": "Conteúdo: Blog Posts",
+    "props": {
+      "blockClass": ["blog-posts-content"]
+    },
+    "children": ["rich-text#blog-posts-title", "flex-layout.row#home-posts"]
+  },
+  "rich-text#blog-posts-title": {
+    "title": "Título: Blog Posts",
+    "props": {
+      "text": "Blog Roland",
+      "blockClass": ["blog-posts-title"]
+    }
+  },
+  "flex-layout.row#home-posts": {
+    "title": "Posts do blog",
+    "props": {
+      "blockClass": ["home-posts"]
+    },
+    "children": ["blog-category-preview.wordpress-category-preview#blog-home"]
+  },
+  
+  "blog-category-preview.wordpress-category-preview#blog-home": {
+    "props": {
+      "category": 4,
+      "numberOfPosts": 3,
+      "showDates": false,
+      "showExcerpts": true,
+      "showPostButton": true,
+      "blockClass": "blog-posts-home"
+    }
+  }
+}

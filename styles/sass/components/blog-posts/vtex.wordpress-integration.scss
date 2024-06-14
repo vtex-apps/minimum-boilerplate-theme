@@ -1,0 +1,120 @@
+.categoryBlockTitle--blog-posts-home,
+.categoryBlockLink--blog-posts-home {
+  display: none;
+}
+
+.categoryBlockContainer--blog-posts-home {
+  padding: 0!important;
+}
+
+.categoryBlockFlex--blog-posts-home {
+  margin: 0!important;
+}
+
+.categoryBlockFlexItem--blog-posts-home {
+  padding: 0;
+  margin: 0;
+  max-width: 400px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+  }
+
+  .teaserContainer--blog-posts-home {
+    padding: 32px;
+    border-radius: 2px;
+    background: rgb(0, 0, 0);
+    height: 100%;
+
+    @media screen and (max-width: 768px) {
+      border-bottom: 2px solid  #FF5A00;
+    }
+    
+
+    :global(.vtex-card) {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: 100%;
+    }
+
+    .teaserImageContainer--blog-posts-home {
+      height: 200px;
+    }
+
+    .titleAndExcerptContainer--blog-posts-home,
+    .teaserImageContainer--blog-posts-home,
+    :global(.vtex-card) {
+      background: rgb(0, 0, 0);
+    }
+
+    .teaserImage--blog-posts-home {
+      max-width: 336px;
+      max-height: 200px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .teaserBody--blog-posts-home {
+      padding: 0;
+      margin: 0 {
+        top: 8px;
+      };
+    }
+
+    .teaserTitle--blog-posts-home {
+      overflow: hidden;
+      color:  #FFF;
+      text-overflow: ellipsis;
+      font-family: "Proxima Nova";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -0.2px;
+      text-align: left;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      padding: 0;
+      height: 56px;
+
+      .teaserTitleLink--blog-posts-home {
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+
+    .teaserShowPostButton--blog-posts-home {
+      margin-top: 8px;
+      :global(.vtex-button) {
+        background: none;
+        border: none;
+        padding: 0;
+        min-height: unset;
+        margin-top: 8px;
+      }
+
+      :global(.vtex-button__label) {
+        font-size: 0;
+        color: #FFF;
+        font-family: "Proxima Nova";
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        text-decoration-line: underline;
+        padding: 0;
+        text-transform: math-auto;
+
+        &::before {
+          content: "Ler mais";
+          font-size: 14px;
+
+        }
+        
+      }
+    }
+  }
+}
