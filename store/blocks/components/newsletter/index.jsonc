@@ -1,0 +1,117 @@
+{
+  "responsive-layout.desktop#newsletter-content": {
+    "title": "Desktop",
+    "children": [
+      "flex-layout.col#newsletter-content",
+      "flex-layout.row#newsletter-images-desktop"
+    ]
+  },
+  "responsive-layout.mobile#newsletter-content": {
+    "title": "Mobile",
+    "children": ["flex-layout.col#newsletter-content-mobile"]
+  },
+  "flex-layout.col#newsletter-content": {
+    "title": "Newsletter Conteúdo",
+    "props": {
+      "blockClass": ["newsletter-content"],
+      "preventVerticalStretch": true
+    },
+    "children": ["rich-text#newsletter-title", "newsletter-form"]
+  },
+  "flex-layout.col#newsletter-content-mobile": {
+    "title": "Newsletter Conteúdo",
+    "props": {
+      "blockClass": ["newsletter-content"],
+      "preventVerticalStretch": true
+    },
+    "children": ["rich-text#newsletter-title-mobile", "newsletter-form#mobile"]
+  },
+  "rich-text#newsletter-title": {
+    "title": "Newsletter Título",
+    "props": {
+      "text": "Se inscreva e receba novidades, lançamentos \ne promoções em seu e-mail.",
+      "blockClass": ["newsletter-title"]
+    }
+  },
+  "rich-text#newsletter-title-mobile": {
+    "title": "Newsletter Título",
+    "props": {
+      "text": "Se inscreva e receba novidades, lançamentos e promoções em seu e-mail.",
+      "blockClass": ["newsletter-title"]
+    }
+  },
+  "newsletter-form": {
+    "title": "Formulário de Newsletter",
+    "props": {
+      "blockClass": ["newsletter-form"]
+    },
+    "children": [
+      "newsletter-input-name",
+      "newsletter-input-email",
+      "newsletter-submit",
+      "newsletter-checkbox-confirmation"
+    ]
+  },
+  "newsletter-form#mobile": {
+    "title": "Formulário de Newsletter",
+    "props": {
+      "blockClass": ["newsletter-form"]
+    },
+    "children": [
+      "newsletter-input-name",
+      "newsletter-input-email",
+      "newsletter-submit",
+      "newsletter-checkbox-confirmation",
+      "image#newsletter-1"
+    ]
+  },
+  "newsletter-input-name": {
+    "props": {
+      "placeholderText": "Seu nome"
+    }
+  },
+  "newsletter-input-email": {
+    "props": {
+      "placeholderText": "Seu e-mail"
+    }
+  },
+  "newsletter-submit": {
+    "props": {
+      "submitButtonLabel": "Cadastrar"
+    }
+  },
+  "newsletter-checkbox-confirmation": {
+    "props": {
+      "checkboxLabel": "Ao me cadastrar, declaro que estou de acordo com os {firstLink}.",
+      "firstLabelLink": {
+        "url": "https://www.roland.com/br/privacy/",
+        "text": "termos de uso e privacidade"
+      }
+    }
+  },
+  "flex-layout.row#newsletter-images-desktop": {
+    "title": "Newsletter Imagens",
+    "props": {
+      "blockClass": ["newsletter-images"],
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": ["image#newsletter-1", "image#newsletter-2"]
+  },
+  "image#newsletter-1": {
+    "title": "Imagem 1",
+    "props": {
+      "src": "/arquivos/newsletter-image-1.png",
+      "alt": "Newsletter 1",
+      "blockClass": ["newsletter-image", "newsletter-1"]
+    }
+  },
+  "image#newsletter-2": {
+    "title": "Imagem 2",
+    "props": {
+      "src": "/arquivos/newsletter-image-2.png",
+      "alt": "Newsletter 2",
+      "blockClass": ["newsletter-image", "newsletter-2"]
+    }
+  }
+}

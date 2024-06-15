@@ -1,0 +1,19 @@
+.paragraph--newsletter-title {
+  margin: 0 {
+    bottom: 24px;
+  }
+  color:  #FFF;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 32px;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+}

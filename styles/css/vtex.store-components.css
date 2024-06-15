@@ -138,6 +138,17 @@
   height: 100%;
 }
 
+.imageElement--newsletter-image {
+  height: fit-content;
+  align-self: center;
+}
+@media screen and (max-width: 768px) {
+  .imageElement--newsletter-image {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+
 .imageElement--simple-banner-image {
   padding: 48px 32px;
 }
