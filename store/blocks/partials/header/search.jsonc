@@ -3,10 +3,8 @@
     "blocks": ["autocomplete-result-list.v2#roland"],
     "title": "Barra de Busca",
     "props": {
-      "openAutocompleteOnFocus": true,
       "placeholder": "Busque por produtos...",
-      "blockClass": "search-bar",
-      "autoFocus": true
+      "blockClass": "search-bar"
     }
   },
   "search-bar#sticky": {
