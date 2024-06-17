@@ -201,9 +201,9 @@
 }
 .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore:hover::before {
   border-radius: var(--radius-rounded-sm, 2px);
-  border: 1.25px solid var(--border-brand-primary-base, #0064FF);
-  background: var(--bg-brand-primary-subtlest-hover, #E2EDF7);
-  color: #0064FF;
+  border: 1.25px solid var(--border-brand-primary-base, #EE8146);
+  background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+  color: #FF5A00;
 }
 
 .close-btn {

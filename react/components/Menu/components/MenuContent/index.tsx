@@ -108,7 +108,7 @@ const MenuContent = ({ staticLink }: MenuContentProps) => {
                         Ver tudo em {name}
                       </a>
                     </div>
-                    {isMobile && (
+                    {isMobile && departmentImageMobile?.src && (
                       <img
                         className={styles.departmentImageMobile}
                         src={departmentImageMobile?.src}
@@ -156,7 +156,7 @@ const MenuContent = ({ staticLink }: MenuContentProps) => {
         </ul>
         {isMobile && (
           <a
-            href="https://sel1786--boss.myvtex.com/"
+            href="https://releaseboss--boss.myvtex.com/"
             className={styles.brandSwitcherMobile}
           />
         )}
