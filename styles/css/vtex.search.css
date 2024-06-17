@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*
+0 - 600PX: Phone
+600 - 900px: Table portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our nortal styles apply
+1800px + : Big desktop
+*/
+/* Media Query M3 */
+/* Colors */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
+/* Grid breakpoints */
+.biggy-autocomplete-wrapper {
+  max-width: 698px;
+}
+@media screen and (max-width: 1025px) {
+  .biggy-autocomplete-wrapper {
+    width: 91vw;
+  }
+}
+.biggy-autocomplete-wrapper .itemList--history {
+  display: none;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete {
+  flex-direction: row !important;
+  left: 17px;
+  top: 17px;
+  padding: 0;
+  border-radius: var(--radius-rounded, 4px);
+  border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  background: var(--elevation-overlay, #FFF);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05), 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width: 1025px) {
+  .biggy-autocomplete-wrapper .biggy-autocomplete {
+    flex-direction: column-reverse !important;
+  }
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemList--suggestion {
+  max-width: 232px;
+}
+@media screen and (max-width: 1025px) {
+  .biggy-autocomplete-wrapper .biggy-autocomplete .itemList--suggestion {
+    border-top: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+    max-width: 100%;
+  }
+  .biggy-autocomplete-wrapper .biggy-autocomplete .itemList--suggestion .itemListTitle {
+    padding: 20px 24px;
+  }
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemList--suggestion .itemListTitle::before {
+  content: "Sugestões";
+  font-weight: 600;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListTitle {
+  margin: 0;
+  padding: 20px;
+  font-size: 0;
+  text-transform: unset;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListTitle::before {
+  content: "Termos sugeridos";
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+@media screen and (max-width: 1025px) {
+  .biggy-autocomplete-wrapper .biggy-autocomplete .itemListTitle {
+    padding: 20px;
+  }
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList {
+  max-height: 216px;
+  overflow: scroll;
+  margin-right: 4px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList::-webkit-scrollbar {
+  width: 4px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListList::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: var(--border-brand-primary-base, #EE8146);
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListItem .itemListSubItem {
+  display: none;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListLink {
+  padding: 10px 12px;
+  margin: 0 12px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  max-width: 307px;
+  gap: 8px;
+  transition: all 0.1s ease-in-out;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListLink .itemListPrefix {
+  height: fit-content;
+  color: var(--text-brand-secondary-base, #2B2B3A);
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: var(--icon-accent-brand-subtlest, #FBE5D8);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .itemListLink .itemListLinkTitle {
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListTitle {
+  margin: 0;
+  margin-top: 12px;
+  margin-left: 12px;
+  padding: 0;
+  padding-bottom: 12px;
+  color: var(--text-neutral-bold, #18181B);
+  /* text-sm/medium */
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.14px;
+  text-transform: math-auto;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList {
+  margin: 0;
+  margin-top: 12px;
+  flex-direction: column !important;
+  max-height: 282px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList::-webkit-scrollbar {
+  width: 4px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList::-webkit-scrollbar-thumb {
+  background-color: #D4D4D8;
+  border-radius: 20px;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList::-webkit-scrollbar-track {
+  background: transparent;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList .tileListItem :global(.vtex-product-summary-2-x-containerNormal) {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListList {
+    max-height: 285px;
+  }
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+@media screen and (max-width: 768px) {
+  .biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter {
+    right: 12px;
+  }
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore {
+  font-size: 0;
+  text-decoration: none;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore::before {
+  content: "Ver tudo";
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+  background: var(--Gray-Scale-White, #FFF);
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 4px 16px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  transition: all 0.1s ease-in-out;
+}
+.biggy-autocomplete-wrapper .biggy-autocomplete .tileList .tileListFooter .tileListSeeMore:hover::before {
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1.25px solid var(--border-brand-primary-base, #EE8146);
+  background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+  color: #FF5A00;
+}
+
+.close-btn {
+  display: none;
+}

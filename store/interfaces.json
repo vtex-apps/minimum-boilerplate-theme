@@ -3,5 +3,19 @@
     "component": "Topbar",
     "composition": "children",
     "allowed": "*"
+  },
+  "menu": {
+    "component": "Menu",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "b8-minicart-summary": {
+    "component": "MinicartSummary"
+  },
+  "b8-shipping-bar": {
+    "component": "ShippingBar"
+  },
+  "custom-price-minicart": {
+    "component": "MinicartCustomPrice"
   }
 }

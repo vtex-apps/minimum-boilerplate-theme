@@ -1,0 +1,36 @@
+{
+  "list-context.image-list#home.slider-main": {
+    "children": ["slider-layout#banner-home"],
+    "props": {
+      "images": [
+        {
+          "image": "assets/imgs/main-banner-home.png",
+          "mobileImage": "assets/imgs/main-banner-home-mobile.png",
+          "description": "Exemplo 01"
+        },
+        {
+          "image": "assets/imgs/main-banner-home.png",
+          "mobileImage": "assets/imgs/main-banner-home-mobile.png",
+          "description": "Exemplo 01"
+        }
+      ]
+    }
+  },
+  "slider-layout#banner-home": {
+    "title": "Banner Home",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "showNavigationArrows": "never",
+      "infinite": true,
+      "blockClass": "banner-home",
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": true
+      }
+    }
+  }
+}

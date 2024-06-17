@@ -1,0 +1,56 @@
+/* Colors */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
+
+$color-black: #000000;
+$color-black600: #211f1f;
+
+$color-white: #ffffff;
+
+$color-gray: #6c6c6c;
+$color-gray2: #7d7d7d;
+$color-gray3: #f0f0f0;
+$color-gray4: #c4c4c4;
+$color-gray5: #e5e5e5;
+$color-gray6: #777777;
+$color-gray7: #8d8d8d;
+$color-gray8: #686868;
+$color-gray9: #f2f2f2;
+$color-gray10: #363636;
+
+$color-gray400: #e0e0e0;
+$color-gray500: #bdbdbd;
+$color-gray600: #303030;
+$color-gray700: #918a8a;
+$color-gray800: #828282;
+$color-gray900: #333333;
+
+$color-blue: #4267b2;
+
+$color-green: #4caf50;
+
+$color-orange: #ff5a00;
+$color-orange--hover: #e65100;
+
+$color-blue: #0064ff;
+$color-blue--hover: #055ada;
+
+$color-red: #e1251b;
+$color-red--hover: #c51f16;
+
+/* Grid breakpoints */
+$grid-breakpoints: (
+    xs: 0,
+    cstm: 400,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+) !default;
+
+$z-index: (
+    level1: 5,
+    level2: 10,
+    level3: 15,
+    level4: 20,
+    level5: 25,
+) !default;

@@ -1,0 +1,58 @@
+/*
+0 - 600PX: Phone
+600 - 900px: Table portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our nortal styles apply
+1800px + : Big desktop
+*/
+/* Media Query M3 */
+/* Colors */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
+/* Grid breakpoints */
+.headerRowBackground--topbar-container {
+  position: relative;
+}
+
+.headerRowContainer--main-container {
+  display: flex;
+  width: 1440px;
+  padding: 16px 32px;
+  margin: 0 auto;
+  align-items: center;
+  background: #FFF;
+  justify-content: space-between;
+}
+
+.headerRowContainer--topbar-container {
+  background-color: black;
+}
+
+.headerStickyRow--desktop {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.headerStickyRow--main-container {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.headerStickyRow--search-container {
+  position: sticky;
+  top: 49.39px;
+  z-index: 99;
+}
+
+@media screen and (max-width: 1025px) {
+  .headerStickyRow--search-container {
+    padding: 0 16px 12px 16px;
+    background-color: #fff;
+  }
+  .headerRowContainer--main-container {
+    padding: 12px 16px;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+}

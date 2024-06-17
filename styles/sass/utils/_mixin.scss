@@ -1,0 +1,72 @@
+// MEDIA QUERY MANAGER
+/*
+0 - 600PX: Phone
+600 - 900px: Table portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our nortal styles apply
+1800px + : Big desktop
+*/
+@mixin respond-phone{
+  @media (max-width: 600px) {@content };
+}
+
+// - phone 600px
+// - tab-port 900px
+// - tab-land 600px
+// - big-desktop 600px
+// 1em = 16px
+@mixin respond($breakpoint){
+  @if $breakpoint == iphonex {
+      @media only screen and (max-width: 23.43em) { @content }; //375px
+  }
+  @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) { @content }; //600px
+  }
+  @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) { @content }; //900px
+  }
+  @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) { @content }; //1200px
+  }
+  @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content }; //1800px
+  }
+}
+// 86em = 1.376
+// 90em = 1440
+//80em = 1280
+@mixin clearFix(){
+  &:after {
+      content: " "; /* Older browser do not support empty content */
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+   }
+}
+
+/* Media Query M3 */
+
+@mixin mq($width, $type: min) {
+	@if map_has_key($grid-breakpoints, $width) {
+		$width: map_get($grid-breakpoints, $width);
+		@if $type == max {
+			$width: $width - 1px;
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+
+@mixin mq_range($min, $max) {
+	@if (map_has_key($grid-breakpoints, $min) and map_has_key($grid-breakpoints, $max)) {
+
+		$width_max: map_get($grid-breakpoints, $max);
+		$width_min: map_get($grid-breakpoints, $min);
+		$width_max: $width_max - 1px;
+		@media only screen and (min-width: $width_min) and (max-width:$width_max) {
+			@content;
+		}
+	}
+}

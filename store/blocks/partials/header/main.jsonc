@@ -1,0 +1,52 @@
+{
+  "header-row#main-desktop": {
+    "children": [
+      "image#logo",
+      "search-bar",
+      "login#desktop",
+      "link#wishlist",
+      "minicart.v2#new"
+    ],
+    "props": {
+      "blockClass": ["main-container", "desktop"]
+    }
+  },
+  "header-row#main-mobile": {
+    "children": ["menu#mobile", "image#logo", "minicart.v2#new"],
+    "props": {
+      "blockClass": ["main-container"]
+    }
+  },
+  "link#wishlist": {
+    "title": "Wishlist",
+    "props": {
+      "href": "/account/#/wishlist",
+      "label": "Meus favoritos",
+      "blockClass": "wishlist"
+    }
+  },
+  "image#logo": {
+    "title": "Logo da loja",
+    "props": {
+      "src": "assets/svgs/roland-logo.svg",
+      "blockClass": "logo",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "login#desktop": {
+    "title": "Login Desktop",
+    "props": {
+      "showIconProfile": true,
+      "iconLabel": "Minha conta",
+      "labelClasses": ["vtex-login-2-x-loginIcon"],
+      "providerPasswordButtonLabel": "Entrar com e-mail",
+      "emailAndPasswordTitle": "Entrar com e-mail e senha",
+      "accessCodeTitle": "Receber código de acesso por e-mail",
+      "emailPraceholder": "EX:@MAIL.COM.BR",
+      "passwordPlaceholder": "adicionar sua senha",
+      "showPasswordVerificationIntoTooltip": true
+    }
+  }
+}

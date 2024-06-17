@@ -1,0 +1,79 @@
+/*
+0 - 600PX: Phone
+600 - 900px: Table portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our nortal styles apply
+1800px + : Big desktop
+*/
+/* Media Query M3 */
+/* Colors */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
+/* Grid breakpoints */
+:global(.vtex-store-header-2-x-headerStickyRow) .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.closeIcon--search-bar {
+  display: none;
+}
+
+.searchBarInnerContainer {
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1px solid var(--border-input-base, #D4D4D8);
+  padding: 9px 16px;
+}
+.searchBarInnerContainer--search-bar--opened {
+  border: 1.5px solid var(--border-focus-base, #EE8146);
+}
+
+.searchBarContainer {
+  max-width: 698px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 2px;
+  background: #FFF;
+  margin: unset;
+}
+.searchBarContainer .searchBarIcon--search-bar {
+  background-image: url("assets/svgs/search-icon.svg");
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  padding-left: 8px;
+}
+.searchBarContainer .searchBarIcon--search-bar .searchIcon {
+  display: none;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input) {
+  width: 100%;
+  padding: 0;
+  border-right: 1px solid var(--border-input-base, #D4D4D8);
+  margin-right: 8px;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .imageElementLink--logo {
+    max-width: 111px;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "header-layout.mobile#roland": {
+    "title": "Header Mobile",
+    "children": [
+      "header-row#topbar-mobile",
+      "header-row#main-mobile",
+      "header-row#search-mobile"
+    ]
+  },
+  "header-row#search-mobile": {
+    "props": {
+      "blockClass": ["search-container"]
+    },
+    "children": ["search-bar"]
+
+  },
+  "menu#mobile": {
+    "title": "Menu Customizado - Mobile"
+  }
+}
