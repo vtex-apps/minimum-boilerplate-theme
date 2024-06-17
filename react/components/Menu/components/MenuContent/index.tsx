@@ -155,10 +155,7 @@ const MenuContent = ({ staticLink }: MenuContentProps) => {
           })}
         </ul>
         {isMobile && (
-          <a
-            href="https://releaseboss--boss.myvtex.com/"
-            className={styles.brandSwitcherMobile}
-          />
+          <a href="/loja/boss" className={styles.brandSwitcherMobile} />
         )}
         {isMobile && (
           <a
