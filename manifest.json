@@ -63,12 +63,5 @@
     "vtex.store-graphql": "2.x",
     "vtex.store-image": "0.x"
   },
-  "billingOptions": {
-    "termsURL": "",
-    "support": {
-      "url": "https://support.vtex.com/hc/requests"
-    },
-    "free": true
-  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
