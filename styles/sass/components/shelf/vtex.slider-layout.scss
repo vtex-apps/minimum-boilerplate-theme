@@ -14,8 +14,10 @@
   background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="20" fill="white"/><path d="M21.5 25L16.5 20L21.5 15" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat!important;
   left: 1px;
 
-  &:hover {
-    background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="%23FDF2EC"/><path d="M21.5 25L16.5 20L21.5 15" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')no-repeat !important;
+  @media screen and (min-width: 768px) {
+    &:hover {
+      background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="%23FDF2EC"/><path d="M21.5 25L16.5 20L21.5 15" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')no-repeat !important;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -31,9 +33,11 @@
   background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"/><path d="M18.5 25L23.5 20L18.5 15" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')no-repeat !important;
   right: 15px;
   filter: unset;
-    &:hover {
-    background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="%23FDF2EC"/><path d="M18.5 25L23.5 20L18.5 15" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')no-repeat !important;
 
+  @media screen and (min-width: 768px) {
+    &:hover {
+      background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="%23FDF2EC"/><path d="M18.5 25L23.5 20L18.5 15" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>')no-repeat !important;
+    }
   }
 
   @media screen and (max-width: 768px) {
