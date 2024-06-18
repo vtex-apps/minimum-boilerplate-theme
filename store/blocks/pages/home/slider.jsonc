@@ -26,7 +26,7 @@
       },
       "showNavigationArrows": "never",
       "infinite": true,
-      "blockClass": "banner-home",
+      "blockClass": ["banner-home", "slider-main-roland" ],
       "autoplay": {
         "timeout": 3000,
         "stopOnHover": true
