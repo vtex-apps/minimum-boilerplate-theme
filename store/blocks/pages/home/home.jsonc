@@ -5,7 +5,7 @@
       "flex-layout.row#simple-shelf-container-1",
       "flex-layout.row#explore-our-categories",
       "flex-layout.row#simple-shelf-container-1",
-      "flex-layout.row#simple-banner"
+      "flex-layout.row#simple-double-banner"
     ],
     "props": {
       "blockClass": "home"

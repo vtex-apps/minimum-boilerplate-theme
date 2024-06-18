@@ -138,11 +138,12 @@
   height: 100%;
 }
 
-.imageElement--simple-banner-image {
-  padding: 48px 32px;
+.imageElement--simple-banner-image-1 {
+  margin-right: 24px;
 }
-.imageElement--simple-banner-image.imageElement--mobile {
-  padding: 16px;
+
+.imageElement--mobile {
+  width: 100%;
 }
 
 .container {

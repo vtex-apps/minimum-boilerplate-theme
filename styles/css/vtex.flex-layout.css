@@ -125,8 +125,18 @@
   }
 }
 
-.flexRowContent--simple-banner {
+.flexRowContent--simple-double-banner {
+  padding: 48px 32px;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .flexRowContent--simple-double-banner {
+    padding: 32px 16px;
+  }
+}
+
+.flexCol--mobile-double-banner-content {
+  gap: 16px;
 }
 
 .flexRowContent--home-content-container {
