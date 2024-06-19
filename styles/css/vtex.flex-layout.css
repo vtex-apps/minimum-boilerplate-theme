@@ -238,8 +238,8 @@
   }
 }
 
-.flexRow--minicart-footer {
-  margin-top: 14px;
+.flexRow--minicart-footer :global(.vtex-store-components-3-x-container) {
+  padding: 0 !important;
 }
 
 .flexCol--default-empty-state {
