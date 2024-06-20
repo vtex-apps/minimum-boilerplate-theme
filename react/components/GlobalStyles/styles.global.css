@@ -1,17 +1,4 @@
-.vtex-wordpress-integration-2-x-teaserBody > p {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    color: #FFF;
-    text-overflow: ellipsis;
-    font-family: "Proxima Nova";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-
+  .vtex-store-newsletter-1-x-confirmationCheckboxContainer .vtex-checkbox__inner-container.bg-action-primary  {
+    background-color: #FF5A00;
+    border-color: #FF5A00!important;
   }

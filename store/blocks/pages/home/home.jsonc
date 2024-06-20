@@ -44,8 +44,7 @@
     "title": "Newsletter",
     "props": {
       "blockClass": ["newsletter", "home-content-container"],
-      "fullWidth": true,
-      "preventHorizontalStretch": true
+      "fullWidth": true
     },
     "children": [
       "responsive-layout.desktop#newsletter-content",

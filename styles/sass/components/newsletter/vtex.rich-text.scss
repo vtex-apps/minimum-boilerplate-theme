@@ -15,5 +15,34 @@
     font-size: 20px;
     line-height: 28px;
     letter-spacing: -0.2px;
+    margin-bottom: 8;
   }
+}
+
+.paragraph--success-title {
+  color:  #FFF;
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+  margin: 0 {
+    top: 16px;
+    bottom: 8px;
+  };
+
+}
+
+.paragraph--success-text {
+  color:  #D4D4D8;
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin: 0;
 }

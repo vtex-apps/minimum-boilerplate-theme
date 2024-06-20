@@ -1,22 +1,11 @@
 {
   "responsive-layout.desktop#newsletter-content": {
     "title": "Desktop",
-    "children": [
-      "flex-layout.col#newsletter-content",
-      "flex-layout.row#newsletter-images-desktop"
-    ]
+    "children": ["newsletter-form", "flex-layout.row#newsletter-images-desktop"]
   },
   "responsive-layout.mobile#newsletter-content": {
     "title": "Mobile",
     "children": ["flex-layout.col#newsletter-content-mobile"]
-  },
-  "flex-layout.col#newsletter-content": {
-    "title": "Newsletter Conteúdo",
-    "props": {
-      "blockClass": ["newsletter-content"],
-      "preventVerticalStretch": true
-    },
-    "children": ["rich-text#newsletter-title", "newsletter-form"]
   },
   "flex-layout.col#newsletter-content-mobile": {
     "title": "Newsletter Conteúdo",
@@ -24,7 +13,7 @@
       "blockClass": ["newsletter-content"],
       "preventVerticalStretch": true
     },
-    "children": ["rich-text#newsletter-title-mobile", "newsletter-form#mobile"]
+    "children": ["newsletter-form#mobile", "image#newsletter-mobile"]
   },
   "rich-text#newsletter-title": {
     "title": "Newsletter Título",
@@ -40,10 +29,39 @@
       "blockClass": ["newsletter-title"]
     }
   },
+  "flex-layout.col#newsletter-content": {
+    "title": "Newsletter Conteúdo",
+    "props": {
+      "blockClass": ["newsletter-content"],
+      "preventVerticalStretch": true
+    },
+    "children": ["rich-text#newsletter-title", "flex-layout.row#form-wrapper"]
+  },
   "newsletter-form": {
     "title": "Formulário de Newsletter",
     "props": {
-      "blockClass": ["newsletter-form"]
+      "blockClass": ["newsletter-form"],
+      "SuccessState": "flex-layout.col#newsletter-success"
+    },
+    "children": ["flex-layout.col#newsletter-content"]
+  },
+  "flex-layout.col#newsletter-success": {
+    "title": "Newsletter Sucesso",
+    "props": {
+      "blockClass": ["newsletter-success"]
+    },
+    "children": [
+      "image#success-icon",
+      "rich-text#success-title",
+      "rich-text#success-text"
+    ]
+  },
+  "flex-layout.row#form-wrapper": {
+    "title": "Formulário de Newsletter",
+    "props": {
+      "blockClass": ["form-wrapper"],
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
     },
     "children": [
       "newsletter-input-name",
@@ -55,14 +73,15 @@
   "newsletter-form#mobile": {
     "title": "Formulário de Newsletter",
     "props": {
-      "blockClass": ["newsletter-form"]
+      "blockClass": ["newsletter-form"],
+      "SuccessState": "flex-layout.col#newsletter-success"
     },
     "children": [
+      "rich-text#newsletter-title-mobile",
       "newsletter-input-name",
       "newsletter-input-email",
       "newsletter-submit",
-      "newsletter-checkbox-confirmation",
-      "image#newsletter-1"
+      "newsletter-checkbox-confirmation"
     ]
   },
   "newsletter-input-name": {
@@ -106,12 +125,41 @@
       "blockClass": ["newsletter-image", "newsletter-1"]
     }
   },
+  "image#newsletter-mobile": {
+    "title": "Imagem mobile",
+    "props": {
+      "src": "/arquivos/image-newsletter-mobile.png",
+      "alt": "Newsletter image mobile",
+      "blockClass": ["newsletter-image", "newsletter-1"]
+    }
+  },
   "image#newsletter-2": {
     "title": "Imagem 2",
     "props": {
       "src": "/arquivos/newsletter-image-2.png",
       "alt": "Newsletter 2",
       "blockClass": ["newsletter-image", "newsletter-2"]
+    }
+  },
+  "image#success-icon": {
+    "title": "Ícone de Sucesso",
+    "props": {
+      "src": "assets/svgs/success-icon-newsletter.svg",
+      "blockClass": ["success-icon"]
+    }
+  },
+  "rich-text#success-title": {
+    "title": "Título de Sucesso",
+    "props": {
+      "text": "Cadastro feito com sucesso!",
+      "blockClass": ["success-title"]
+    }
+  },
+  "rich-text#success-text": {
+    "title": "Texto de Sucesso",
+    "props": {
+      "text": "Muito bem. Agora você faz parte da nossa lista e irá receber os melhores conteúdos.",
+      "blockClass": ["success-text"]
     }
   }
 }
