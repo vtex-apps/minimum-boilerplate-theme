@@ -1,0 +1,71 @@
+{
+  "flex-layout.row#simple-double-banner": {
+    "title": "Banner Duplo Simples",
+    "props": {
+      "blockClass": ["simple-double-banner", "home-content-container"],
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "responsive-layout.desktop#simple-double-banner",
+      "responsive-layout.mobile#simple-banner"
+    ]
+  },
+  "responsive-layout.desktop#simple-double-banner": {
+    "title": "Desktop",
+    "children": [
+      "image#desktop-simple-double-banner-1",
+      "image#desktop-simple-double-banner-2"
+    ]
+  },
+  "responsive-layout.mobile#simple-banner": {
+    "title": "Mobile",
+    "children": ["flex-layout.col#mobile-double-banner-content"]
+  },
+  "flex-layout.col#mobile-double-banner-content": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "mobile-double-banner-content"
+    },
+    "children": [
+      "image#mobile-simple-double-banner-1",
+      "image#mobile-simple-double-banner-2"
+    ]
+  },
+  "image#desktop-simple-double-banner-1": {
+    "title": "Imagem",
+    "props": {
+      "src": "/arquivos/simple-banner-1-desktop.png",
+      "alt": "Banner simples desktop",
+      "link": "#",
+      "blockClass": ["simple-banner-image-1", "desktop"]
+    }
+  },
+  "image#desktop-simple-double-banner-2": {
+    "title": "Imagem",
+    "props": {
+      "src": "/arquivos/simple-banner-2-desktop.png",
+      "alt": "Banner simples desktop",
+      "link": "#",
+      "blockClass": ["simple-banner-image-2", "desktop"]
+    }
+  },
+  "image#mobile-simple-double-banner-1": {
+    "title": "Imagem",
+    "props": {
+      "src": "/arquivos/simple-banner-1-mobile.png",
+      "alt": "Banner simples mobile",
+      "link": "#",
+      "blockClass": ["simple-banner-image", "mobile"]
+    }
+  },
+  "image#mobile-simple-double-banner-2": {
+    "title": "Imagem",
+    "props": {
+      "src": "/arquivos/simple-banner-2-mobile.png",
+      "alt": "Banner simples mobile",
+      "link": "#",
+      "blockClass": ["simple-banner-image", "mobile"]
+    }
+  }
+}
