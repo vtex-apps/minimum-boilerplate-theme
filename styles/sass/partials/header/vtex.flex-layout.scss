@@ -247,7 +247,9 @@
 
 //MINICART
 .flexRow--minicart-footer {
-  margin-top: 14px;
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0 !important
+  }
 }
 
 .flexCol--default-empty-state {
