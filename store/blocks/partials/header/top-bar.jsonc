@@ -41,7 +41,7 @@
   "link#boss": {
     "title": "Link para BOSS",
     "props": {
-      "href": "https://sel1786--boss.myvtex.com/",
+      "href": "/loja/boss",
       "label": "boss",
       "blockClass": ["link-boss"]
     }

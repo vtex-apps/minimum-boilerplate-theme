@@ -5,8 +5,7 @@
     "props": {
       "openAutocompleteOnFocus": false,
       "placeholder": "Busque por produtos...",
-      "blockClass": "search-bar",
-      "autoFocus": true
+      "blockClass": "search-bar"
     }
   },
   "search-bar#sticky": {
