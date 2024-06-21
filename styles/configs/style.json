@@ -60,7 +60,7 @@
         "background": {
             "base": "#ffffff",
             "base--inverted": "#00000066",
-            "action-primary": "#292929",
+            "action-primary": "#FF5A00",
             "action-secondary": "#eef3f7",
             "emphasis": "#292929",
             "disabled": "#66666669",

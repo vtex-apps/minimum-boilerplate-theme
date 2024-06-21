@@ -62,7 +62,8 @@
     "vtex.product-context": "0.x",
     "vtex.store-graphql": "2.x",
     "vtex.store-image": "0.x",
-    "vtex.pixel-manager": "1.x"
+    "vtex.pixel-manager": "1.x",
+    "vtex.store-newsletter": "1.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",

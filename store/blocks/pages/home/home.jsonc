@@ -6,8 +6,9 @@
       "flex-layout.row#simple-shelf-container-1",
       "flex-layout.row#explore-our-categories",
       "flex-layout.row#simple-shelf-container-1",
-      "flex-layout.row#blog-posts"
-      "flex-layout.row#simple-double-banner"
+      "flex-layout.row#simple-double-banner",
+      "flex-layout.row#blog-posts",
+      "flex-layout.row#newsletter"
     ],
     "props": {
       "blockClass": "home"
@@ -38,5 +39,16 @@
       "fullWidth": true
     },
     "children": ["flex-layout.col#blog-posts-content"]
+  },
+  "flex-layout.row#newsletter": {
+    "title": "Newsletter",
+    "props": {
+      "blockClass": ["newsletter", "home-content-container"],
+      "fullWidth": true
+    },
+    "children": [
+      "responsive-layout.desktop#newsletter-content",
+      "responsive-layout.mobile#newsletter-content"
+    ]
   }
 }
