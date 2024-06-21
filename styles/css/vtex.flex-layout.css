@@ -121,12 +121,13 @@
   min-height: 334px;
   max-width: 676px;
   width: 100%;
-  margin-right: 48px;
+  margin-right: 44px;
 }
 @media screen and (max-width: 768px) {
   .flexCol--newsletter-success {
     margin-right: 0;
     padding: 0 38px;
+    min-height: 352px;
   }
 }
 
