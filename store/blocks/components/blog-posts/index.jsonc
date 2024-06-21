@@ -18,17 +18,7 @@
     "props": {
       "blockClass": ["home-posts"]
     },
-    "children": ["blog-category-preview.wordpress-category-preview#blog-home"]
-  },
-  
-  "blog-category-preview.wordpress-category-preview#blog-home": {
-    "props": {
-      "category": 4,
-      "numberOfPosts": 3,
-      "showDates": false,
-      "showExcerpts": true,
-      "showPostButton": true,
-      "blockClass": "blog-posts-home"
-    }
+    "children": ["blog-posts"]
   }
+  
 }

@@ -6,7 +6,7 @@
       "flex-layout.row#simple-shelf-container-1",
       "flex-layout.row#explore-our-categories",
       "flex-layout.row#simple-shelf-container-1",
-      "flex-layout.row#simple-banner",
+      "flex-layout.row#simple-double-banner",
       "flex-layout.row#blog-posts",
       "flex-layout.row#newsletter"
     ],
@@ -25,7 +25,7 @@
     "children": ["list-context.image-list#home.slider-main"]
   },
   "flex-layout.row#explore-our-categories": {
-    "title": "Linha: Expore nossas categorias",
+    "title": "Expore nossas categorias",
     "props": {
       "blockClass": ["explore-our-categories", "home-content-container"],
       "fullWidth": true

@@ -26,5 +26,8 @@
   },
   "global-styles": {
     "component": "GlobalStyles"
+  },
+  "blog-posts": {
+    "component": "BlogPosts"
   }
 }

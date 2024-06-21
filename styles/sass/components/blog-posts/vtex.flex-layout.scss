@@ -1,13 +1,23 @@
 .flexRow--blog-posts {
   background:  #18181B;
-  padding: 48px 0;
+  padding: 48px 0 {
+    bottom: 75px;
+  };
 
   @media screen and (max-width: 768px) {
-    padding: 24px 16px;
+    padding: 24px 16px {
+      bottom: 54px;
+    };
   }
 }
 
 .flexCol--blog-posts-content {
   max-width: 1248px;
-  margin: 0 auto;
+  margin: 0 auto {
+    right: 80px;
+  };
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+  }
 }

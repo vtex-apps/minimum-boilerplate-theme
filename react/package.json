@@ -44,7 +44,7 @@
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.5.1",
     "graphql": "^14.6.0",
-    "roland.store-theme": "https://sel1502--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@0.0.1+build1718208117/public/@types/roland.store-theme",
+    "roland.store-theme": "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@0.0.2/public/@types/roland.store-theme",
     "typescript": "3.9.7",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.30.2/public/@types/vtex.add-to-cart-button",
     "vtex.breadcrumb": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.4/public/@types/vtex.breadcrumb",
