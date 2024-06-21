@@ -23,5 +23,11 @@
   },
   "add-to-cart-event": {
     "component": "HandleAddToCartPixelEvent"
+  },
+  "global-styles": {
+    "component": "GlobalStyles"
+  },
+  "blog-posts": {
+    "component": "BlogPosts"
   }
 }
