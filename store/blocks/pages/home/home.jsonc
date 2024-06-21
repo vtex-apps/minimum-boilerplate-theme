@@ -22,7 +22,7 @@
     "children": ["list-context.image-list#home.slider-main"]
   },
   "flex-layout.row#explore-our-categories": {
-    "title": "Linha: Expore nossas categorias",
+    "title": "Expore nossas categorias",
     "props": {
       "blockClass": ["explore-our-categories", "home-content-container"],
       "fullWidth": true
