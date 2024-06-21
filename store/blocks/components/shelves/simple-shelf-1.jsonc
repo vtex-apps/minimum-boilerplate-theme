@@ -1,0 +1,73 @@
+{
+  "flex-layout.row#simple-shelf-container-1": {
+    "title": "Vitrine Simples",
+    "children": ["flex-layout.col#shelf-container-1"],
+    "props": {
+      "blockClass": ["shelf-container", "home-content-container"]
+    }
+  },
+  "flex-layout.col#shelf-container-1": {
+    "title": "Col: Vitrine",
+    "children": [
+      "flex-layout.row#shelf-title-container-1",
+      "flex-layout.row#shelf-slider-container-1"
+    ],
+    "props": {
+      "blockClass": "shelf-container"
+    }
+  },
+  "flex-layout.row#shelf-title-container-1": {
+    "title": "Linha: Título da Shelf",
+    "children": [
+      "rich-text#shelf-section-title-1",
+      "link#shelf-section-show-all-1"
+    ],
+    "props": {
+      "blockClass": "shelf-title-container",
+      "preventHorizontalStretch": true
+    }
+  },
+  "rich-text#shelf-section-title-1": {
+    "title": "Texto: Título da Sessão",
+    "props": {
+      "text": "Titulo da Shelf",
+      "blockClass": "section-title"
+    }
+  },
+  "link#shelf-section-show-all-1": {
+    "title": "Link: Ver todos",
+    "props": {
+      "label": "Ver Tudo",
+      "href": "#",
+      "blockClass": "section-title"
+    }
+  },
+  "flex-layout.row#shelf-slider-container-1": {
+    "title": "Linha: Container da Shelf",
+    "children": ["list-context.product-list#shelf-list-container-1"],
+    "props": {
+      "blockClass": "shelf-container"
+    }
+  },
+  "list-context.product-list#shelf-list-container-1": {
+    "title": "Lista: Shelf de Produtos - Lançamentos",
+    "blocks": ["product-summary.shelf#general"],
+    "children": ["slider-layout#shelf-slider-1"],
+    "props": {
+      "orderBy": "OrderByReleaseDateDESC"
+    }
+  },
+  "slider-layout#shelf-slider-1": {
+    "title": "Slider: Carrosel da Shelf ",
+    "props": {
+      "showPaginationDots": "always",
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": false,
+      "blockClass": "shelf-slider"
+    }
+  }
+}

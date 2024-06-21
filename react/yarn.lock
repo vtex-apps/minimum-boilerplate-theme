@@ -4901,7 +4901,6 @@ rimraf@^3.0.0:
 "roland.store-theme@http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@0.0.2/public/@types/roland.store-theme":
   version "0.0.2"
   resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@0.0.2/public/@types/roland.store-theme#a5e1917adde0a40adf7111f7bceb4b8834ca5ffc"
-
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
@@ -5769,6 +5768,10 @@ verror@1.10.0:
 "vtex.telemarketing@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.telemarketing@2.12.1/public/@types/vtex.telemarketing":
   version "2.12.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.telemarketing@2.12.1/public/@types/vtex.telemarketing#0b43598b66598b4085af04268140ea8a8d84e263"
+
+"vtex.wish-list@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wish-list@1.18.0/public/@types/vtex.wish-list":
+  version "1.18.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wish-list@1.18.0/public/@types/vtex.wish-list#ecca26017681c0a0562e85b8b94e2ba9bef498cd"
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

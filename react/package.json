@@ -95,6 +95,7 @@
     "vtex.store-link": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.9.3/public/@types/vtex.store-link",
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.9/public/@types/vtex.styleguide",
     "vtex.tab-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.tab-layout@0.4.6/public/@types/vtex.tab-layout",
-    "vtex.telemarketing": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.telemarketing@2.12.1/public/@types/vtex.telemarketing"
+    "vtex.telemarketing": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.telemarketing@2.12.1/public/@types/vtex.telemarketing",
+    "vtex.wish-list": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wish-list@1.18.0/public/@types/vtex.wish-list"
   }
 }

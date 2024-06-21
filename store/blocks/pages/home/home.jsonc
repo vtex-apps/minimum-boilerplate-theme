@@ -1,1 +1,21 @@
-{}
+{
+  "store.home": {
+    "blocks": [
+      "flex-layout.row#main-banner",
+      "flex-layout.row#simple-shelf-container-1"
+    ],
+    "props": {
+      "blockClass": "home"
+    },
+    "parent": {
+      "header": "header"
+    }
+  },
+  "flex-layout.row#main-banner": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": ["main-banner"]
+    },
+    "children": ["list-context.image-list#home.slider-main"]
+  }
+}
