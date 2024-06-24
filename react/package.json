@@ -44,7 +44,7 @@
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.5.1",
     "graphql": "^14.6.0",
-    "roland.store-theme": "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@0.0.2/public/@types/roland.store-theme",
+    "roland.store-theme": "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@0.0.7/public/@types/roland.store-theme",
     "typescript": "3.9.7",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.30.2/public/@types/vtex.add-to-cart-button",
     "vtex.breadcrumb": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.4/public/@types/vtex.breadcrumb",
@@ -62,6 +62,7 @@
     "vtex.my-account": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account@1.27.1/public/@types/vtex.my-account",
     "vtex.order-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager",
     "vtex.order-placed": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.17.2/public/@types/vtex.order-placed",
+    "vtex.pixel-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.9.0/public/@types/vtex.pixel-manager",
     "vtex.product-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context",
     "vtex.product-details": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-details@1.22.0/public/@types/vtex.product-details",
     "vtex.product-identifier": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-identifier@0.5.0/public/@types/vtex.product-identifier",
@@ -96,6 +97,7 @@
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.9/public/@types/vtex.styleguide",
     "vtex.tab-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.tab-layout@0.4.6/public/@types/vtex.tab-layout",
     "vtex.telemarketing": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.telemarketing@2.12.1/public/@types/vtex.telemarketing",
-    "vtex.wish-list": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wish-list@1.18.0/public/@types/vtex.wish-list"
+    "vtex.wish-list": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wish-list@1.18.0/public/@types/vtex.wish-list",
+    "vtex.wordpress-integration": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.wordpress-integration@2.25.2/public/@types/vtex.wordpress-integration"
   }
 }
