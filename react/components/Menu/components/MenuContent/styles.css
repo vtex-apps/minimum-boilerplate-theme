@@ -368,25 +368,30 @@
     border-top: 1px solid rgba(156, 160, 174, 0.4);
   }
 
-  .menuItem button:not(.hideCategory) {
+   .menuItem button:not(.hideCategory)
+  .menuItem a:not(.hideCategory) {
     display: flex;
     align-items: center;
     gap: 8px;
     width: 100%;
   }
-  .menuItem button span {
+
+  .menuItem button span,
+  .menuItem a span {
     width: 100%;
     text-align: left;
   }
 
-  .menuItem button:not(.hideCategory):after {
+  .menuItem button:not(.hideCategory):after,
+  .menuItem a:not(.hideCategory):after  {
     content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12L10 8L6 4" stroke="%235A5A66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     width: 16px;
     height: 16px;
     display: block;
   }
 
-  .menuItem button img {
+  .menuItem button img,
+  .menuItem a img {
     width: 54px;
     height: 40px;
     border-radius: var(--radius-rounded, 4px);

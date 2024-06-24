@@ -83,19 +83,21 @@ const MenuContent = ({ staticLink }: MenuContentProps) => {
 
             return (
               <li key={name} className={styles.menuItem}>
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.preventDefault()
-                    event.stopPropagation()
-                    setActiveDepartment(isActive ? null : name)
-                  }}
-                >
-                  {isMobile && (
-                    <img src={departmentThumbImageMobile.src} alt={name} />
-                  )}
-                  <span>{name}</span>
-                </button>
+                <a href={hasCategories ? link : ''}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (hasCategories) {
+                        setActiveDepartment(isActive ? null : name)
+                      }
+                    }}
+                  >
+                    {isMobile && (
+                      <img src={departmentThumbImageMobile.src} alt={name} />
+                    )}
+                    <span>{name}</span>
+                  </button>
+                </a>
                 {hasCategories && (
                   <div className={departmentClasses}>
                     <div className={styles.departmentTitleWrapper}>
