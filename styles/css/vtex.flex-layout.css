@@ -228,6 +228,11 @@
   gap: 16px;
 }
 
+.flexRowContent--home-content-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .flexRow--topbar-interactions {
   max-width: 1440px;
   position: relative;
@@ -515,9 +520,4 @@
   background: #fff;
   top: 0;
   box-shadow: 0 0 1em #222;
-}
-
-.flexRowContent--home-content-container {
-  max-width: 1440px;
-  margin: 0 auto;
 }
