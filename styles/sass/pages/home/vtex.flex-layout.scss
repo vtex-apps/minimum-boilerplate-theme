@@ -3,3 +3,15 @@
   margin: 0 auto;
 }
 
+.flexRow--main-banner {
+  :global(.vtex-store-components-3-x-container) {
+    max-width: 100%;
+  }
+}
+
+.flexRow--shelf-container,
+.flexRow--main-banner {
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0!important;
+  }
+}

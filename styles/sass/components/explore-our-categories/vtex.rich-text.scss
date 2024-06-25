@@ -6,7 +6,9 @@
   font-weight: 500;
   line-height: 40px;
   letter-spacing: -0.32px;
-  margin: 0;
+  margin: 0 {
+    bottom: 32px;
+  };
 }
 
 .container--our-categories-title {

@@ -2,7 +2,10 @@
   padding: 48px 0;
 
   @media screen and (max-width: 768px) {
-    padding-top: 34px;
+    padding: 0 {
+      top: 34px;
+      bottom: 32px
+    }
   }
 }
 
@@ -54,7 +57,6 @@
 
 .flexCol--explore-our-categories-content {
   padding: 0 32px;
-  gap: 32px;
   max-width: 1376px;
   box-sizing: content-box;
 

@@ -35,7 +35,7 @@
   "image#desktop-simple-double-banner-1": {
     "title": "Imagem",
     "props": {
-      "src": "/arquivos/simple-banner-1-desktop.png",
+      "src": "/arquivos/banner-home-roland.png",
       "alt": "Banner simples desktop",
       "link": "#",
       "blockClass": ["simple-banner-image-1", "desktop"]
@@ -53,7 +53,7 @@
   "image#mobile-simple-double-banner-1": {
     "title": "Imagem",
     "props": {
-      "src": "/arquivos/simple-banner-1-mobile.png",
+      "src": "/arquivos/minibanner-roland-home-mobile.png",
       "alt": "Banner simples mobile",
       "link": "#",
       "blockClass": ["simple-banner-image", "mobile"]
