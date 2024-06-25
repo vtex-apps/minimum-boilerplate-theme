@@ -149,6 +149,10 @@
   }
 }
 
+.discountContainer .discountInsideContainer {
+  display: none;
+}
+
 .imageElement--simple-banner-image-1 {
   margin-right: 24px;
 }

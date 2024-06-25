@@ -177,6 +177,10 @@
   margin-bottom: 12px;
 }
 
+.flexColChild--price-container:first-child {
+  min-height: 24px;
+}
+
 .flexCol--shelf-container {
   padding: 48px 32px;
   padding-right: 16px;
@@ -226,6 +230,11 @@
 
 .flexCol--mobile-double-banner-content {
   gap: 16px;
+}
+
+.flexRowContent--home-content-container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .flexRow--topbar-interactions {
@@ -515,9 +524,4 @@
   background: #fff;
   top: 0;
   box-shadow: 0 0 1em #222;
-}
-
-.flexRowContent--home-content-container {
-  max-width: 1440px;
-  margin: 0 auto;
 }
