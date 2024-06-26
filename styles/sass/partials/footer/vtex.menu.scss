@@ -1,0 +1,35 @@
+.menuContainerNav--footer-menu-links {
+  .styledLinkContent--footer-menu-links,
+  .styledLink--highlight {
+      color: #FFF;
+      font-family: "Proxima Nova";
+      font-style: normal;
+  }
+
+  .styledLinkContent--footer-menu-links {
+       font-size: 14px;
+       line-height: 20px;
+       letter-spacing: -0.14px;
+       margin-bottom: 12px;
+      font-weight: 500;
+
+       &:hover {
+        color: $color-orange
+       }
+   
+  }
+
+  .styledLink--highlight .styledLinkContent {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      cursor: default;
+      pointer-events: none;
+
+      &:hover {
+        color: #FFF;
+      }
+  }
+}

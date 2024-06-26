@@ -1,0 +1,172 @@
+.flexRow--footer {
+  background: #000;
+  padding: 32px 0;
+
+  :global(.vtex-store-components-3-x-container) {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .flexRow--wrapper-main,
+  .flexRow--payment-methods-and-security-wrapper,
+  .flexRowContent--signature-wrapper {
+    max-width: 1440px;
+    padding: 0 32px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 639px) {
+      padding: 0 24px
+    }
+  }
+
+  .socialNetworkWrapper {
+
+    &::before {
+      content: "Nos siga nas redes sociais";
+      color: #FFF;
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .socialNetworksContainer {
+      gap: 24px;
+
+      .socialNetworkLink {
+        height: 32px;
+        min-width: 32px;
+        margin: 0;
+
+        &--facebook {
+          background: url('assets/svgs/facebook-footer-icon.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+
+        }
+
+        &--youtube {
+          background: url('assets/svgs/youtube-footer-icon.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &--instagram {
+          background: url('assets/svgs/instagram-footer-icon.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    .socialNetworkImage {
+      display: none;
+    }
+  }
+}
+
+.flexRow--signature-wrapper {
+  border-top: 1px solid #3F3C3C;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+
+.flexRowContent--technology-partners-wrapper {
+  justify-content: flex-end;
+  align-items: center;
+
+  @media screen and (max-width: 639px) {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
+}
+
+.flexRowContent--signature-wrapper {
+  justify-content: space-between;
+}
+
+.flexRowContent--footer-main-links {
+  position: relative;
+
+  @media screen and (max-width: 639px) {
+    padding-bottom: 58px;
+  }
+
+
+  .stretchChildrenWidth {
+    width: 33%!important;
+
+    @media screen and (max-width: 639px) {
+      width: 100%!important;
+    }
+
+
+    &:last-child {
+      width: fit-content !important;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.flexRow--payment-methods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexRow--payment-methods-and-security-wrapper {
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.flexRowContent--payment-methods {
+  align-items: center;
+  @media screen and (max-width: 808px) {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  @media screen and (max-width: 639px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+
+    .flexRowContent--icons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.flexRowContent--seals-and-security {
+  align-items: center;
+  @media screen and (max-width: 639px) {
+    display: flex;
+    margin-top: 16px;
+  }
+}
+
+.flexRowContent--payment-methods,
+.flexRowContent--seals-and-security,
+.flexRowContent--icons {
+  gap: 16px;
+  // align-items: center;
+}
+
+
+.flexRowContent--payment-methods-and-security-wrapper {
+  justify-content: space-between;
+
+  @media screen and (min-width: 639px) {
+    margin-top: 32px;
+
+  }
+}

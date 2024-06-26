@@ -1,0 +1,29 @@
+{
+  "flex-layout.row#footer-roland": {
+    "title": "Footer Roland",
+    "props": {
+      "blockClass": "footer"
+    },
+    "children": [
+      "flex-layout.col#footer-layout"
+    ]
+  },
+  "flex-layout.col#footer-layout": {
+    "title": "Layout do Footer",
+    "props": {
+      "blockClass": "footer-layout"
+    },
+    "children": [
+      "flex-layout.row#wrapper-main",
+      "flex-layout.row#payment-methods-and-security",
+      "flex-layout.row#signature"
+    ]
+  },
+  "flex-layout.row#wrapper-main": {
+    "title": "Wrapper Principal",
+    "props": {
+      "blockClass": "wrapper-main"
+    },
+    "children": ["flex-layout.row#footer-main-links"]
+  }
+}

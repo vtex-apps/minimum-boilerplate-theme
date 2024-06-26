@@ -14,7 +14,8 @@
       "blockClass": "home"
     },
     "parent": {
-      "header": "header"
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
     }
   },
   "flex-layout.row#main-banner": {
