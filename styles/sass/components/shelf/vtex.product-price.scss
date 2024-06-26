@@ -51,9 +51,9 @@
 .spotPriceSavingsPercentage--product-summary-price {
   color: #FF5A00;
   font-family: 'Roboto';
-  font-size: 12px;
   font-style: normal;
   font-weight: 600;
+  font-size: 0;
   line-height: 16px;
   padding: 2px 8px;
   border-radius:  2px;
@@ -65,7 +65,9 @@
   box-sizing: border-box;
 
   &::before {
-    content: '-'
+    content: '-10%';
+    font-size: 12px;
+
   }
 
   @media screen and (max-width: 768px) {
