@@ -7,14 +7,19 @@
   margin-bottom: 12px;
 }
 
+.flexColChild--price-container:first-child {
+  min-height: 24px;
+}
+
 .flexCol--shelf-container {
   padding: 48px 32px {
     right: 16px;
+    bottom: 72px;
   };
 
   @media screen and (max-width: 768px) {
     padding: 16px {
-      bottom: 32px;
+      bottom: 54px;
       right: 8px;
     }
   }
