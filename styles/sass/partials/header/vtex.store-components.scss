@@ -34,6 +34,10 @@
   background: #FFF;
   margin: unset;
 
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
+
 
   .searchBarIcon--search-bar {
     background-image: url('assets/svgs/search-icon.svg');

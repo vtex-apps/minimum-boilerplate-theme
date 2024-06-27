@@ -97,6 +97,7 @@
   "slider-layout#topbar": {
     "title": "Slider Topbar",
     "props": {
+      "infinite": false,
       "blockClass": "topbar-slider",
       "itemsPerPage": {
         "desktop": 1,
@@ -104,10 +105,8 @@
         "phone": 1
       },
       "autoplay": {
-        "timeout": 3000,
-        "stopOnHover": true
+        "timeout": 3000
       },
-      "infinite": true,
       "showNavigationArrows": "never",
       "showPaginationDots": "never"
     }

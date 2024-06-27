@@ -82,21 +82,51 @@ const MenuContent = ({ staticLink }: MenuContentProps) => {
             })
 
             return (
-              <li key={name} className={styles.menuItem}>
-                <a href={hasCategories ? link : ''}>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (hasCategories) {
-                        setActiveDepartment(isActive ? null : name)
-                      }
-                    }}
-                  >
-                    {isMobile && (
-                      <img src={departmentThumbImageMobile.src} alt={name} />
-                    )}
-                    <span>{name}</span>
-                  </button>
+              <li
+                key={name}
+                className={styles.menuItem}
+                onMouseEnter={() => {
+                  if (!isMobile && hasCategories) {
+                    setActiveDepartment(name)
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!isMobile && hasCategories) {
+                    setActiveDepartment(null)
+                  }
+                }}
+              >
+                <a href={link}>
+                  {isMobile && (
+                    <img src={departmentThumbImageMobile.src} alt={name} />
+                  )}
+                  <span>{name}</span>
+                  {isMobile && hasCategories && (
+                    <button
+                      type="button"
+                      onClick={(evt) => {
+                        evt.preventDefault()
+                        evt.stopPropagation()
+                        setActiveDepartment(name)
+                      }}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M6 12L10 8L6 4"
+                          stroke="#5A5A66"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  )}
                 </a>
                 {hasCategories && (
                   <div className={departmentClasses}>
