@@ -8,7 +8,7 @@
       "flex-layout.row#simple-shelf-container-1",
       "flex-layout.row#simple-double-banner",
       "flex-layout.row#blog-posts",
-      "back-to-top-button#home",
+      "flex-layout.row#back-to-top-button",
       "flex-layout.row#newsletter"
     ],
     "props": {
@@ -18,6 +18,14 @@
       "header": "header",
       "footer": "flex-layout.row#footer-roland"
     }
+  },
+  "flex-layout.row#back-to-top-button": {
+    "title": "Back to Top Button",
+    "props": {
+      "blockClass": ["back-to-top-button"],
+      "fullWidth": true
+    },
+    "children": ["back-to-top-button#home"]
   },
   "back-to-top-button#home": {
     "props":{
