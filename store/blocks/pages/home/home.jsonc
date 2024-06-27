@@ -8,6 +8,7 @@
       "flex-layout.row#simple-shelf-container-1",
       "flex-layout.row#simple-double-banner",
       "flex-layout.row#blog-posts",
+      "back-to-top-button#home",
       "flex-layout.row#newsletter"
     ],
     "props": {
@@ -16,6 +17,11 @@
     "parent": {
       "header": "header",
       "footer": "flex-layout.row#footer-roland"
+    }
+  },
+  "back-to-top-button#home": {
+    "props":{
+      "displayThreshold": 800
     }
   },
   "flex-layout.row#main-banner": {
