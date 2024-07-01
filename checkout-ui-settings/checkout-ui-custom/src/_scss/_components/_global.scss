@@ -42,10 +42,12 @@ body {
   font-family:$fontFamily;
   min-width: initial !important;
   padding: 0;
+  padding-bottom: 0;
+  min-height: 93vh;
   background: $base;
   padding-bottom:40px !important;
+  box-sizing: border-box;
 
-  min-height: 93vh;
   position: relative;
   font-size: $fontSize;
 
@@ -113,6 +115,7 @@ body {
   max-width:$maxWrapper;
   width: 100%;
   margin: 0 auto;
+
 }
 
 
@@ -120,10 +123,6 @@ body {
 .checkout-container {
   overflow: initial !important;
   z-index: 2;
-
-  @media(max-width: 768px) {
-    margin-bottom: 30px;
-  }
 
   .orderform-template,
   .cart-template {

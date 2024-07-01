@@ -23,7 +23,90 @@ body.v-custom-cart-empty {
   margin:0 auto;
 }
 }
-.empty-cart-content {padding:50px 0;}
+.empty-cart-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 420px;
+
+  .empty-cart-title {
+    color:  #18181B;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.32px;
+    margin: 0;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.24px;
+    }
+  }
+
+  .empty-cart-message {
+    p {
+      color: #71717A;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: -0.18px;
+      margin: 0 0 32px 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        margin-bottom: 16px;
+        padding: 0 16px;
+      }
+    }
+  }
+
+  .empty-cart-links {
+
+    .link-choose-products {
+      color: #3F3F46;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      border-radius: 2px;
+      border: 1.25px solid #D4D4D8;
+      background: #FFF;
+      padding: 12px 20px;
+      text-transform: lowercase;
+      margin: 0;
+
+      transition: all 0.2s ease-in-out;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      &::before {
+        content: "Voltar e "
+      }
+
+      &:hover {
+        border: 1.25px solid #EE8146;
+        background: #FDF2EC;
+        color: #FF5A00;
+      }
+    }
+  }
+
+
+}
 
 
 // end empty cart
