@@ -1,12 +1,50 @@
 // _global.scss
 
+@import url("https://p.typekit.net/p.css?s=1&k=jla5wuv&ht=tk&f=139.140.175.176&a=16702154&app=typekit&e=css");
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("https://use.typekit.net/af/4de20a/00000000000000007735e604/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"), url("https://use.typekit.net/af/4de20a/00000000000000007735e604/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"), url("https://use.typekit.net/af/4de20a/00000000000000007735e604/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("https://use.typekit.net/af/3322cc/00000000000000007735e616/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/3322cc/00000000000000007735e616/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/3322cc/00000000000000007735e616/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
 body {
   font-family:$fontFamily;
   min-width: initial !important;
   padding: 0;
   background: $base;
   padding-bottom:40px !important;
- 
+
   min-height: 93vh;
   position: relative;
   font-size: $fontSize;
@@ -20,7 +58,7 @@ body {
     }
   }
 
-  @media(max-width: 768px) { 
+  @media(max-width: 768px) {
     padding-bottom:0px !important;
   }
 
@@ -40,7 +78,7 @@ body {
   }
   //end short preloader to don't show a empty cart
 
-  &.returningUser.v-custom-addressForm-on.v-custom-step-shipping 
+  &.returningUser.v-custom-addressForm-on.v-custom-step-shipping
   .accordion-inner.shipping-container  {
 
     .vtex-omnishipping-1-x-addressFormPart1.vtex-omnishipping-1-x-geolocation {
@@ -64,19 +102,17 @@ body {
 
 .container-main {
 }
- 
+
 .loading.loading-bg {
-  background:$base; 
+  background:$base;
 }
 
 // containers
 
 .container {
   max-width:$maxWrapper;
-  width:calc(100% - 40px);
-  @media(max-width: $mobileWidth) {
-    width:calc(100% - 20px);
-  }
+  width: 100%;
+  margin: 0 auto;
 }
 
 
@@ -147,13 +183,13 @@ body {
       list-style: none;
       padding: 0;
       margin: 0;
-      
+
       &__item {
         strong {
           &:after {content:":";}
         }
         span, strong {line-height: 14px;}
       }
-    } 
-     
+    }
+
   }
