@@ -1,0 +1,195 @@
+// pre email step
+
+
+.client-pre-email {
+  background: none;
+  width: 100%;
+  border-top:none;
+  position:relative;
+  text-align: left;
+
+  fieldset.pre-email {
+    box-sizing: border-box;
+
+  }
+
+  label {
+    margin: 0;
+    line-height: 20px;
+
+    small {
+      font-size: $fontSize;
+      padding: 0;
+      margin: 0;
+      color: $muted1;
+      font-weight: 400;
+      margin: 0;
+      vertical-align: top;
+      display: block;
+      margin-bottom: 13px;
+
+      margin-top: 20px;
+      
+    }
+  }
+  
+  .link-cart {display: none;}  
+
+  h3.client-pre-email-h {
+    margin: 0;
+    span {
+      
+      display: block;
+      position:relative;
+
+      font-size: 0;
+
+      &:after {
+        content: "Email";
+        @extend %steps-title;
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0;        
+      }
+
+      @if $countingSteps {
+        padding:7px 0 !important;
+        &:after{padding: 0 !important;}
+      } @else {
+        &:after{width: 100%;}
+      }
+    }
+
+    .link-box-edit {display: none;}
+  }
+
+
+
+  a#orderform-to-cart {
+    color:$actionPrimary;
+  }
+
+  .client-email.input.text {
+    margin: 0;
+    width: 100%;
+    position:initial;
+
+    input[type="email"] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .btn-success {
+      width: 20%;
+      margin: 0;
+      height: initial;
+      position: absolute;
+      top: initial;
+      bottom:15px;
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 55%;
+
+      @extend .btn-large;
+
+      @media(max-width: 768px) {
+        width: calc(100% - 60px);
+      }
+    }
+
+    .loading-inline {
+      position: absolute;
+      color: #FFF;
+      font-size: 16px;
+      bottom: 35px;
+      top: initial;
+      right: 50% !important;
+      margin-right: -10px;
+    }
+
+    .loading-inline[style=""] + #btn-client-pre-email {
+      font-size:0;
+    }
+  }
+
+  span.help.error {
+  }
+
+
+  
+  .emailInfo {
+    margin-top:20px;
+    width: 80%;
+    box-sizing:border-box;
+    .icon-ok, 
+    h3 {
+      color:$actionPrimary;
+    }
+
+    @media(max-width: $mobileWidth) {
+      width: 100%;
+    }
+
+    .icon-lock {
+      color: $muted5;
+    }
+  }
+
+
+  @media(max-width: $mobileWidth) {
+    .link-cart { display: none !important;}
+  }
+
+  & + .client-profile-data { 
+    .accordion-body:before {
+      content:"Waiting for more information";
+      display:block;
+    }
+    .accordion-body .accordion-inner {display:none;}
+
+    &.filled {
+      .accordion-body:before {
+        display: none;
+      }
+    }
+  }
+
+  &[style*="display: none"] {
+    padding-bottom:20px !important;
+
+    .link-box-edit {display: block !important;}
+    label {
+      small {display: none !important;}
+    }
+
+    input#client-pre-email {
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      font-size: 12px;
+      font-weight: 400;
+      pointer-events: none;
+      cursor: text;
+      background: none !important;
+      color:$muted2;
+    }
+
+    .emailInfo,
+    #btn-client-pre-email {
+        display:none;
+    }
+
+    & + .client-profile-data {
+      .accordion-body:before {
+        display: none;
+      }
+      .accordion-inner {display:block;}
+    }
+  }
+}
+
+
+
+body:not(.v-custom-step-email) .client-pre-email span.help.error {
+  display: none !important;
+}

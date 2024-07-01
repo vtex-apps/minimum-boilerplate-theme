@@ -1,0 +1,178 @@
+
+.payment-data .gift-card-section, .payment-data .payment-discounts-alert {
+  margin: 0;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.input-append, .input-prepend {
+  display: flex !important;
+  align-items: stretch;
+
+  .btn, 
+  .add-on {
+    height: $inputHeight;
+    line-height:$inputHeight;
+    box-sizing: border-box;
+    padding: 0;
+    width:20px;
+  }
+  .add-on {
+    height: initial !important;
+  }
+  input {
+    border-radius: 0 $borderRadius $borderRadius 0 !important;
+    width:100% !important;
+    max-width: 100px !important;
+  }
+}
+  
+.payment-discoints-table .number, .gift-card-provider-group .number, .payment-discoints-table .action, .gift-card-provider-group .action {
+  text-align:right;
+}
+
+
+@media (max-width: $mobileWidth) {
+  .orderform-template-holder .client-profile-data input[type="text"] {
+    width:100% !important;
+  }
+
+}
+
+//imported from io.vtex (just changing the @media width)
+@media (max-width: $mobileWidth) {
+  .item-quantity-change {
+    display: inline-block;
+  }
+  .item-quantity-change {
+    float: left;
+    padding: 3px 5px 3px 0px;
+  }
+  .item-quantity-change-increment {
+    padding-left: 5px;
+    padding-right: 0;
+  }
+  .full-cart .cart-links-bottom .btn-success {
+    width: 83%;
+    display: block;
+    margin-top: 10px;
+  }
+  .full-cart .cart table {
+    display: block;
+    margin-top: 0 !important;
+  }
+  .full-cart .cart table thead {
+    display: none;
+  }
+  .full-cart .cart table tbody {
+    display: block;
+  }
+  .full-cart .cart table tbody tr + tr {
+    border-top: 1px dashed #ddd;
+  }
+  .full-cart .cart table tbody tr {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 0;
+    position: relative;
+  }
+  .full-cart .cart table tbody tr .product-name a,
+  .full-cart .cart table tbody tr .product-name .seller {
+    overflow: hidden;
+  }
+  .full-cart .cart table tbody tr td {
+    display: inline-block;
+    padding: 4px 0;
+  }
+  .full-cart .cart table tbody tr td.product-name .seller {
+    display: block;
+    line-height: 120%;
+    font-size: 80%;
+    margin: 4px 0;
+  }
+  .full-cart .cart table tbody tr td.product-image,
+  .full-cart .cart table tbody tr td.bundle-item-image {
+    left: 0;
+    position: absolute;
+  }
+  .full-cart .cart table tbody tr td.product-name {
+    display: block;
+    margin-left: 60px;
+    text-align: left;
+    line-height: 140%;
+    width: auto;
+  }
+  .full-cart .cart table tbody tr td.product-name {
+    padding: 0 0 10px !important;
+  }
+  .full-cart .cart table tbody tr td.empty,
+  .full-cart .cart table tbody tr td.shipping-date,
+  .full-cart .cart table tbody tr td .brand {
+    display: none;
+  }
+  .full-cart .cart table tbody tr td.product-name a,
+  .full-cart .cart table tbody tr td.bundle-item-name span {
+    display: block;
+    padding-right: 20px;
+  }
+  .full-cart .cart table tbody tr td.quantity {
+    width: 81px;
+    padding: 0px;
+    margin-left: 60px;
+  }
+  .full-cart .cart table tbody tr td.quantity input {
+    float: left;
+    margin: 0;
+    width: 25px;
+  }
+  .full-cart .cart table tbody tr td.product-price {
+    text-align: right;
+    float: right;
+    margin-right: 5px;
+    padding: 0;
+  }
+  .full-cart .cart table tbody tr td.quantity-price {
+    display: none;
+  }
+  .full-cart .cart table tbody tr td.item-remove {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 24px;
+  }
+  .cart-links-bottom {
+    float: none;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    text-align: right;
+  }
+  .more {
+    margin-right: 0;
+  }
+  .full-cart .cart-links-bottom .btn-success {
+    width: auto;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header {
+    top: auto;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header:after {
+    content: none;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header strong {
+    box-shadow: none;
+  }
+  .full-cart .cart table tbody tr.item-attachments-content {
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+  .full-cart .cart table tbody tr.item-attachments-content .item-attachments-item-fields {
+    margin-left: 5px;
+    width: 95%;
+  }
+}

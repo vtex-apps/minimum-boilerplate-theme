@@ -1,0 +1,9 @@
+query GetConfig {
+  getSetupConfig {
+    adminSetup {
+      hasSchema
+      schemaVersion
+      appVersion
+    }
+  }
+}

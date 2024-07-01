@@ -1,0 +1,69 @@
+
+#vtexIdContainer {
+  position: fixed !important;
+}
+
+.vtexIdUI {
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
+}
+
+
+#vtexIdContainer {
+  position: fixed;
+  a {color:$actionPrimary;}
+
+  input {@extend %input-style;}
+
+  .vtexIdUI {
+    .modal-footer {
+      background: none;
+    }
+    .btn {
+      border-radius:$btnBorderRadius;
+      height: $inputHeight;
+      line-height: $inputHeight;
+      box-shadow: none !important;
+      font-size: $fontSize;
+      padding:0 30px;
+      &.btn-success {
+        background: $success;
+        border:1px solid $success;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background:$successDarken; 
+          border:1px solid $successDarken; 
+        }
+      }
+
+      &#vtexIdUI-facebook {
+        background: #4568ad !important;
+      }
+    }
+
+    
+  }
+  @media (max-width:768px) {
+    position: fixed !important;
+    .vtexIdUI {
+      overflow: auto;
+      border-radius: 0;
+      width: 100%;
+      left: 0;
+      margin: 0;
+      top: 0;
+      height: 100% !important;
+      border: none;
+      .modal-header .close {
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 4px 8px;
+      }
+    }
+  }
+}

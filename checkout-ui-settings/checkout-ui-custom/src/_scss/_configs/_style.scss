@@ -1,0 +1,54 @@
+// IMPORTED FROM STORE THEME
+
+$base: #f4f2f2; // body bg...
+$baseInverted: #21364f; // general
+
+$actionPrimary: #1a73e8; //links, buttons borders, backgrounds
+$actionPrimaryDarken: #1d63be; // usually 15% more
+
+$actionSecondary: #f1f7ff;
+
+
+$emphasis: #000000;
+$disabled: #999999;
+
+$success: #2fba2d; // success button, cta, usually the "checkout", "login", "pay"
+$successDarken: #269e24;  // usually 15% more
+$successFaded: #beffa5;
+
+$danger: #ff4c4c;
+$dangerFaded: #ffe6e6; 
+
+$warning: #ffb100;
+$warningFaded: #fff6e0;
+
+$muted1: #323232; //titles & borders
+$muted2: #676767; //borders
+$muted3: #999999; //borders
+$muted4: #cbcbcb; //borders
+$muted5: #eee; //borders
+$muted6: #f3f3f3; //borders & bg
+
+// CHECKOUT VARS
+
+$fontSize: 12px;
+$borderRadius:4px;
+$btnBorderRadius:30px;
+
+$maxWrapper: 980px;
+$inputHeight:40px;
+
+$bordersContainers:none; // 2px solid $muted5
+
+//font
+
+$fontFamily: 'Roboto', sans-serif;
+
+
+// NOT included on admin -- kept for future (no change!)
+
+$showCouponField:true;
+$countingSteps:true;
+$showCheckoutSteps:true;
+$buttonShadow:false;
+$mobileWidth:690px;

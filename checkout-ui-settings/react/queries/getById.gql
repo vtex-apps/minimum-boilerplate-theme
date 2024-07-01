@@ -1,0 +1,10 @@
+query GetById($id: String) {
+  getById(id: $id) {
+    css
+    javascript
+    layout
+    colors
+    javascriptActive
+    cssActive
+  }
+}

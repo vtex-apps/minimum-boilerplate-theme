@@ -1,0 +1,17 @@
+{
+  "stack": "nodejs",
+  "memory": 1224,
+  "timeout": 40,
+  "minReplicas": 10,
+  "maxReplicas": 100,
+  "routes": {
+    "apiGetCountryRules": {
+      "path": "/rules/:countryCode",
+      "public": true
+    },
+    "getHolidays": {
+      "path": "/_v/holidays",
+      "public": true
+    }
+  }
+}

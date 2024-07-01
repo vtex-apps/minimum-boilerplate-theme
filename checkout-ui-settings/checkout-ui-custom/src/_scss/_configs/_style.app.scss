@@ -1,0 +1,54 @@
+// IMPORTED FROM STORE THEME
+
+$base: "{{base}}"; // body bg...
+$baseInverted: "{{$baseInverted}}"; // general
+
+$actionPrimary: "{{actionPrimary}}"; //links, buttons borders, backgrounds
+$actionPrimaryDarken: "{{actionPrimaryDarken}}"; // usually 15% more
+
+$actionSecondary: "{{actionSecondary}}";
+
+
+$emphasis: "{{emphasis}}";
+$disabled: "{{disabled}}";
+
+$success: "{{success}}"; // success button, cta, usually the "checkout", "login", "pay"
+$successDarken: "{{successDarken}}";  // usually 15% more
+$successFaded: "{{successFaded}}";
+
+$danger: "{{danger}}";
+$dangerFaded: "{{dangerFaded}}"; 
+
+$warning: "{{warning}}";
+$warningFaded: "{{warningFaded}}";
+
+$muted1: "{{muted1}}"; //titles & borders
+$muted2: "{{muted2}}"; //borders
+$muted3: "{{muted3}}"; //borders
+$muted4: "{{muted4}}"; //borders
+$muted5: "{{muted5}}"; //borders
+$muted6: "{{muted6}}"; //borders & bg
+
+// CHECKOUT VARS
+
+$fontSize: "{{fontSize}}";
+$borderRadius:"{{borderRadius}}";
+$btnBorderRadius:"{{btnBorderRadius}}";
+
+$maxWrapper: "{{maxWrapper}}";
+$inputHeight:"{{inputHeight}}";
+
+$bordersContainers:"{{bordersContainers}}"; // 2px solid $muted5
+
+//font
+
+$fontFamily: "{{fontFamily}}";
+
+
+// NOT included on admin -- kept for future (no change!)
+
+$showCouponField:true;
+$countingSteps:true;
+$showCheckoutSteps:true;
+$buttonShadow:false;
+$mobileWidth:690px;

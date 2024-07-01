@@ -1,0 +1,108 @@
+// _buttons.scss
+
+
+.btn {
+	font-family:$fontFamily;
+	text-shadow: none;
+	border-radius:$btnBorderRadius;
+	outline: none !important;
+	text-align: center;
+	font-size: $fontSize;
+	padding: 5px 12px;
+	box-sizing: border-box;
+	display: inline-block;
+
+	&,
+	&:hover,
+	&:focus {
+		transition: all ease 0.3s;
+	}
+
+	@if $buttonShadow {
+
+	} @else {
+		background: none;
+		box-shadow: none;
+		&:hover,
+		&:focus {
+			background:none;
+		}
+	}
+
+	&-large {
+		padding:17px 19px;
+	}
+
+	&-link {
+		color:$actionPrimary;
+		&:hover,
+		&:focus {
+			color:$actionPrimaryDarken;
+		}
+	}
+
+	&-success {
+		background: $success;
+		border:1px solid $success;
+		font-size:13px;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background:$successDarken; 
+			border:1px solid $successDarken; 
+		}
+
+		&[disabled] {
+			background: $success;
+		}
+	}
+
+	&-primary {
+		background: $actionPrimary;
+		border:1px solid $actionPrimary;
+		color:$actionSecondary;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background:$actionPrimaryDarken;
+			border:1px solid $actionPrimaryDarken; 
+		}
+	}  
+
+	&-secondary {
+		background: transparent;
+		border:1px solid $actionPrimary;
+		color:$actionPrimary;
+	
+		&:hover,
+		&:focus,
+		&:active {
+			background:$actionSecondary;
+			border:1px solid $actionPrimaryDarken;
+			color:$actionPrimaryDarken;
+		}
+	}
+
+	&-outlined {
+		background: transparent;
+		border:1px solid $success;
+		color:$success;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background:transparent; 
+			border:1px solid $successDarken; 
+		}
+	}
+
+	&#payment-data-submit {
+		span {
+			font-size: 14px;
+			margin-left: 5px;
+			font-weight: bold;
+		}
+	}
+}

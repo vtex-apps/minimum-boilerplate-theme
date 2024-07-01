@@ -1,0 +1,49 @@
+
+input, select, button {
+	outline: none !important;
+}
+//input
+
+%input-style {
+	height: $inputHeight;
+	line-height:$inputHeight;
+	max-height:initial;
+	display:inline-block;
+	padding:0px 10px ;
+	border-radius:$borderRadius;
+  border:1px solid $muted4;
+	outline: initial;
+	font-family:$fontFamily;
+	
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	&.error {
+		border-color:$danger;
+	}
+
+	&:focus {
+		box-shadow:inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(0,0,0,0.4);
+	}
+}
+
+
+input#creditCardpayment-card-0Number,
+input#creditCardpayment-card-0Code,
+input#creditCardpayment-card-1Number,
+input#creditCardpayment-card-1Code{
+	font-size:18px;
+}
+
+//remove autofill from chrome
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    animation: input_background_autofill 0s forwards;
+}
+@keyframes input_background_autofill {
+    100% { background-color: transparent }
+}

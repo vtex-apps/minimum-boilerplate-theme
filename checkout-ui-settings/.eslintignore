@@ -1,0 +1,6 @@
+node_modules/
+coverage/
+*.snap.ts
+node/templates/
+checkout-ui-custom/checkout6-custom.js
+checkout-ui-custom/checkout6-custom.css

@@ -1,0 +1,31 @@
+.main-footer {
+	clear: both;
+	text-align: center;
+	padding: 2px 0;
+	border-top:1px solid $muted4;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index:-1;
+
+	.container {position: initial;}
+
+	@media(max-width: 768px) {
+		position:relative;
+	}
+
+	a.credits-vtex {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+	}	
+	.vtex-logo {
+		display: block;
+    margin: 0 auto;
+	}
+
+	svg, svg path {
+		fill:$muted3;
+	}
+}

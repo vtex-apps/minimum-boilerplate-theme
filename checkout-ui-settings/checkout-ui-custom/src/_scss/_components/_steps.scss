@@ -1,0 +1,251 @@
+//steps
+  
+  $numberStepSize:26px;
+
+
+  %countingStepsNormal {
+    background: #FFF;
+    border:1px solid $muted1;
+    color:$muted1;
+
+    width:$numberStepSize;
+    height: $numberStepSize;
+    line-height: $numberStepSize;
+    font-size: 15px;
+
+  }
+
+  %countingStepsActive {
+    background:$actionPrimary;
+    border-color:$actionPrimary;
+    color:#FFF
+  }
+
+  %countingStepsFilled {
+    @extend %countingStepsActive;
+  }
+
+
+
+  //keep attention changing anything below
+  
+  @if $countingSteps {
+    .client-pre-email h3.client-pre-email-h span:before,
+    .client-profile-data .accordion-toggle > span:before,
+    .shipping-data .accordion-toggle:before,
+    .payment-data .accordion-toggle > span:not(.payment-edit-link):before {
+      
+      @extend %countingStepsNormal;
+      
+      text-align: center;
+      margin-right:10px;
+      border-radius: 100%;
+      
+      display: inline-block;
+      
+      font-weight:bold;
+      vertical-align: middle;
+      margin-top: -2px;
+    }
+
+    .client-pre-email h3.client-pre-email-h span:before { content: "1" }
+    .client-profile-data .accordion-toggle > span:before { content: "2" }
+    .shipping-data .accordion-toggle:before { content: "3" }
+    .payment-data .accordion-toggle > span:not(.payment-edit-link):before { content: "4" }
+  }
+
+
+  //mobile
+  @media(max-width: $mobileWidth) {
+    body {
+      &:before {
+        width: 0;
+        height: 4px; 
+        background:$actionPrimary; 
+        display: block;
+        content:"";
+        position: fixed;
+        top: 0;
+        transition: all ease 0.3s;
+        z-index: 999;
+      } 
+      &.v-custom-step-email:before {width: 23%;}
+      &.v-custom-step-profile:before {width: 46%;}
+      &.v-custom-step-shipping:before {width: 69%;}
+      &.v-custom-step-payment:before {width: 92%;}
+    }
+
+  }
+
+
+  %checkout-steps-active {
+    color:$muted1;
+    font-weight: bold;
+    pointer-events: initial;
+  }
+
+  body {
+    &.v-custom-step-cart .checkout-steps_item_cart {
+      opacity: 1;
+      .text {@extend %checkout-steps-active;pointer-events: none;}
+      &:before {background: $actionPrimary;border-color: $actionPrimary;}
+    }
+    &.v-custom-step-email,
+    &.v-custom-step-profile{
+
+      .checkout-steps_bar_inner-active {width: 20%;}
+      .checkout-steps_item_cart,
+      .checkout-steps_item_identification {
+        opacity: 1;
+        .text {@extend %checkout-steps-active;}
+        &:before {background: $actionPrimary;border-color: $actionPrimary;}
+      }
+      .checkout-steps_item_identification .text {pointer-events: none;}
+
+      .client-pre-email h3.client-pre-email-h span:before {
+        @extend %countingStepsActive;
+      }
+    } 
+
+    &.v-custom-step-shipping {
+      .checkout-steps_bar_inner-active {width: 40%;}
+      .checkout-steps_item_cart,
+      .checkout-steps_item_identification,
+      .checkout-steps_item_shipping {
+        opacity: 1;
+        .text {@extend %checkout-steps-active;}
+        &:before {background: $actionPrimary;border-color: $actionPrimary;}
+      }
+      .checkout-steps_item_shipping .text {pointer-events: none;}
+    } 
+
+    &.v-custom-step-payment {
+      .checkout-steps_bar_inner-active {width: 60%;}
+      .checkout-steps_item_cart,
+      .checkout-steps_item_identification,
+      .checkout-steps_item_shipping,
+      .checkout-steps_item_payment {
+        opacity: 1;
+        .text {@extend %checkout-steps-active;}
+        &:before {background: $actionPrimary;border-color: $actionPrimary;}
+      }
+      .checkout-steps_item_payment .text {pointer-events: none;}
+    } 
+
+    &.v-custom-step-profile {
+      .client-pre-email h3.client-pre-email-h span:before {
+        @extend %countingStepsFilled;
+      }
+
+      .client-profile-data .accordion-toggle > span:before {@extend %countingStepsActive;}
+    }
+    &.v-custom-step-shipping {
+
+      .client-pre-email h3.client-pre-email-h span:before,
+      .client-profile-data .accordion-toggle > span:before {
+        @extend %countingStepsFilled;
+      }
+
+      .shipping-data .accordion-toggle:before {@extend %countingStepsActive;}
+    }
+    &.v-custom-step-payment {
+
+      .client-pre-email h3.client-pre-email-h span:before,
+      .client-profile-data .accordion-toggle > span:before,
+      .shipping-data .accordion-toggle:before {
+        @extend %countingStepsFilled;
+      }
+
+      .payment-data .accordion-toggle > span:not(.payment-edit-link):before {@extend %countingStepsActive;}
+    }
+  }
+  .checkout-steps {
+    display: none;
+    position: relative;
+    min-width: 470px;
+    width:100%;
+    @if $showCheckoutSteps {
+      display: block;
+    }
+    @media(max-width: $mobileWidth) {
+      display: none !important;
+    }
+
+    &-wrap {
+
+    }
+
+    /*
+    &_bar_inner,
+    &_bar_inner-active {
+      width: calc(100% - 20%);
+      height: 3px;
+      background: $actionSecondary;
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      left: 10%;
+      top: 7px;
+      transition: all ease 0.3s;
+    }
+    */
+
+    &_bar_inner-active {width:0;background: $actionPrimary;}
+
+    &_items {
+      display:flex;
+      justify-content: space-between; 
+    }
+
+    &_item {
+      position:relative;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      opacity:0.6;
+      
+      &:after {
+        content:"";
+        height:2px;
+        background: $actionPrimary;
+        margin: 0px 5px;
+        min-width: 10px;
+        
+      }
+    
+      .text {
+        clear: both;
+        display: flex;
+        align-items: center;
+        color:$muted3;
+        font-weight: 500;
+        cursor:pointer;
+        pointer-events: none;
+
+        &:before {
+          content:  "";
+          width: 7px;
+          height: 7px;
+          background: $actionPrimary;
+          border: 2px solid $actionPrimary;
+          display: inline-block;
+          border-radius:100%;
+          margin-right: 7px;
+          transition: all ease 0.3s;
+        } 
+      }
+
+      &_cart:after {width: calc(100% - 50px);}
+      &_identification:after {width: calc(100% - 103px);}
+      &_shipping:after {width: calc(100% - 77px);}
+      &_payment:after {width: calc(100% - 77px);}
+      &_confirmation:after {display:none;}
+    }   
+  }
+
+
+
+
+//end steps

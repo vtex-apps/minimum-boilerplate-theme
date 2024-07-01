@@ -1,0 +1,13 @@
+{
+  "extends": "vtex-react/io",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  }
+}

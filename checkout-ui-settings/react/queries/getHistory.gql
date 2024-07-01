@@ -1,0 +1,9 @@
+query GetHistory {
+  getHistory {
+    id
+    email
+    workspace
+    creationDate
+    appVersion
+  }
+}
