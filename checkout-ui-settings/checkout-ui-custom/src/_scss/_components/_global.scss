@@ -42,12 +42,9 @@ body {
   font-family:$fontFamily;
   min-width: initial !important;
   padding: 0;
-  padding-bottom: 0;
-  min-height: 93vh;
+  min-height: 100vh;
   background: $base;
-  padding-bottom:40px !important;
   box-sizing: border-box;
-
   position: relative;
   font-size: $fontSize;
 

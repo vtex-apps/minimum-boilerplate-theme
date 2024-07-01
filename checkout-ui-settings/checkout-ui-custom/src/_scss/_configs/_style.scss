@@ -17,7 +17,7 @@ $successDarken: #269e24;  // usually 15% more
 $successFaded: #beffa5;
 
 $danger: #ff4c4c;
-$dangerFaded: #ffe6e6; 
+$dangerFaded: #ffe6e6;
 
 $warning: #ffb100;
 $warningFaded: #fff6e0;
@@ -35,14 +35,14 @@ $fontSize: 12px;
 $borderRadius:4px;
 $btnBorderRadius:30px;
 
-$maxWrapper: 980px;
+$maxWrapper: 1248px;
 $inputHeight:40px;
 
 $bordersContainers:none; // 2px solid $muted5
 
 //font
 
-$fontFamily: 'Roboto', sans-serif;
+$fontFamily: 'Proxima Nova', sans-serif;
 
 
 // NOT included on admin -- kept for future (no change!)
@@ -52,3 +52,4 @@ $countingSteps:true;
 $showCheckoutSteps:true;
 $buttonShadow:false;
 $mobileWidth:690px;
+
