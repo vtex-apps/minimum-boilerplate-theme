@@ -117,6 +117,7 @@ body {
 
 
 
+
 .checkout-container {
   overflow: initial !important;
   z-index: 2;
@@ -151,12 +152,25 @@ body {
 
 //titles
 
-  .container-cart h1,
-  h1#orderform-title {
-  	font-size: 22px !important;
-    font-weight: 400 !important;
-    color: $muted1 !important;
+//cart title
+
+#cart-title {
+  font-size: 0;
+  color:#18181B;
+  text-align: left;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+
+  margin: 32px 0 24px;
+
+  &::before {
+    content: "Carrinho";
+    font-size: 24px;
   }
+}
 
   h1#orderform-title {display:none !important;}
 
