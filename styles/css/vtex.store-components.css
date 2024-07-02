@@ -138,6 +138,10 @@
   height: 100%;
 }
 
+.discountContainer .discountInsideContainer {
+  display: none;
+}
+
 .imageElement--newsletter-image {
   height: fit-content;
   align-self: center;
@@ -147,10 +151,6 @@
     width: 100%;
     margin-top: 32px;
   }
-}
-
-.discountContainer .discountInsideContainer {
-  display: none;
 }
 
 .imageElement--simple-banner-image-1 {
@@ -193,6 +193,11 @@
   border-radius: 2px;
   background: #FFF;
   margin: unset;
+}
+@media screen and (max-width: 1024px) {
+  .searchBarContainer {
+    max-width: 100%;
+  }
 }
 .searchBarContainer .searchBarIcon--search-bar {
   background-image: url("assets/svgs/search-icon.svg");

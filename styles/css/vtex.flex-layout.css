@@ -239,6 +239,15 @@
   margin: 0 auto;
 }
 
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  max-width: 100%;
+}
+
+.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  padding: 0 !important;
+}
+
 .flexRow--topbar-interactions {
   max-width: 1440px;
   position: relative;
@@ -301,7 +310,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .flexRow--topbar-wrapper {
     width: 100%;
   }
@@ -526,18 +535,4 @@
   background: #fff;
   top: 0;
   box-shadow: 0 0 1em #222;
-}
-
-.flexRowContent--home-content-container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  max-width: 100%;
-}
-
-.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  padding: 0 !important;
 }
