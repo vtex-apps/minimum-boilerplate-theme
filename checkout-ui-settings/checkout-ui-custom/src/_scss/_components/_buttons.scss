@@ -49,8 +49,8 @@
 		&:hover,
 		&:focus,
 		&:active {
-			background:$successDarken; 
-			border:1px solid $successDarken; 
+			background:$successDarken;
+			border:1px solid $successDarken;
 		}
 
 		&[disabled] {
@@ -60,28 +60,29 @@
 
 	&-primary {
 		background: $actionPrimary;
-		border:1px solid $actionPrimary;
 		color:$actionSecondary;
 
 		&:hover,
 		&:focus,
 		&:active {
 			background:$actionPrimaryDarken;
-			border:1px solid $actionPrimaryDarken; 
+			border:1px solid $actionPrimaryDarken;
 		}
-	}  
+	}
 
 	&-secondary {
-		background: transparent;
-		border:1px solid $actionPrimary;
-		color:$actionPrimary;
-	
+		background: $actionPrimary;
+    color:  #FF5A00;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+
 		&:hover,
 		&:focus,
 		&:active {
-			background:$actionSecondary;
-			border:1px solid $actionPrimaryDarken;
-			color:$actionPrimaryDarken;
+			background:$actionPrimaryDarken;
 		}
 	}
 
@@ -93,8 +94,8 @@
 		&:hover,
 		&:focus,
 		&:active {
-			background:transparent; 
-			border:1px solid $successDarken; 
+			background:transparent;
+			border:1px solid $successDarken;
 		}
 	}
 
