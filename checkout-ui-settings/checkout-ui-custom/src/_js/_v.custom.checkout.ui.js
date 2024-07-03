@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-inner-declarations */
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable vtex/prefer-early-return */
 /* eslint-disable func-names */
@@ -119,9 +122,30 @@ class checkoutCustom {
   buildHorizontal() {}
 
   showDeliveryOptions() {
-    $(
-      '.cart-template .cart-more-options:eq(0), .cart-template .extensions-checkout-buttons-container'
-    ).appendTo('.cart-template-holder')
+    const { hash } = window.location
+    if (hash !== '#/cart') return
+    const _this = this
+
+    const observer = new MutationObserver((mutations, obs) => {
+      const shippingCalculator = $('.cart-template .cart-more-options').eq(0)
+      const alreadyAppended = !!document.querySelector(
+        '.cart-template.active .summary-totalizers .cart-more-options'
+      )
+
+      if (shippingCalculator.length && !alreadyAppended) {
+        shippingCalculator.appendTo('.summary-totalizers')
+        console.log('appended')
+        _this.buildShippingBar()
+        obs.disconnect()
+      }
+    })
+
+    const config = {
+      childList: true,
+      subtree: true,
+    }
+
+    observer.observe(document.body, config)
   }
 
   builder() {
@@ -645,6 +669,135 @@ class checkoutCustom {
     } catch (e) {
       console.error(`Error at "addBusinessDays":`, e)
     }
+  }
+
+  buildShippingOptions() {
+
+    const observer = new MutationObserver((mutations, obs) => {
+      const deliverySelect = document.querySelector('.srp-delivery-select')
+
+      if (deliverySelect) {
+        if (document.querySelector('.radio-options-container')) {
+          obs.disconnect()
+
+          return
+        }
+
+        const options = deliverySelect.querySelectorAll('option')
+
+        const radioContainer = document.createElement('div')
+
+        radioContainer.classList.add('radio-options-container')
+
+        function updateSelect(value) {
+          console.log('Atualizando select', {
+            deliverySelect,
+            select: deliverySelect.querySelector(`option[value="${value}"]`)
+              .parentNode,
+          })
+
+          deliverySelect
+            .querySelector(`option[value="${value}"]`)
+            .parentNode.click()
+
+          deliverySelect.value = value
+          deliverySelect.dispatchEvent(new Event('change'))
+        }
+
+        function extractText(optionText) {
+          const parts = optionText.split(' - ')
+          const text = parts[0]
+          const price = parts[1] || ''
+
+          return { text, price }
+        }
+
+        options.forEach(option => {
+          const { text, price } = extractText(option.textContent)
+
+          const labelHtml = `
+          <label class="radio-option-label">
+            <input type="radio" name="delivery-option" value="${
+              option.value
+            }" class="radio-option-input" ${option.selected ? 'checked' : ''}>
+            <span class="option-text">${text}</span>
+            <span class="option-price">${price}</span>
+          </label>
+        `
+
+          radioContainer.innerHTML += labelHtml
+        })
+
+        radioContainer
+          .querySelectorAll('input[type="radio"]')
+          .forEach(radio => {
+            radio.addEventListener('change', function (evt) {
+              console.log('evt', evt)
+              updateSelect(radio.value)
+            })
+          })
+
+        deliverySelect.parentNode.insertBefore(radioContainer, deliverySelect)
+
+        obs.disconnect()
+      }
+    })
+
+    const config = {
+      childList: true,
+      subtree: true,
+    }
+
+    observer.observe(document.body, config)
+  }
+
+  updateShippingBar() {
+    const minValue = 200;
+    const itemsValue =
+      this.orderForm.totalizers.find(({ id }) => id === 'Items')?.value || 0
+    const differenceToMinValue = (itemsValue - minValue * 100) / 100
+    const progressPercentage = Math.min(
+      100,
+      (itemsValue / (minValue * 100)) * 100
+    )
+
+    const textWrapperElement = document.querySelector(
+      '.shipping-bar-wrapper .shipping-bar-text'
+    )
+    if (!textWrapperElement) return
+
+    const textContentElement = textWrapperElement.querySelector('p')
+    const valueElement = textContentElement?.querySelector('.value')
+    const fullBarTextElement = textWrapperElement.querySelector(
+      '.value-reached'
+    )
+    const progressBarElement = document.querySelector('.shipping-bar-progress')
+
+    if (differenceToMinValue < 0) {
+      if (valueElement)
+        valueElement.textContent = `R$ ${Math.abs(differenceToMinValue).toFixed(
+          2
+        )}`
+      if (progressBarElement)
+        progressBarElement.style.width = `${progressPercentage}%`
+        fullBarTextElement.style.display = 'none'
+        textContentElement.style.display = 'block'
+    } else {
+      fullBarTextElement.style.display = 'block'
+      textContentElement.style.display = 'none'
+      if (progressBarElement) progressBarElement.style.width = '100%'
+    }
+  }
+
+  buildShippingBar() {
+    const _this = this
+    const shippingBarElement = $('.shipping-bar-wrapper')
+
+    shippingBarElement.appendTo(
+      '.cart-template.active .summary-totalizers .cart-more-options'
+    )
+
+    _this.updateShippingBar()
   }
 
   changeShippingTimeInfo() {
@@ -1321,6 +1474,10 @@ class checkoutCustom {
       _this.update(_this.orderForm)
       _this.addStepsHeader()
       _this.paymentBuilder(_this.orderForm)
+
+      if (_this.orderForm.shippingData.selectedAddresses.length > 0) {
+        _this.buildShippingOptions()
+      }
     }
 
     _this.addEditButtoninLogin()
