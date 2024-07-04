@@ -138,10 +138,6 @@
   height: 100%;
 }
 
-.discountContainer .discountInsideContainer {
-  display: none;
-}
-
 .imageElement--newsletter-image {
   height: fit-content;
   align-self: center;
@@ -151,6 +147,10 @@
     width: 100%;
     margin-top: 32px;
   }
+}
+
+.discountContainer .discountInsideContainer {
+  display: none;
 }
 
 .imageElement--simple-banner-image-1 {

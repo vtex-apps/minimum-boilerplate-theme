@@ -9,6 +9,20 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
+.flexRowContent--home-content-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  max-width: 100%;
+}
+
+.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  padding: 0 !important;
+}
+
 .flexRow--blog-posts {
   background: #18181B;
   padding: 48px 0;
@@ -232,20 +246,6 @@
 
 .flexCol--mobile-double-banner-content {
   gap: 16px;
-}
-
-.flexRowContent--home-content-container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  max-width: 100%;
-}
-
-.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  padding: 0 !important;
 }
 
 .flexRow--topbar-interactions {
