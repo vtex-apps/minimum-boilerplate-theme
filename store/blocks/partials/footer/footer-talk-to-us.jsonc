@@ -9,7 +9,6 @@
       "rich-text#talk-to-us",
       "link#footer-help-center",
       "link#backstage",
-      "rich-text#phone",
       "rich-text#opening-hours",
       "social-networks#roland"
     ]
@@ -37,17 +36,11 @@
       "blockClass": ["backstage", "talk-to-us-link"]
     }
   },
-  "rich-text#phone": {
-    "title": "Texto: Telefone",
-    "props": {
-      "text": "(00) 00000-0000",
-      "blockClass": "phone"
-    }
-  },
+  
   "rich-text#opening-hours": {
     "title": "Texto: Horário de Funcionamento",
     "props": {
-      "text": "**Horário de Funcionamento:** \n De segunda à sabado, \ndas 09h as 19:30h.",
+      "text": "**Horário de Funcionamento:**\n De segunda à sabado, \ndas 09h as 19:30h.",
       "blockClass": "opening-hours"
     }
   },
