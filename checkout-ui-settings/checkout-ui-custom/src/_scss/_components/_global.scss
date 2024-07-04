@@ -50,6 +50,13 @@ body {
 
   overflow-x:hidden;
 
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #FF5A00;
+    border-radius: 4px;
+  }
+
   a {
     color:$actionPrimary;
     &:hover {
