@@ -151,8 +151,7 @@
         padding-bottom: 0!important;
 
         >span {
-          border-bottom: none;
-          padding-bottom: 0 !important;
+          width: 100%;
           &::before {
             background: var(--bg-accent-brand-primary-subtlest, #FBE5D8);
             color: #EE8146;
@@ -603,10 +602,26 @@
     }
 
 	  .box-info {
-			color:$muted1;
-			&[style*="display: block"] {
-				margin-top: 10px;
-			}
+			display: flex;
+      flex-direction: column;
+
+      p span {
+        color: var(--text-neutral-bold, #18181B);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        margin-bottom: 4px;
+      }
+
+      .client-profile-email {
+        order: 2;
+      }
+
+      .client-profile-summary {
+        order: 1;
+      }
 		}
 
     .form-step {
@@ -765,6 +780,11 @@
 			.box-step {
 				display: flex;
 				flex-wrap: wrap;
+        margin-top: 24px;
+
+        #postalCode-finished-loading {
+          display: none;
+        }
 				> * {
 					width:100%;
 					order: 1;
@@ -772,8 +792,51 @@
 					//&:not(#postalCode-finished-loading),
 					//&:not(.vtex-omnishipping-1-x-geolocation) {margin:0 0 20px 0;}
 
-					&.vtex-omnishipping-1-x-addressFormPart1 {order: 1;}
-					&.vtex-omnishipping-1-x-addressForm { order: 2; }
+					&.vtex-omnishipping-1-x-addressFormPart1 {
+            order: 1;
+
+            .ship-postalCode {
+              max-width: 274px;
+              small {
+                margin: 0 {
+                  top: 12px;
+                };
+                display: block;
+
+                a {
+                  color: var(--text-link-primary-default-base, #FF5A00);
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 20px;
+                  letter-spacing: -0.14px;
+                }
+              }
+            }
+          }
+					&.vtex-omnishipping-1-x-addressForm {
+            order: 2;
+
+            .vtex-omnishipping-1-x-shippingSectionTitle {
+              color: var(--text-neutral-subtle, #3F3F46);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 20px;
+              letter-spacing: -0.14px;
+            }
+
+            .address-summary {
+              span {
+                color: var(--text-neutral-bold, #18181B);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: -0.14px;
+              }
+            }
+          }
 					&.vtex-omnishipping-1-x-addressInfo { order: 3; }
 					&.vtex-omnishipping-1-x-deliveryGroup { order: 4; }
 					&.vtex-omnishipping-1-x-submitPaymentButton { order: 100; }
@@ -796,9 +859,10 @@
 			}
 
 			.vtex-omnishipping-1-x-addressSummaryActive .address-summary {
-				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24'><path fill='%23999999' d='M15.998,5.951L4,16.237V30c0,0.552,0.448,1,1,1h8v-8h6v8h8c0.552,0,1-0.448,1-1V16.238L15.998,5.951z M19,19 h-6v-5h6V19z'></path> <polygon fill='%23999999' points='15.998,0.683 9,6.682 9,3 5,3 5,10.111 0.59,13.892 1.892,15.41 15.998,3.317 30.108,15.41 31.41,13.892 '></polygon></svg>") no-repeat;
-				background-position: 12px 9px;
-				border:1px solid $muted4;
+				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24'><path fill='%23FF5A00' d='M15.998,5.951L4,16.237V30c0,0.552,0.448,1,1,1h8v-8h6v8h8c0.552,0,1-0.448,1-1V16.238L15.998,5.951z M19,19 h-6v-5h6V19z'></path> <polygon fill='%23FF5A00' points='15.998,0.683 9,6.682 9,3 5,3 5,10.111 0.59,13.892 1.892,15.41 15.998,3.317 30.108,15.41 31.41,13.892 '></polygon></svg>") no-repeat;
+				background-position: 11px 18px;
+        border-radius: var(--radius-rounded-sm, 2px);
+        border: 1px solid var(--border-input-base, #D4D4D8);
 			}
 
 			.vtex-omnishipping-1-x-SummaryItemGroup {}
@@ -844,7 +908,10 @@
   			align-items:center;
     	}
 
-			.vtex-omnishipping-1-x-linkEdit { text-decoration: underline; }
+			.vtex-omnishipping-1-x-linkEdit {
+        text-decoration: underline;
+        color: var(--text-link-primary-default-base, #FF5A00);
+      }
     	.vtex-omnishipping-1-x-deliveryChannelsWrapper,
     	.vtex-omnishipping-1-x-deliveryChannelsToggle {border-radius: $borderRadius;}
     	.vtex-omnishipping-1-x-deliveryChannelsWrapper {
@@ -899,6 +966,18 @@
 						margin-left: 10px !important;
 						height: $inputHeight;
 					}
+          &.ship-street,
+          &.ship-complement,
+          &.ship-neighborhood,
+          &.ship-city,
+          &.ship-state,
+          &.ship-receiverName {
+            max-width: 274px;
+          }
+
+          &.ship-number {
+            max-width: 128px;
+          }
 				}
 			}
 
