@@ -1,23 +1,25 @@
 //steps
-  
+
   $numberStepSize:26px;
 
 
   %countingStepsNormal {
-    background: #FFF;
-    border:1px solid $muted1;
-    color:$muted1;
-
-    width:$numberStepSize;
-    height: $numberStepSize;
-    line-height: $numberStepSize;
-    font-size: 15px;
+    border-radius: var(--radius-rounded-full, 9999px);
+    background: var(--bg-accent-brand-primary-subtlest, #FBE5D8);
+    width: 32px;
+    height: 32px;
+    color: var(--text-accent-brand-subtle, #EE8146);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
 
   }
 
   %countingStepsActive {
-    background:$actionPrimary;
-    border-color:$actionPrimary;
+    background: #EE8146;
+    border: none;
     color:#FFF
   }
 
@@ -28,24 +30,27 @@
 
 
   //keep attention changing anything below
-  
+
   @if $countingSteps {
     .client-pre-email h3.client-pre-email-h span:before,
     .client-profile-data .accordion-toggle > span:before,
     .shipping-data .accordion-toggle:before,
     .payment-data .accordion-toggle > span:not(.payment-edit-link):before {
-      
+
       @extend %countingStepsNormal;
-      
+
       text-align: center;
-      margin-right:10px;
+      margin-right:16px;
       border-radius: 100%;
-      
-      display: inline-block;
-      
-      font-weight:bold;
       vertical-align: middle;
-      margin-top: -2px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .client-pre-email h3.client-pre-email-h span:before { content: "1" }
@@ -60,15 +65,15 @@
     body {
       &:before {
         width: 0;
-        height: 4px; 
-        background:$actionPrimary; 
+        height: 4px;
+        background:$actionPrimary;
         display: block;
         content:"";
         position: fixed;
         top: 0;
         transition: all ease 0.3s;
         z-index: 999;
-      } 
+      }
       &.v-custom-step-email:before {width: 23%;}
       &.v-custom-step-profile:before {width: 46%;}
       &.v-custom-step-shipping:before {width: 69%;}
@@ -105,7 +110,7 @@
       .client-pre-email h3.client-pre-email-h span:before {
         @extend %countingStepsActive;
       }
-    } 
+    }
 
     &.v-custom-step-shipping {
       .checkout-steps_bar_inner-active {width: 40%;}
@@ -117,7 +122,7 @@
         &:before {background: $actionPrimary;border-color: $actionPrimary;}
       }
       .checkout-steps_item_shipping .text {pointer-events: none;}
-    } 
+    }
 
     &.v-custom-step-payment {
       .checkout-steps_bar_inner-active {width: 60%;}
@@ -130,7 +135,7 @@
         &:before {background: $actionPrimary;border-color: $actionPrimary;}
       }
       .checkout-steps_item_payment .text {pointer-events: none;}
-    } 
+    }
 
     &.v-custom-step-profile {
       .client-pre-email h3.client-pre-email-h span:before {
@@ -194,7 +199,7 @@
 
     &_items {
       display:flex;
-      justify-content: space-between; 
+      justify-content: space-between;
     }
 
     &_item {
@@ -205,16 +210,16 @@
       align-items: center;
       justify-content: flex-start;
       opacity:0.6;
-      
+
       &:after {
         content:"";
         height:2px;
         background: $actionPrimary;
         margin: 0px 5px;
         min-width: 10px;
-        
+
       }
-    
+
       .text {
         clear: both;
         display: flex;
@@ -234,7 +239,7 @@
           border-radius:100%;
           margin-right: 7px;
           transition: all ease 0.3s;
-        } 
+        }
       }
 
       &_cart:after {width: calc(100% - 50px);}
@@ -242,7 +247,7 @@
       &_shipping:after {width: calc(100% - 77px);}
       &_payment:after {width: calc(100% - 77px);}
       &_confirmation:after {display:none;}
-    }   
+    }
   }
 
 

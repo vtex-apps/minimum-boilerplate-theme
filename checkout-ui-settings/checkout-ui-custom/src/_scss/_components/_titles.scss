@@ -2,13 +2,12 @@
 //titles in third step checkout
 
 %steps-title {
-	font-size: calc( #{$fontSize} + 2px);
-  text-transform: uppercase;
-  border-bottom: 1px solid $muted5;
-  font-weight: bold;
-  margin-bottom: 15px;
-  padding:7px 0 !important;
-  color:$muted3;
+  color: var(--text-neutral-bold, #18181B);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
 
   @if $countingSteps {
   	color: $muted1;
@@ -17,5 +16,5 @@
 	  text-transform: initial;
 	  margin-bottom: 0px;
   }
-  
+
 }
