@@ -122,9 +122,13 @@
 		.accordion-toggle {
 			padding:0;
     	@extend %steps-title;
-    	> i {display: none;}
-    	span,
-       &.collapsed:not(.accordion-toggle-active) {
+
+    	> i {
+        display: none;
+      }
+      span[data-i18n="clientProfileData.identification"],
+      span[data-i18n="paymentData.payment"],
+      &.collapsed:not(.accordion-toggle-active) {
     		color: #18181B;
     		font-family: "Proxima Nova";
     		font-size: 16px;
@@ -137,15 +141,57 @@
         align-items: center;
         border-bottom: 1px solid #E4E4E7;
         padding-bottom: 24px;
-        margin-bottom: 24px;
-
     	}
+
+      #edit-shipping-data,
+      #edit-profile-data {
+        border-radius: var(--radius-rounded-sm, 2px);
+        border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+        background: var(--Gray-Scale-White, #FFF);
+        padding: 10px 16px;
+        color: var(--text-neutral-subtle, #3F3F46);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+
+        i {
+          display: none;
+        }
+
+
+
+        &:hover {
+          border: 1.25px solid var(--border-brand-primary-base, #EE8146);
+          background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+          color: #FF5A00;
+        }
+      }
+
+      #edit-shipping-data {
+        &::before {
+          content: 'Alterar opção de entrega';
+        }
+      }
+
+      #edit-profile-data {
+        &::before {
+          content: 'Editar';
+        }
+      }
+
+
 
       &.collapsed:not(.accordion-toggle-active) {
         display: flex;
         border-bottom: none!important;
         padding-bottom: 0!important;
 
+        &::before {
+          background: var(--bg-accent-brand-primary-subtlest, #FBE5D8);
+          color: #EE8146;
+        }
         >span {
           width: 100%;
           &::before {
@@ -967,6 +1013,7 @@
     }
 
     &.client-profile-data {
+
     	.box-client-info {
 
         .newsletter {
@@ -996,7 +1043,12 @@
         margin-top: 24px;
 
         .vtex-omnishipping-1-x-SummaryItemGroup {
-          padding: 0;
+          padding: 0 {
+            top: 24px;
+          };
+
+          border-top: 1px solid #E4E4E7;
+
 
           .vtex-omnishipping-1-x-SummaryItemInfo {
             border-right: none;
@@ -1272,6 +1324,9 @@
 			.vtex-omnishipping-1-x-leanShippingGroupList {
 				border-color:$muted5;
 				margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
 			}
 
 
@@ -1455,6 +1510,7 @@
       align-items: center;
       justify-content: center;
       border: none;
+      box-shadow: none;
 		}
 
 		.summary-template-holder {
@@ -1640,14 +1696,7 @@
 		}
 
 		#go-to-cart-button {
-	    position: absolute;
-	    top:0px;
-	    right: 7px;
-	    color:$actionPrimary;
-	    text-decoration: underline;
-	    @media (max-width: $mobileWidth) {
-	    	display: none;
-	    }
+      display: none;
 		}
 
 
@@ -1659,6 +1708,12 @@
         };
         display: block;
   			tr {
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
 			    &.CustomTax:not(.CustomTax--total) {
 			      display:none !important;
 			    }
@@ -1793,7 +1848,8 @@
 		padding:0;
 
 		.payment-submit-wrap {
-			margin:10px 0 0 0;
+      padding: 0 16px;
+      margin: 0;
 
 			@media(max-width: 768px) {
 				z-index: 9999;
@@ -1816,6 +1872,40 @@
 		}
 
 		#payment-data-submit {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 2px;
+      background: #2B2B3A;
+      border: none;
+
+      transition: all ease 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #424250;
+      }
+
+      .icon-lock {
+        display: none;
+      }
+
+      span {
+        color: var(--text-inverse-bold, #FFF);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+
+      }
+
+      &::after {
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.16699 9.99984H15.8337M15.8337 9.99984L10.0003 4.1665M15.8337 9.99984L10.0003 15.8332" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
 			&:disabled span {
 				display:none;
 			}
