@@ -48,11 +48,6 @@
 // -- vertical checkout
 
 
-.container.container-main.container-order-form {
-  @media(max-width: 768px) {
-  	width: calc(100% - 20px);
-  }
-}
 
 .orderform-template-holder{
 
@@ -268,6 +263,8 @@
       margin-bottom: 24px;
       flex-wrap: wrap;
       gap: 10px;
+
+
 		}
 
 
@@ -340,6 +337,9 @@
       }
 
 
+      @media screen and (max-width: 653px) {
+        width: 100%;
+      }
 
 		}
 
@@ -481,6 +481,16 @@
               &[data-bind="text: window.paymentData.totalToPayIncludingGiftsLabel"] {
                 color: #18181B;
               }
+            }
+          }
+
+          @media screen and (max-width: 768px) {
+            padding: 64px 32px;
+            box-sizing: border-box;
+
+            .sight {
+              text-align: center;
+              margin: 0;
             }
           }
         }
@@ -758,7 +768,7 @@
                   line-height: 16px;
                   letter-spacing: -0.12px;
                   position: relative;
-                  top: 22px;
+                  top: 10px;
                   max-width: 207px;
                 }
 
@@ -802,6 +812,27 @@
                     right: 0;
                     content: 'Confira os dados e realize o pagamento pelo app do seu banco';
                   }
+                }
+              }
+
+              @media screen and (max-width: 780px) {
+                display: flex;
+                flex-direction: column;
+                gap: 100px;
+
+                p {
+                  position: relative;
+                  left: 0!important;
+                  right: 0!important;
+                  align-self: center;
+                }
+
+                &::after {
+                  height: 75px;
+                  width: 1px;
+                  position: absolute;
+                  align-self: center;
+                  top: 62px;
                 }
               }
             }
@@ -963,6 +994,33 @@
 				display: flex;
 				flex-wrap: wrap;
         margin-top: 24px;
+
+        .vtex-omnishipping-1-x-SummaryItemGroup {
+          padding: 0;
+
+          .vtex-omnishipping-1-x-SummaryItemInfo {
+            border-right: none;
+          }
+
+          .vtex-omnishipping-1-x-SummaryItemPrice {
+            display: none;
+          }
+
+          span {
+            color: var(--text-neutral-bold, #18181B);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.14px;
+          }
+
+          .address-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+          }
+        }
 
         #postalCode-finished-loading {
           display: none;
@@ -1296,17 +1354,21 @@
 	display: flex !important;
 
 	padding-top: 0px;
+  padding: 0 16px;
 	min-height: 400px !important;
+  gap: 24px;
 	align-items:flex-start;
   margin-top: 32px;
+
 
   &::before,
   &::after {
     display: none;
   }
 
-	@media(max-width: 768px) {
-		flex-wrap:wrap;
+	@media screen and (max-width: 960px) {
+    flex-direction: column;
+
 	}
 
 	.orderform-template-holder{
@@ -1339,8 +1401,9 @@
 		float: right;
 		margin:0;
 
-  	@media(max-width: 768px) {
+  	@media screen and (max-width: 960px) {
   		width:100%;
+      max-width: 100%;
   		position: relative;
   		top:0;
 		}
@@ -1472,6 +1535,10 @@
       display: flex;
       max-width: 234px;
       box-sizing: border-box;
+
+      @media screen and (max-width: 960px) {
+        max-width: 100%;
+      }
 
 			&:last-child {
         border:none;
@@ -1899,6 +1966,15 @@
     }
 
 
+  .PaymentInstallments {
+    &+div {
+      order: 2;
+      max-width: 274px;
+      width: 100%;
+    }
+  }
+
+
 		> div {
       position: relative;
       clear: both;
@@ -1929,6 +2005,7 @@
         }
       }
 
+
       &.BillingAddress {
         order: 6;
         width: 100%;
@@ -1948,10 +2025,14 @@
       }
 
 
-      &:nth-child(3) {
+      &:nth-child(3):not(.PaymentInstallments) {
         order: 2;
         max-width: 274px;
         width: 100%;
+      }
+
+      @media screen and (max-width: 659px) {
+        max-width: 100%!important;
       }
     }
 
@@ -1998,6 +2079,16 @@
       label, input {
         width: 100%;
         margin-left: 32px;
+
+      }
+      @media screen and (max-width: 659px) {
+        width: 100%;
+
+        label,
+        input {
+          margin-left: 0;
+
+        }
       }
     }
 
@@ -2035,6 +2126,19 @@
           margin-right: 0;
         }
 
+      }
+
+      @media screen and (max-width: 659px) {
+        p {
+          max-width: 100%;
+          width: 48.06%;
+        }
+      }
+
+      @media screen and (max-width: 483px) {
+        p {
+          width: 47.06%;
+        }
       }
     }
 
@@ -2201,10 +2305,18 @@
 
   input {
     max-width: 274px;
+
+    @media screen and (max-width: 659px) {
+      max-width: 100%;
+    }
   }
 
   select {
     max-width: 128px;
+
+    @media screen and (max-width: 659px) {
+      max-width: 100%;
+    }
   }
 
 	.AddressForm {
