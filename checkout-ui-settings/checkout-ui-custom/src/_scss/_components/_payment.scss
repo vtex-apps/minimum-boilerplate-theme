@@ -129,7 +129,7 @@
     	@extend %steps-title;
     	> i {display: none;}
     	span,
-       &.collapsed {
+       &.collapsed:not(.accordion-toggle-active) {
     		color: #18181B;
     		font-family: "Proxima Nova";
     		font-size: 16px;
@@ -142,6 +142,7 @@
         align-items: center;
         border-bottom: 1px solid #E4E4E7;
         padding-bottom: 24px;
+        margin-bottom: 24px;
 
     	}
 
@@ -230,11 +231,6 @@
 				}
 			}
 
-			&.active,
-			&:hover {
-				box-shadow:0 0 6px $muted4;
-				border:1px solid $actionPrimary;
-			}
 		}
 
 
@@ -275,82 +271,77 @@
 
 		.payment-group-list-btn {
 		  width: 100%;
+      display: flex;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 10px;
 		}
 
-		p.link.link-gift-card *,
-		.payment-group-item * {
-			font-size:12px !important;
-			font-weight:bold;
-		}
+
 
 		.payment-group-item {
-			position: relative;
-			height: 40px;
+      width: fit-content;
+			border-radius: var(--radius-rounded-sm, 2px);
+			border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+			background: #FFF;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: all 0.2s ease-in-out;
+      margin: 0;
+
+      &:hover {
+        border: 1.25px solid var(--border-brand-primary-base, #EE8146);
+        background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+
+        span.payment-group-item-text {
+          color: #FF5A00;
+        }
+      }
+
+
 			span.payment-group-item-text {
-				padding: 0;
-				line-height: 17px;
-				background: none !important;
+				color: var(--text-neutral-subtle, #3F3F46);
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 24px;
+        background: none;;
+				letter-spacing: -0.16px;
+        padding: 0;
 			}
 
-			&:first-child:nth-last-child(n + 2),
-			&:first-child:nth-last-child(n + 2) ~ .payment-group-item {
-				width: calc(50% - 3px);
-			}
-			&:first-child:nth-last-child(n + 3),
-			&:first-child:nth-last-child(n + 3) ~ .payment-group-item {
-				width: calc(33.3% - 4px);
-			}
-			&:first-child:nth-last-child(n + 4),
-			&:first-child:nth-last-child(n + 4) ~ .payment-group-item {
-				width: calc(25% - 4.8px);
-			}
-			&:first-child:nth-last-child(n + 5),
-			&:first-child:nth-last-child(n + 5) ~ .payment-group-item {
-				width: 100%;
-				margin-right: 0;
-				height: auto;
-				&:after,
-				&:before {
-					display: none;
-				}
-				&:hover {
-					top:0;
-				}
-			}
-			&:last-child {
-				margin-right:0;
-			}
-			&:hover {
-				position: relative;
-				background: #FFF;
-				top: -2px;
-			}
+      &.active {
+        background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+        border: 1.25px solid transparent;
 
-			&.active {
 
-				&:after,
-				&:before {
-					content: '';
-					display: block;
-					position: absolute;
-					left: 50%;
-					transform:translateX(-50%);
-					top:100%;
-					width: 0;
-					height: 0;
-					border-style: solid;
-				}
+        &:hover {
+          background: var(--bg-brand-secondary-bold-hover, #424250);
 
-				&:after {
-					border-color: #FFF transparent transparent transparent;
-					border-width: 6px;
-				}
+        }
 
-				&:before {
-					border-color: $actionPrimary transparent transparent transparent;
-					border-width: 7px;
-				}
-			}
+        span.payment-group-item-text {
+          color: #fff;
+        }
+      }
+
+      &#payment-group-PagalevePixAVistaTransparentePaymentGroup,
+      &#payment-group-bankInvoicePaymentGroup {
+        span {
+          &::after {
+            content:" (10% OFF)";
+            color: var(--text-brand-primary-base, #FF5A00);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.16px;
+          }
+        }
+      }
+
+
+
 		}
 
 		.gift-card-section.form-step.box-default {
@@ -837,25 +828,130 @@
               }
             }
           }
-					&.vtex-omnishipping-1-x-addressInfo { order: 3; }
-					&.vtex-omnishipping-1-x-deliveryGroup { order: 4; }
-					&.vtex-omnishipping-1-x-submitPaymentButton { order: 100; }
+					&.vtex-omnishipping-1-x-addressInfo {
+						order: 3;
+					}
+					&.vtex-omnishipping-1-x-deliveryGroup {
+						order: 4;
+
+						.vtex-omnishipping-1-x-shippingSectionTitle {
+							color: var(--text-neutral-bold, #18181B);
+							text-align: left;
+							font-style: normal;
+              font-size: 0;
+							font-weight: 500;
+							line-height: 20px;
+							letter-spacing: -0.14px;
+
+              &::before {
+                content: 'Selecione a forma de entrega';
+							  font-size: 14px;
+
+              }
+						}
+
+						.vtex-omnishipping-1-x-leanShippingGroupList {
+							.vtex-omnishipping-1-x-leanShippingOption {
+                border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+                padding: 14px 16px;
+                max-height: 48px;
+                box-sizing: border-box;
+
+                &.shp-lean-option-active {
+                  border: 1px solid var(--border-selected-base, #EE8146);
+                  background: var(--bg-selected-subtle-base, #FDF2EC);
+                  .vtex-omnishipping-1-x-optionPrice {
+                    color: #FF5A00;
+                  }
+
+                  .vtex-omnishipping-1-x-leanShippingIcon {
+                    margin-right: 8px;
+                    &::before {
+                      content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z" fill="%23FF5A00"/><circle cx="8" cy="8" r="3" fill="%23F4F4F5"/></svg>');
+                      width: 16px;
+                      height: 16px;
+                    }
+                    .vtex-omnishipping-1-x-svg {
+                      display: none;
+                    }
+                  }
+
+
+                }
+
+                .vtex-omnishipping-1-x-leanShippingText {
+                  border-right: none;
+                  span {
+                    color: var(--text-neutral-bold, #18181B);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+                    letter-spacing: -0.14px;
+                  }
+                }
+
+                .vtex-omnishipping-1-x-optionPrice {
+                  color: var(--text-neutral-bold, #18181B);
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 20px;
+                  letter-spacing: -0.14px;
+                }
+							}
+						}
+					}
+					&.vtex-omnishipping-1-x-submitPaymentButton {
+            order: 100;
+            margin-top: 24px;
+            display: flex;
+            justify-content: flex-end;
+
+            .btn-go-to-payment {
+              font-size: 16px;
+              color: #FFF;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px;
+              letter-spacing: -0.16px;
+              padding: 12px 20px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-radius: 2px;
+              background: #2B2B3A;
+              border: none;
+              gap: 8px;
+
+              transition: all ease 0.2s ease-in-out;
+
+              &:hover {
+                background-color: #424250;
+              }
+
+              &::after {
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.16699 9.99984H15.8337M15.8337 9.99984L10.0003 4.1665M15.8337 9.99984L10.0003 15.8332" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                width: 20px;
+                height: 20px;
+                display: block;
+              }
+            }
+          }
 					&.btn-link.vtex-omnishipping-1-x-btnDelivery {
 						order: 5;
 						margin-top: 20px;
 						background: $actionPrimary;
-					}
-
-					&#postalCode-finished-loading,
-					&:last-child {
-						margin:0;
 					}
 				}
 			}
 
 			.vtex-omnishipping-1-x-address {
 				margin:0;
-
+        > div {
+          display: flex;
+					flex-wrap: wrap;
+        }
 			}
 
 			.vtex-omnishipping-1-x-addressSummaryActive .address-summary {
@@ -921,9 +1017,7 @@
 				margin:0 0 20px 0;
 			}
     	.vtex-omnishipping-1-x-summaryChange {
-		    background:$actionSecondary;
-		    border-color:$muted4;
-		    color:$actionPrimary;
+        display: none;
 			}
 
 			.vtex-omnishipping-1-x-leanShippingGroupList {
@@ -931,11 +1025,6 @@
 				margin: 0;
 			}
 
-			.vtex-omnishipping-1-x-option:hover,
-			.vtex-omnishipping-1-x-leanShippingOptionActive,
-			.vtex-omnishipping-1-x-leanShippingOption {
-				background:#FFF !important;
-			}
 
 			.vtex-pickup-points-modal-3-x-modalDetailsBackLnk svg path,
 			.vtex-pickup-points-modal-3-x-modalDetailsBackLnk {
@@ -972,8 +1061,18 @@
           &.ship-city,
           &.ship-state,
           &.ship-receiverName {
-            max-width: 274px;
+						width: 100%;
+						margin-bottom: 16px;
+            input, select {
+							max-width: 274px!important;
+						}
           }
+
+					&.ship-complement {
+            max-width: 274px;
+            width: 100%;
+						margin-left: 24px;
+					}
 
           &.ship-number {
             max-width: 128px;
@@ -1596,7 +1695,68 @@
 	}
 
 	.CardForm {
-		> div {position: relative;clear: both;}
+    display: flex;
+    flex-wrap: wrap;
+
+
+		> div {
+      position: relative;
+      clear: both;
+      &:nth-child(1) {
+        width: 100%;
+        order: 1;
+      }
+
+      &.PaymentInstallments {
+        order: 5;
+        width: 100%;
+
+        label {
+          display: block;
+        }
+
+        select {
+          max-width: 100%;
+
+        }
+      }
+
+      &.BillingAddress {
+        order: 6;
+      }
+
+      &:nth-child(3) {
+        order: 2;
+        max-width: 274px;
+        width: 100%;
+      }
+    }
+
+    select {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      height: 48px;
+    }
+
+    .PaymentCardCVV {
+      order: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      label, input {
+        width: 100%;
+        margin-left: 32px;
+      }
+    }
+
+    .PaymentCardHolderDocument {
+      order: 4;
+      width: 100%;
+    }
+
 		.PaymentValue {display:none;}
 
 		input#creditCardpayment-card-0Number[value=""] {
@@ -1604,6 +1764,30 @@
 			position:relative;
 			z-index:1;
 		}
+
+    .PaymentCardDueDate {
+      display: flex;
+      flex-wrap: wrap;
+
+      .FormFieldLabel {
+        width: 100%;
+      }
+
+      .payment-card-lash {
+        display: none;
+      }
+
+      p {
+        max-width: 128px;
+        width: 100%;
+        margin-right: 16px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+      }
+    }
 
 		.SavedCardsList {
 			width: calc(100% - 1px);
@@ -1636,10 +1820,6 @@
 		.card-flag.card-selected {opacity: 1;display:block;}
 	}
 
-	input#creditCardpayment-card-0Code,
-	input#creditCardpayment-card-1Code{
-	  width: 100px !important;
-	}
 
 	.label-vertical-group {
 		padding: 9px;
@@ -1686,11 +1866,36 @@
 
 
 	label.FormFieldLabel {
-	  display: block;
-	  clear: both;
-	  width: auto;
-  	margin-right: 10px;
+	  color: var(--text-neutral-subtle, #3F3F46);
+	  font-size: 14px;
+	  font-style: normal;
+	  font-weight: 500;
+	  line-height: 20px;
+	  letter-spacing: -0.14px;
+    margin-bottom: 8px;
 	}
+
+  input, select {
+    border-radius: var(--radius-rounded-sm, 2px);
+    border: 1px solid var(--border-input-base, #D4D4D8);
+    background: var(--bg-neutral-subtlest-base, #FFF);
+    color: var(--text-neutral-bold, #18181B);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    margin-bottom: 24px;
+    padding: 12px 16px;
+  }
+
+  input {
+    max-width: 274px;
+  }
+
+  select {
+    max-width: 128px;
+  }
 
 	.AddressForm {
     display:flex;
