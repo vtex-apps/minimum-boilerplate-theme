@@ -4,7 +4,7 @@ const CheckoutCustom = require('./_js/_v.custom.checkout.ui.js')
 window.vcustom = {
   checkout: new CheckoutCustom({
     type: 'vertical', // ["vertical" , "horizontal"]
-    accordionPayments: true,
+    accordionPayments: false,
     deliveryDateFormat: false,
     quantityPriceCart: false,
     showNoteField: false,
