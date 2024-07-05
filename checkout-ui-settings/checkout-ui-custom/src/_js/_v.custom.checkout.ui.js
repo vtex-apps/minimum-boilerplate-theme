@@ -17,7 +17,8 @@ const {
   _cities,
   _addressPlaceholder,
 } = require('./_countries.js')
-const FnsCustomAddressForm = require('./_customAddressForm.js')
+const FnsCustomAddressForm = require('./_customAddressForm.js');
+const { set } = require('date-fns');
 
 class checkoutCustom {
   constructor({
@@ -672,7 +673,6 @@ class checkoutCustom {
   }
 
   buildShippingOptions() {
-
     const observer = new MutationObserver((mutations, obs) => {
       const deliverySelect = document.querySelector('.srp-delivery-select')
 
@@ -751,8 +751,118 @@ class checkoutCustom {
     observer.observe(document.body, config)
   }
 
+  updateBreadcrumb() {
+    const currentURL = window.location.href
+    const { items } = this.orderForm
+
+    console.log('updateBreadcrumb -> items', items)
+
+    if (items.length === 0) {
+      const stepElement = document.querySelector('.checkout-steps')
+      if (stepElement) {
+        stepElement.style.display = 'none'
+      }
+      return
+    }
+
+
+    const updateClasses = (selectors, addClasses = [], removeClasses = []) => {
+      selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector)
+        elements.forEach(element => {
+          addClasses.forEach(cls => element.classList.add(cls))
+          removeClasses.forEach(cls => element.classList.remove(cls))
+        })
+      })
+    }
+
+    const step = currentURL.split('/').pop();
+
+    console.log('step', step)
+
+    const stepsConfig = {
+      cart: {
+        active: ['.checkout-steps__item[step="cart"]'],
+        inactive: [
+          '.checkout-steps__item[step="profile"]',
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+        ],
+      },
+      email: {
+        active: ['.checkout-steps__item[step="profile"]'],
+        completed: ['.checkout-steps__item[step="cart"]'],
+        uncompleted: [
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+        ],
+        inactive: [
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+          '.checkout-steps__item[step="cart"]',
+        ],
+      },
+      profile: {
+        active: ['.checkout-steps__item[step="profile"]'],
+        completed: ['.checkout-steps__item[step="cart"]'],
+        uncompleted: [
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+        ],
+        inactive: [
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+          '.checkout-steps__item[step="cart"]',
+        ],
+      },
+      shipping: {
+        active: [
+          '.checkout-steps__item[step="profile"]',
+          '.checkout-steps__item[step="shipping"]',
+        ],
+        completed: [
+          '.checkout-steps__item[step="cart"]',
+          '.checkout-steps__item[step="profile"]',
+        ],
+        inactive: ['.checkout-steps__item[step="payment"]'],
+      },
+      payment: {
+        active: [
+          '.checkout-steps__item[step="profile"]',
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+        ],
+        completed: [
+          '.checkout-steps__item[step="cart"]',
+          '.checkout-steps__item[step="profile"]',
+          '.checkout-steps__item[step="shipping"]',
+        ],
+      },
+      confirmation: {
+        active: [
+          '.checkout-steps__item[step="profile"]',
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+        ],
+        completed: [
+          '.checkout-steps__item[step="cart"]',
+          '.checkout-steps__item[step="profile"]',
+          '.checkout-steps__item[step="shipping"]',
+          '.checkout-steps__item[step="payment"]',
+        ],
+      },
+    }
+
+    const config = stepsConfig[step] || {}
+
+    updateClasses(config.active || [], ['active'], ['completed'])
+    updateClasses(config.completed || [], ['completed'])
+    updateClasses(config.uncompleted || [], [], ['completed'])
+    updateClasses(config.inactive || [], [], ['active'])
+  }
+
   updateShippingBar() {
-    const minValue = 200;
+    const minValue = 200
     const itemsValue =
       this.orderForm.totalizers.find(({ id }) => id === 'Items')?.value || 0
     const differenceToMinValue = (itemsValue - minValue * 100) / 100
@@ -780,8 +890,8 @@ class checkoutCustom {
         )}`
       if (progressBarElement)
         progressBarElement.style.width = `${progressPercentage}%`
-        fullBarTextElement.style.display = 'none'
-        textContentElement.style.display = 'block'
+      fullBarTextElement.style.display = 'none'
+      textContentElement.style.display = 'block'
     } else {
       fullBarTextElement.style.display = 'block'
       textContentElement.style.display = 'none'
@@ -1467,6 +1577,7 @@ class checkoutCustom {
     _this.general()
     _this.updateStep()
     _this.builder()
+    _this.updateBreadcrumb()
 
     _this.changeShippingTimeInfoInit()
     if (_this.orderForm) {
@@ -1500,6 +1611,7 @@ class checkoutCustom {
       $(window).on('hashchange', function () {
         const cartItems = document.querySelector('.cart-items')
 
+        _this.updateBreadcrumb()
         _this.updateStep()
         _this.changeShippingTimeInfoInit()
         _this.checkProfileFocus()
