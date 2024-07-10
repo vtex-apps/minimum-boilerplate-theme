@@ -9,6 +9,20 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
+.flexRowContent--home-content-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  max-width: 100%;
+}
+
+.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  padding: 0 !important;
+}
+
 .flexRow--blog-posts {
   background: #18181B;
   padding: 48px 0;
@@ -234,9 +248,168 @@
   gap: 16px;
 }
 
-.flexRowContent--home-content-container {
+.flexRow--footer {
+  background: #000;
+  padding: 32px 0;
+}
+.flexRow--footer :global(.vtex-store-components-3-x-container) {
+  max-width: 100%;
+  padding: 0;
+}
+.flexRow--footer .flexRow--wrapper-main,
+.flexRow--footer .flexRow--payment-methods-and-security-wrapper,
+.flexRow--footer .flexRowContent--signature-wrapper {
   max-width: 1440px;
+  padding: 0 32px;
+  width: 100%;
   margin: 0 auto;
+}
+@media screen and (max-width: 639px) {
+  .flexRow--footer .flexRow--wrapper-main,
+  .flexRow--footer .flexRow--payment-methods-and-security-wrapper,
+  .flexRow--footer .flexRowContent--signature-wrapper {
+    padding: 0 24px;
+  }
+}
+.flexRow--footer .socialNetworkWrapper::before {
+  content: "Nos siga nas redes sociais";
+  color: #FFF;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  margin-bottom: 24px;
+  display: block;
+}
+.flexRow--footer .socialNetworkWrapper .socialNetworksContainer {
+  gap: 24px;
+}
+.flexRow--footer .socialNetworkWrapper .socialNetworksContainer .socialNetworkLink {
+  height: 32px;
+  min-width: 32px;
+  margin: 0;
+}
+.flexRow--footer .socialNetworkWrapper .socialNetworksContainer .socialNetworkLink--facebook {
+  background: url("assets/svgs/facebook-footer-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.flexRow--footer .socialNetworkWrapper .socialNetworksContainer .socialNetworkLink--youtube {
+  background: url("assets/svgs/youtube-footer-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.flexRow--footer .socialNetworkWrapper .socialNetworksContainer .socialNetworkLink--instagram {
+  background: url("assets/svgs/instagram-footer-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.flexRow--footer .socialNetworkWrapper .socialNetworkImage {
+  display: none;
+}
+
+.flexRow--signature-wrapper {
+  border-top: 1px solid #3F3C3C;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+
+.flexRowContent--technology-partners-wrapper {
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 639px) {
+  .flexRowContent--technology-partners-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
+}
+
+.flexRowContent--signature-wrapper {
+  justify-content: space-between;
+}
+
+.flexRowContent--footer-main-links {
+  position: relative;
+}
+@media screen and (max-width: 639px) {
+  .flexRowContent--footer-main-links {
+    padding-bottom: 58px;
+  }
+}
+.flexRowContent--footer-main-links .stretchChildrenWidth {
+  width: 33% !important;
+}
+@media screen and (max-width: 639px) {
+  .flexRowContent--footer-main-links .stretchChildrenWidth {
+    width: 100% !important;
+  }
+}
+.flexRowContent--footer-main-links .stretchChildrenWidth:last-child {
+  width: fit-content !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.flexRow--payment-methods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexRow--payment-methods-and-security-wrapper {
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.flexRowContent--payment-methods {
+  align-items: center;
+}
+@media screen and (max-width: 808px) {
+  .flexRowContent--payment-methods {
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
+@media screen and (max-width: 639px) {
+  .flexRowContent--payment-methods {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+  }
+  .flexRowContent--payment-methods .flexRowContent--icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.flexRowContent--seals-and-security {
+  align-items: center;
+}
+@media screen and (max-width: 639px) {
+  .flexRowContent--seals-and-security {
+    display: flex;
+    margin-top: 16px;
+  }
+}
+
+.flexRowContent--payment-methods,
+.flexRowContent--seals-and-security,
+.flexRowContent--icons {
+  gap: 16px;
+}
+
+.flexRowContent--payment-methods-and-security-wrapper {
+  justify-content: space-between;
+}
+@media screen and (min-width: 639px) {
+  .flexRowContent--payment-methods-and-security-wrapper {
+    margin-top: 32px;
+  }
 }
 
 .flexRow--topbar-interactions {
@@ -301,7 +474,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .flexRow--topbar-wrapper {
     width: 100%;
   }
@@ -526,18 +699,4 @@
   background: #fff;
   top: 0;
   box-shadow: 0 0 1em #222;
-}
-
-.flexRowContent--home-content-container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  max-width: 100%;
-}
-
-.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  padding: 0 !important;
 }

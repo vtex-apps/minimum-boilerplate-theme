@@ -1,0 +1,131 @@
+{
+  "flex-layout.row#payment-methods-and-security": {
+    "title": "Formas de Pagamento e Segurança",
+    "props": {
+      "blockClass": "payment-methods-and-security-wrapper",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "flex-layout.row#payment-methods",
+      "flex-layout.row#seals-and-security"
+    ]
+  },
+  "flex-layout.row#payment-methods": {
+    "title": "Formas de pagamentos",
+    "props": {
+      "blockClass": "payment-methods",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children":[
+      "rich-text#payment-methods",
+      "flex-layout.row#icons"
+    ]
+  },
+  "flex-layout.row#icons": {
+    "title": "Ícones",
+    "props": {
+      "blockClass": "icons",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "image#mastercard",
+      "image#visa",
+      "image#american-express",
+      "image#elo",
+      "image#paga-leve",
+      "image#pix",
+      "image#boleto"
+    ]
+  },
+  "flex-layout.row#seals-and-security": {
+    "title": "Selos e Segurança",
+    "props": {
+      "blockClass": "seals-and-security",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": ["rich-text#seals-and-security", "image#seal"
+  ]
+  },
+  "rich-text#payment-methods": {
+    "title": "Texto: Formas de Pagamento",
+    "props": {
+      "text": "Pague com",
+      "blockClass": "payment-methods-title"
+    }
+  },
+  "rich-text#seals-and-security": {
+    "title": "Texto: Selos e Segurança",
+    "props": {
+      "text": "Selos e Segurança",
+      "blockClass": "seals-and-security-title"
+    }
+  },
+  "image#seal": {
+    "title": "Selos",
+    "props": {
+      "src": "assets/svgs/seal-icon.svg",
+      "alt": "Selos",
+      "blockClass": "seal"
+    }
+  },
+  "image#mastercard": {
+    "title": "Mastercard",
+    "props": {
+      "src": "assets/svgs/mastercard-icon.svg",
+      "alt": "Mastercard",
+      "blockClass": "payment-method"
+    }
+  },
+  "image#visa": {
+    "title": "Visa",
+    "props": {
+      "src": "assets/svgs/visa-icon.svg",
+      "alt": "Visa",
+      "blockClass": "payment-method"
+    }
+  },
+  "image#american-express": {
+    "title": "American Express",
+    "props": {
+      "src": "assets/svgs/american-express-icon.svg",
+      "alt": "American Express",
+      "blockClass": "payment-method"
+    }
+  },
+  "image#elo": {
+    "title": "Elo",
+    "props": {
+      "src": "assets/svgs/elo-icon.svg",
+      "alt": "Elo",
+      "blockClass": "payment-method"
+    }
+  },
+  "image#paga-leve": {
+    "title": "Paga Leve",
+    "props": {
+      "src": "assets/svgs/paga-leve-icon.svg",
+      "alt": "Paga Leve",
+      "blockClass": "payment-method"
+    }
+  },
+  "image#pix": {
+    "title": "Pix",
+    "props": {
+      "src": "assets/svgs/pix-icon.svg",
+      "alt": "Pix",
+      "blockClass": "payment-method"
+    }
+  },
+  "image#boleto": {
+    "title": "Boleto",
+    "props": {
+      "src": "assets/svgs/boleto-icon.svg",
+      "alt": "Boleto",
+      "blockClass": "payment-method"
+    }
+  }
+}

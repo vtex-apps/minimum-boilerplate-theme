@@ -1,0 +1,65 @@
+{
+  "flex-layout.col#talk-to-us": {
+    "title": "Fale Conosco",
+    "props": {
+      "blockClass": "talk-to-us",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#talk-to-us",
+      "link#footer-help-center",
+      "link#backstage",
+      "rich-text#opening-hours",
+      "social-networks#roland"
+    ]
+  },
+  "rich-text#talk-to-us": {
+    "title": "Texto: Fale Conosco",
+    "props": {
+      "text": "Fale Conosco",
+      "blockClass": "talk-to-us-title"
+    }
+  },
+  "link#footer-help-center": {
+    "title": "Link: Central de Ajuda",
+    "props": {
+      "label": "Central de Ajuda",
+      "href": "/central-de-ajuda",
+      "blockClass": ["footer-help-center", "talk-to-us-link"]
+    }
+  },
+  "link#backstage": {
+    "title": "Link: Backstage",
+    "props": {
+      "label": "Backstage",
+      "href": "https://www.roland.com/backstage/login",
+      "blockClass": ["backstage", "talk-to-us-link"]
+    }
+  },
+  
+  "rich-text#opening-hours": {
+    "title": "Texto: Horário de Funcionamento",
+    "props": {
+      "text": "**Horário de Funcionamento:**\n De segunda à sabado, \ndas 09h as 19:30h.",
+      "blockClass": "opening-hours"
+    }
+  },
+  "social-networks#roland": {
+    "props": {
+      "socialNetworks": [
+        {
+          "url": "https://www.instagram.com/roland_brasil/",
+          "name": "Instagram"
+        },
+        {
+          "url": "https://www.youtube.com/user/CanalRolandBrasil",
+          "name": "Youtube"
+        },
+        {
+          "url": "https://web.facebook.com/RolandBrasilOficial?_rdc=1&_rdr",
+          "name": "Facebook"
+        }
+      ]
+    }
+  }
+}

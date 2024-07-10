@@ -1,0 +1,61 @@
+{
+  "flex-layout.row#signature": {
+    "title": "Assinatura",
+    "props": {
+      "blockClass": "signature-wrapper",
+       "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": ["rich-text#signature", "flex-layout.row#technology-partners"]
+  },
+  "rich-text#signature": {
+    "title": "Contetudo da assinatura",
+    "props": {
+      "blockClass": "signature-text",
+      "text": "Ⓒ 2024 ROLAND BRASIL. ROLAND BRASIL IMP. EXP. COM. REPOR. E SERVIÇOS LTDA. CNPJ: 67.070.268/0002-51"
+    }
+  },
+  "flex-layout.row#technology-partners": {
+    "title": "Parceiros de Tecnologia",
+    "props": {
+      "blockClass": "technology-partners-wrapper",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#developed-by",
+      "image#b8one-logo",
+      "rich-text#technology",
+      "image#vtex-logo"
+    ]
+  },
+  "rich-text#developed-by": {
+    "title": "Texto: Feito por",
+    "props": {
+      "blockClass": "developed-by",
+      "text": "Feito por"
+    }
+  },
+  "image#b8one-logo": {
+    "title": "Logo: B8One",
+    "props": {
+      "src": "assets/svgs/logo-b8.svg",
+      "link": "https://www.b8one.com/pt-BR",
+      "blockClass": "b8one-logo"
+    }
+  },
+  "rich-text#technology": {
+    "title": "Texto: Tecnologia",
+    "props": {
+      "blockClass": "technology",
+      "text": "Tecnologia"
+    }
+  },
+  "image#vtex-logo": {
+    "title": "Logo: VTEX",
+    "props": {
+      "src": "assets/svgs/logo-vtex-light.svg",
+      "blockClass": "vtex-logo"
+    }
+  }
+}

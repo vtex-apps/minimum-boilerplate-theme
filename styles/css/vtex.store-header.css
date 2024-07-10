@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 1025px) {
   .headerStickyRow--search-container {
-    padding: 0 16px 12px 16px;
+    padding: 2px 16px 12px 16px;
     background-color: #fff;
   }
   .headerRowContainer--main-container {

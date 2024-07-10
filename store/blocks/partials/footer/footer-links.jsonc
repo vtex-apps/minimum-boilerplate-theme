@@ -1,0 +1,326 @@
+{
+  "flex-layout.row#footer-main-links": {
+    "title": "Links Principais do Footer",
+    "props": {
+      "blockClass": "footer-main-links"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#institucional",
+      "vtex.menu@2.x:menu#support",
+      "vtex.menu@2.x:menu#categories",
+      "flex-layout.col#talk-to-us",
+      "image#logo-roland"
+    ]
+  },
+  "vtex.menu@2.x:menu#institucional": {
+    "title": "Menu Institucional",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "footer-menu-links",
+      "items": [
+        {
+          "id": "institucional-root",
+          "type": "custom",
+          "highlight": true,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "institucional",
+            "text": "Institucional"
+          }
+        },
+        {
+          "id": "quem-somos",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/quem-somos",
+            "noFollow": false,
+            "tagTitle": "Quem somos",
+            "text": "Quem Somos"
+          }
+        },
+        {
+          "id": "blog",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "http://blog.rolandbrasil.com.br/",
+            "noFollow": false,
+            "tagTitle": "Blog",
+            "text": "Blog"
+          }
+        },
+        {
+          "id": "onde-encontrar",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://www.roland.com/br/dealer_locator/",
+            "noFollow": false,
+            "tagTitle": "Onde encontrar",
+            "text": "Onde encontrar"
+          }
+        },
+        {
+          "id": "nossas-lojas",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://www.roland.com/br/roland-stores/moema/",
+            "noFollow": false,
+            "tagTitle": "Nossas lojas",
+            "text": "Nossas Lojas"
+          }
+        }
+      ]
+    }
+  },
+  "vtex.menu@2.x:menu#support": {
+    "title": "Menu Suporte",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "footer-menu-links",
+      "items": [
+        {
+          "id": "support-root",
+          "type": "custom",
+          "highlight": true,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Suporte",
+            "text": "Suporte"
+          }
+        },
+        {
+          "id": "trocas-e-devolucoes",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/central-de-ajuda/devolucao-e-garantia",
+            "noFollow": false,
+            "tagTitle": "Trocas e devoluções",
+            "text": "Trocas e devoluções"
+          }
+        },
+        {
+          "id": "garantias",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/central-de-ajuda/devolucao-e-garantia",
+            "noFollow": false,
+            "tagTitle": "Garantias",
+            "text": "Garantias"
+          }
+        },
+        {
+          "id": "assistencia-tecnica",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/central-de-ajuda/assistencia-tecnica",
+            "noFollow": false,
+            "tagTitle": "Assistência técnica",
+            "text": "Assistência técnica"
+          }
+        },
+        {
+          "id": "politica-de-privacidade",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://www.roland.com/br/privacy/",
+            "noFollow": false,
+            "tagTitle": "Política de privacidade",
+            "text": "Política de privacidade"
+          }
+        },
+        {
+          "id": "documentos-e-manuais",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://www.roland.com/br/support/owners_manuals/",
+            "noFollow": false,
+            "tagTitle": "Documentos e manuais",
+            "text": "Documentos e manuais"
+          }
+        },
+        {
+          "id": "termos-de-uso",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://www.roland.com/br/termos_de_uso/",
+            "noFollow": false,
+            "tagTitle": "Termos de uso",
+            "text": "Termos de uso"
+          }
+        },
+        {
+          "id": "portal-do-titular",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://www.roland.com/br/portal_do_titular/",
+            "noFollow": false,
+            "tagTitle": "Portal do titular",
+            "text": "Portal do titular"
+          }
+        },
+        {
+          "id": "perguntas-frequentes",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/institucional-central-faq",
+            "noFollow": false,
+            "tagTitle": "Perguntas Frequentes",
+            "text": "Perguntas Frequentes"
+          }
+        }
+      ]
+    }
+  },
+  "vtex.menu@2.x:menu#categories": {
+    "title": "Menu Categorias",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "footer-menu-links",
+      "items": [
+        {
+          "id": "categories-root",
+          "type": "custom",
+          "highlight": true,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Categorias",
+            "text": "Categorias"
+          }
+        },
+        {
+          "id": "teclados",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/teclados",
+            "noFollow": false,
+            "tagTitle": "Teclados",
+            "text": "Teclados"
+          }
+        },
+        {
+          "id": "pianos",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/pianos",
+            "noFollow": false,
+            "tagTitle": "Pianos",
+            "text": "Pianos"
+          }
+        },
+        {
+          "id": "baterias-e-percussao",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/baterias-e-percussao",
+            "noFollow": false,
+            "tagTitle": "Batérias e Percussão",
+            "text": "Batérias e Percussão"
+          }
+        },
+        {
+          "id": "dance-dj",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/dance-&-dj",
+            "noFollow": false,
+            "tagTitle": "Dance & DJ",
+            "text": "Dance & DJ"
+          }
+        },
+        {
+          "id": "producao-musical",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/producao-musical",
+            "noFollow": false,
+            "tagTitle": "Produção musical",
+            "text": "Produção musical"
+          }
+        },
+        {
+          "id": "amplificadores",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/amplificadores",
+            "noFollow": false,
+            "tagTitle": "Amplificadores",
+            "text": "Amplificadores"
+          }
+        },
+        {
+          "id": "audio-e-video",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/audio-e-video",
+            "noFollow": false,
+            "tagTitle": "Áudio e vídeo",
+            "text": "Áudio e vídeo"
+          }
+        },
+        {
+          "id": "fones-de-ouvido",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/roland/fones-de-ouvido",
+            "noFollow": false,
+            "tagTitle": "Fones de ouvidos",
+            "text": "Fones de ouvidos"
+          }
+        }
+      ]
+    }
+  },
+  "image#logo-roland": {
+    "title": "Logo Roland footer",
+    "props": {
+      "src": "assets/svgs/roland-logo.svg",
+      "blockClass": ["logo-footer"],
+      "link": "/"
+    }
+  }
+}
