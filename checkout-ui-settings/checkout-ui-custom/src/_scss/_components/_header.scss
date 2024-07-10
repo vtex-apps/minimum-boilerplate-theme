@@ -6,6 +6,14 @@ body {
     display: none;
   }
 
+  &.v-custom-cart-empty {
+    .header.new {
+      .header-wrapper {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
   .header.new {
     display: block!important;
 
@@ -20,6 +28,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+
 
 
       .seal-safe-environment {
@@ -55,7 +65,10 @@ body {
       }
 
       @media screen and (max-width: 768px) {
-        padding: 20px 16px;
+        padding: 20px 16px {
+          bottom: 68px
+        };
+        position: relative;
 
         .store-logo svg {
           width: 116px;

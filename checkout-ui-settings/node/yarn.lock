@@ -275,10 +275,10 @@
     react-intl "^2.8.0"
     recompose "^0.27.1"
 
-"@vtex/api@6.46.1":
-  version "6.46.1"
-  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-6.46.1.tgz#55a8755ae48f5400e7f1ed1921cd547950bb7a2a"
-  integrity sha512-geoxVvyWoQpOQ70Zmx3M8SBkRoGOS/bp9Gy26M+iCue63jofVSwmFz1zf66EaHA1PKOJNRgQPFwY+oeDE1U2lQ==
+"@vtex/api@6.47.0":
+  version "6.47.0"
+  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-6.47.0.tgz#6910455d593d8bb76f1f4f2b7660023853fda35e"
+  integrity sha512-t9gt7Q89EMbSj3rLhho+49Fv+/lQgiy8EPVRgtmmXFp1J4v8hIAZF7GPjCPie111KVs4eG0gfZFpmhA5dafKNA==
   dependencies:
     "@types/koa" "^2.11.0"
     "@types/koa-compose" "^3.2.3"
@@ -2608,6 +2608,10 @@ resolve@^1.12.0, resolve@^1.3.2:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
+"roland.checkout-ui-settings@https://sel2277--roland.myvtex.com/_v/private/typings/linked/v1/roland.checkout-ui-settings@0.0.1+build1720542845/public/@types/roland.checkout-ui-settings":
+  version "0.0.1"
+  resolved "https://sel2277--roland.myvtex.com/_v/private/typings/linked/v1/roland.checkout-ui-settings@0.0.1+build1720542845/public/@types/roland.checkout-ui-settings#05080bb6b81c547c0436ceda30f67466fa04fe3b"
+
 rwlock@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/rwlock/-/rwlock-5.0.0.tgz#888d6a77a3351cc1a209204ef2ee1722093836cf"
@@ -3005,13 +3009,9 @@ vtex-tachyons@^3.2.0:
   resolved "https://registry.yarnpkg.com/vtex-tachyons/-/vtex-tachyons-3.2.2.tgz#e9e39d939778ef7d80a92c476cecf7417f79a6e8"
   integrity sha512-4M53uuvV+2XEjplVYiPgpBuaI5dtGksVgz/20NNjbZkXklJM7Lwgod/hOoh3PtIn36+95zZVVgXYfs3e6EU8YA==
 
-"vtex.checkout-ui-custom@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-ui-custom@0.18.1/public/@types/vtex.checkout-ui-custom":
-  version "0.18.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-ui-custom@0.18.1/public/@types/vtex.checkout-ui-custom#b550ae32fbdf7c594e4fc77eeccfecfbd9eeb568"
-
-"vtex.checkout-ui-settings-server@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-ui-settings-server@0.5.1/public/_types/react":
+"vtex.checkout-ui-settings-server@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-ui-settings-server@0.5.2/public/_types/react":
   version "0.0.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-ui-settings-server@0.5.1/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-ui-settings-server@0.5.2/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
 "vtex.email-checkout-conflict@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.email-checkout-conflict@0.3.0/public/_types/react":
   version "0.0.0"

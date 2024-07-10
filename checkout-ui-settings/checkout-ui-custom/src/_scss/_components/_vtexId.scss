@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 #vtexIdContainer {
   position: fixed !important;
 }
@@ -35,8 +35,8 @@
         &:hover,
         &:focus,
         &:active {
-          background:$successDarken; 
-          border:1px solid $successDarken; 
+          background:$successDarken;
+          border:1px solid $successDarken;
         }
       }
 
@@ -45,7 +45,7 @@
       }
     }
 
-    
+
   }
   @media (max-width:768px) {
     position: fixed !important;

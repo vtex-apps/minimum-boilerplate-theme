@@ -1,5 +1,5 @@
 // _global.scss
-
+@charset "UTF-8";
 @import url("https://p.typekit.net/p.css?s=1&k=jla5wuv&ht=tk&f=139.140.175.176&a=16702154&app=typekit&e=css");
 
 @font-face {
@@ -117,10 +117,119 @@ body {
 
 .container-main {
   min-height: unset;
-  height: calc(100vh - 260px);
 }
 
-.loading.loading-bg {
+.cart-more-options {
+  display: none;
+}
+
+.v-custom-step-cart {
+  .cart-more-options {
+    display: block;
+  }
+}
+
+
+.radio-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+}
+
+.vtex-omnishipping-1-x-leanShippingOption {
+  border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  padding: 14px 16px;
+  max-height: 48px;
+  box-sizing: border-box;
+
+  .vtex-omnishipping-1-x-leanShippingIcon {
+    border-radius: var(--radius-rounded-full, 9999px);
+    border: 1px solid var(--border-input-base, #D4D4D8);
+    background: var(--bg-neutral-subtlest-base, #FFF);
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+  }
+
+
+  .vtex-omnishipping-1-x-leanShippingTextLabel,
+  .radio-option-input {
+    display: none;
+  }
+
+  &.shp-lean-option-active {
+    border: 1px solid var(--border-selected-base, #EE8146);
+    background: var(--bg-selected-subtle-base, #FDF2EC);
+
+    .vtex-omnishipping-1-x-optionPrice {
+      color: #FF5A00;
+    }
+
+    .vtex-omnishipping-1-x-leanShippingIcon {
+
+      &::before {
+        content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z" fill="%23FF5A00"/><circle cx="8" cy="8" r="3" fill="%23F4F4F5"/></svg>');
+        width: 16px;
+        height: 16px;
+      }
+
+      .vtex-omnishipping-1-x-svg {
+        display: none;
+      }
+    }
+
+
+  }
+
+  .vtex-omnishipping-1-x-leanShippingText {
+    border-right: none;
+
+    span {
+      color: var(--text-neutral-bold, #18181B);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+    }
+  }
+
+  .vtex-omnishipping-1-x-optionPrice {
+    color: var(--text-neutral-bold, #18181B);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+}
+
+.body-order-form {
+  .cart-more-options {
+    display: none!important;
+  }
+}
+
+.payment-edit-link {
+  display: none;
+}
+
+.valid-coupon .summary-template-holder .summary-coupon fieldset.coupon-fieldset {
+  &::after {
+    content: 'Cupom aplicado com sucesso!';
+    color: var(--text-feedback-success-base, #065F46);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.12px;
+  }
+}
+
+.loading-bg,
+.loading-img {
   background: transparent;
 
   .icon-spinner {
@@ -132,16 +241,48 @@ body {
     opacity: 1;
 
     &::before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0px;
-    border-radius: 50%;
-    border: 5px solid #FF5A00;
-    animation: prixClipFix 2s linear infinite;
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid #FF5A00;
+      animation: prixClipFix 2s linear infinite;
     }
   }
 }
+
+.v-custom-step-shipping #shipping-data {
+  .step {
+
+    .accordion-inner {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite;
+      opacity: 1;
+      align-self: center;
+      margin: 0 auto;
+
+      .box-step {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #FF5A00;
+        animation: prixClipFix 2s linear infinite;
+      }
+    }
+
+
+    }
+  }
 
 // containers
 
@@ -200,7 +341,6 @@ body {
   font-size: 0;
   color:#18181B;
   text-align: left;
-  font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
@@ -211,6 +351,18 @@ body {
   &::before {
     content: "Carrinho";
     font-size: 24px;
+  }
+
+  @media screen and (max-width: 1070px) {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    padding: 0 16px;
+     &::before {
+       content: "Meu carrinho";
+       font-size: 16px;
+     }
   }
 }
 

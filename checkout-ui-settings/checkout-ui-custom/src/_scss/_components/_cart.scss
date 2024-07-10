@@ -2,6 +2,10 @@
   border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
   background: #FFF;
   padding:0;
+
+  @media screen and (max-width: 1070px) {
+    border: none;
+  }
 }
 
 body.v-custom-step-cart {
@@ -214,6 +218,14 @@ body.v-custom-cart-empty {
         }
       }
 
+      &.product-item {
+        margin: 0;
+        padding: 0;
+        @media screen and (max-width: 768px) {
+          border-top: 1px solid #CFD1D2;
+        }
+      }
+
       &.hide {
         display:none;
       }
@@ -248,12 +260,14 @@ body.v-custom-cart-empty {
         }
 
         @media screen and (max-width: 738px) {
-          display: grid;
-          grid-auto-columns: 1fr;
-          grid-template-rows: max-content max-content;
-          row-gap: 12px;
-          grid-template-areas: "product-image product-name product-name"
-          "product-image quantity price";
+          justify-content: flex-start;
+          // display: grid;
+          // grid-auto-columns: 1fr;
+          // grid-template-rows: max-content max-content;
+          // row-gap: 12px;
+          // grid-template-areas: "product-image product-name product-name"
+          // "product-image quantity price";
+          padding: 16px 20px;
 
           .product-image {
             background: none;
@@ -261,15 +275,18 @@ body.v-custom-cart-empty {
           }
 
           .product-name {
-            width: auto;
+            width: calc(100% - 88px);
             grid-area: product-name;
             padding-left: 0px!important;
             max-width: 100%;
             margin-left: 0!important;
+            display: flex;
+            margin-bottom: 12px ;
 
             a {
               max-width: 100%;
               padding-right: 0;
+              max-height: 32px;
             }
 
             .seller {
@@ -279,17 +296,26 @@ body.v-custom-cart-empty {
 
           .quantity {
             grid-area: quantity;
-            margin-left: 0px !important;
-
-
+            margin-left: 89px !important;
           }
 
           .product-price {
             padding: 0;
             margin: 0;
             padding-left: 10px;
-
             grid-area: price;
+          }
+        }
+
+        @media screen and (max-width: 490px) {
+          .product-price {
+            width: 35%!important;
+            text-align: left;
+            white-space: wrap;
+          }
+
+          .product-image {
+            position: relative;
           }
         }
 
@@ -467,24 +493,43 @@ body.v-custom-cart-empty {
           width: 20px !important;
           margin-left: auto;
 
+          .icon-spinner {
+             width: 20px;
+             height: 20px;
+             border-radius: 50%;
+             position: relative;
+             animation: rotate 1s linear infinite;
+             opacity: 1;
+
+             &::before {
+               content: "";
+               box-sizing: border-box;
+               position: absolute;
+               inset: 0px;
+               border-radius: 50%;
+               border: 2px solid #FF5A00;
+               animation: prixClipFix 2s linear infinite;
+             }
+          }
+
           @media screen and (max-width: 1125px) {
             margin-left: 0;
           }
 
-          @media (max-width: $mobileWidth) {
-            top:0 !important;
-          }
 
           @media screen and (max-width: 782px) {
             position: absolute;
-            right: 16px;
-            top: 16px;
+            right: 16px!important;
+            top: 16px!important;
           }
         }
 
 
 
-        &.product-image {order:1;}
+        &.product-image {
+          order:1;
+          background-image: none;
+        }
         &.product-name {order:2;}
         &.shipping-date {order:3;}
 
@@ -800,6 +845,7 @@ body.v-custom-cart-empty {
     .brand {
       order: 1;
       margin-bottom: 4px;
+      display: block;
       .brand-name {
         display: block;
         color:  #FF5A00;
@@ -917,6 +963,7 @@ body.v-custom-cart-empty {
 		min-width: initial;
 
 		fieldset.coupon-fieldset {
+
       &::after {
         content: 'Use apenas 1 código por pedido';
         color: #71717A;
@@ -938,10 +985,29 @@ body.v-custom-cart-empty {
 			p {
 				margin: 0;
 				color: $muted2;
+        width: 100%;
 				label {
 					cursor: initial;
 					font-size: 13px;
 				}
+
+        .info {
+          border-radius: var(--radius-rounded-sm, 2px);
+          border: 1px solid var(--border-input-base, #D4D4D8);
+          background: var(--bg-neutral-subtlest-base, #FFF);
+          width: 100%;
+          padding: 12px 16px!important;
+          box-sizing: border-box;
+
+          span[data-bind="text: value"] {
+            color: var(--text-neutral-bold, #18181B);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: -0.14px;
+          }
+        }
 			}
 
 			input[type="text"],
@@ -965,7 +1031,8 @@ body.v-custom-cart-empty {
 			> div {
 				display: flex;
 				justify-content: space-between;
-				align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
 
 				@if $showCouponField {
 					&[style*="none"] {
@@ -990,9 +1057,6 @@ body.v-custom-cart-empty {
 				width: 100%;
 				position: relative;
 				&.info {
-					align-items: center;
-					padding: 0;
-					color: $muted1;
 					> span {
 						text-align: left;
 						margin-right: 10px;
@@ -1283,11 +1347,37 @@ body.v-custom-cart-empty {
       }
     }
 
-    .srp-description {
+    .srp-description,
+    .srp-toggle {
       display: none;
     }
 
     .srp-data {
+      #cart-shipping-calculate {
+        border-radius: 0 2px 2px 0;
+        background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+        border: 1px solid var(--border-input-base, #D4D4D8);
+        border-left: 0;
+        color: var(--text-inverse-bold, #FFF);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        transition: all 0.2s ease-in-out;
+        text-transform: uppercase;
+        margin: 0;
+        max-width: 111px;
+        width: 100%;
+        position: relative;
+        top: 1px;
+
+
+        &:hover {
+          background: var(--bg-brand-secondary-bold-hover, #424250);
+        }
+      }
+
       #shipping-calculate-link {
         border-radius: 2px;
         background: #FDF2EC;
@@ -1321,9 +1411,20 @@ body.v-custom-cart-empty {
     }
 
     .srp-delivery-info {
+      padding: 0;
+      margin: 0;
+      .srp-delivery-current-many,
+      .srp-delivery-select {
+        display: none!important;
+      }
+
+
+
       .b--light-gray {
         background:#FFF;
         border-radius:$borderRadius;
+      border: none;
+
       }
     }
     select,
@@ -1362,17 +1463,72 @@ body.v-custom-cart-empty {
       border-radius:$borderRadius;
     }
 
+    .vtex-shipping-preview-0-x-postalCodeForgotten {
+      padding-bottom: 17px;
+    }
+
     .ship-postalCode {
       width: auto !important;
       max-width: 190px;
-      input#ship-postalCode {width:100%;}
+
+
+
+      label {
+        color: var(--text-neutral-subtle, #3F3F46);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        margin-bottom: 4px;
+      }
+
+      input#ship-postalCode {
+        width:100%;
+        border-radius: 2px 0 0 2px;
+        border: 1px solid var(--border-input-base, #D4D4D8);
+        background: var(--bg-neutral-subtlest-base, #FFF);
+        border-right: 0;
+      }
+
+      small {
+        position: relative;
+        top: 16px;
+        a {
+          color: var(--text-link-primary-default-base, #FF5A00);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: -0.14px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 
   #shipping-preview-container {
     width: 100%;
-    display: none;
 
+    .srp-delivery-header {
+
+      .srp-items,
+      #deliver-at-text a {
+        color: var(--text-neutral-bold, #18181B);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
   }
 
   .cart-select-gift-placeholder {
@@ -1439,6 +1595,10 @@ body.v-custom-cart-empty {
       margin:0;
     }
 
+    .summary-coupon-wrap {
+      display: none;
+    }
+
     .totalizers.summary-totalizers.cart-totalizers {
       width: 100%;
       padding:0;
@@ -1456,6 +1616,7 @@ body.v-custom-cart-empty {
 
       .summary-coupon-wrap {
         order: 1;
+        display: block!important;
         .coupon-label {
           display: flex;
           align-items: center;

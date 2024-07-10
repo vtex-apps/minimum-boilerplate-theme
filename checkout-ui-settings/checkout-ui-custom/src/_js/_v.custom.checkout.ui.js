@@ -10,6 +10,9 @@ const {
   formatCurrency,
   findClosestLang,
   parseDateBd,
+  getVtexAddress,
+  getAddressByViaCep,
+  validateRangePostalCode,
 } = require('./_utils.js')
 const {
   _countriesrules,
@@ -137,6 +140,7 @@ class checkoutCustom {
         shippingCalculator.appendTo('.summary-totalizers')
         console.log('appended')
         _this.buildShippingBar()
+        _this.buildShippingOptions()
         obs.disconnect()
       }
     })
@@ -172,7 +176,7 @@ class checkoutCustom {
   }
 
   checkEmpty(items) {
-    if (items.length === 0) {
+    if (items?.length === 0) {
       $('body').addClass('v-custom-cart-empty')
     } else {
       $('body').removeClass('v-custom-cart-empty')
@@ -690,18 +694,14 @@ class checkoutCustom {
         radioContainer.classList.add('radio-options-container')
 
         function updateSelect(value) {
-          console.log('Atualizando select', {
-            deliverySelect,
-            select: deliverySelect.querySelector(`option[value="${value}"]`)
-              .parentNode,
-          })
-
           deliverySelect
             .querySelector(`option[value="${value}"]`)
             .parentNode.click()
 
           deliverySelect.value = value
-          deliverySelect.dispatchEvent(new Event('change'))
+          deliverySelect.dispatchEvent(
+            new CustomEvent('change', { bubbles: true })
+          )
         }
 
         function extractText(optionText) {
@@ -716,14 +716,17 @@ class checkoutCustom {
           const { text, price } = extractText(option.textContent)
 
           const labelHtml = `
-          <label class="radio-option-label">
-            <input type="radio" name="delivery-option" value="${
-              option.value
-            }" class="radio-option-input" ${option.selected ? 'checked' : ''}>
-            <span class="option-text">${text}</span>
-            <span class="option-price">${price}</span>
-          </label>
-        `
+        <label class="vtex-omnishipping-1-x-leanShippingOption">
+          <input type="radio" name="delivery-option" value="${
+            option.value
+          }" class="radio-option-input" ${option.selected ? 'checked' : ''}>
+          <div class="vtex-omnishipping-1-x-leanShippingIcon"></div>
+          <div class="vtex-omnishipping-1-x-leanShippingText">
+            <span>${text}</span>
+          </div>
+          <span class="vtex-omnishipping-1-x-optionPrice">${price}</span>
+        </label>
+      `
 
           radioContainer.innerHTML += labelHtml
         })
@@ -732,9 +735,25 @@ class checkoutCustom {
           .querySelectorAll('input[type="radio"]')
           .forEach(radio => {
             radio.addEventListener('change', function (evt) {
-              console.log('evt', evt)
               updateSelect(radio.value)
+
+              document
+                .querySelectorAll('.vtex-omnishipping-1-x-leanShippingOption')
+                .forEach(label =>
+                  label.classList.remove('shp-lean-option-active')
+                )
+
+              radio
+                .closest('.vtex-omnishipping-1-x-leanShippingOption')
+                .classList.add('shp-lean-option-active')
             })
+
+            if (radio.value === deliverySelect.value) {
+              radio.checked = true
+              radio
+                .closest('.vtex-omnishipping-1-x-leanShippingOption')
+                .classList.add('shp-lean-option-active')
+            }
           })
 
         deliverySelect.parentNode.insertBefore(radioContainer, deliverySelect)
@@ -755,8 +774,6 @@ class checkoutCustom {
     const currentURL = window.location.href
     const { items } = this.orderForm
 
-    console.log('updateBreadcrumb -> items', items)
-
     if (items.length === 0) {
       const stepElement = document.querySelector('.checkout-steps')
       if (stepElement) {
@@ -764,7 +781,6 @@ class checkoutCustom {
       }
       return
     }
-
 
     const updateClasses = (selectors, addClasses = [], removeClasses = []) => {
       selectors.forEach(selector => {
@@ -776,9 +792,7 @@ class checkoutCustom {
       })
     }
 
-    const step = currentURL.split('/').pop();
-
-    console.log('step', step)
+    const step = currentURL.split('/').pop()
 
     const stepsConfig = {
       cart: {
@@ -900,6 +914,8 @@ class checkoutCustom {
   }
 
   buildShippingBar() {
+    const { hash } = window.location
+    if (hash !== '#/cart') return null
     const _this = this
     const shippingBarElement = $('.shipping-bar-wrapper')
 
@@ -1485,6 +1501,156 @@ class checkoutCustom {
     }
   }
 
+  validatePostalCode() {
+    const _this = this
+    const { hash } = window.location
+
+    if (hash !== '#/shipping') return
+
+    async function handlePostalCodeChange(postalCode) {
+      try {
+        if (await _this.isOnPostalCodeRange(postalCode)) {
+          _this.removeExistingErrors()
+          await _this.handleVtexAddress(postalCode)
+          _this.showShippingStep()
+        } else {
+          _this.displayError()
+        }
+      } catch (error) {
+        console.error('Erro ao validar o código postal:', error)
+      }
+    }
+
+    async function initObserver(postalCodeInput) {
+      const observer = new MutationObserver(async mutationsList => {
+        for (const mutation of mutationsList) {
+          if (
+            mutation.type === 'attributes' &&
+            mutation.attributeName === 'value' &&
+            postalCodeInput.value.length >= 8
+          ) {
+            await handlePostalCodeChange(postalCodeInput.value)
+          }
+        }
+      })
+
+      observer.observe(postalCodeInput, {
+        attributes: true,
+        attributeFilter: ['value'],
+      })
+
+      console.log(
+        'Observando mudanças no código postal:',
+        postalCodeInput.value
+      )
+      await handlePostalCodeChange(postalCodeInput.value)
+    }
+
+    function waitForPostalCodeInput() {
+      const postalCodeInput = document.getElementById('ship-postalCode')
+      if (postalCodeInput) {
+        initObserver(postalCodeInput)
+      } else {
+        setTimeout(waitForPostalCodeInput, 500)
+      }
+    }
+
+    waitForPostalCodeInput()
+  }
+
+  async isOnPostalCodeRange(postalCode) {
+    return await validateRangePostalCode(postalCode)
+  }
+
+  async handleVtexAddress(postalCode) {
+    const _this = this
+    const existOnVtex = await getVtexAddress(postalCode)
+
+    if (!existOnVtex) {
+      const addressViaCep = await getAddressByViaCep(postalCode)
+      if (!addressViaCep.erro) {
+        _this.fillAddressForm(addressViaCep)
+      } else {
+        alert('CEP não encontrado')
+      }
+    }
+  }
+
+  fillAddressForm(address) {
+    const { bairro, logradouro, localidade, uf } = address
+    const streetInput = document.getElementById('ship-street')
+    const neighborhoodInput = document.getElementById('ship-neighborhood')
+    const cityInput = document.getElementById('ship-city')
+    const stateSelect = document.getElementById('ship-state')
+
+    if (streetInput && neighborhoodInput && cityInput && stateSelect) {
+      streetInput.value = logradouro || ''
+      neighborhoodInput.value = bairro || ''
+      cityInput.value = localidade || ''
+      stateSelect.value = uf || ''
+
+      console.log('Formulário preenchido')
+    }
+  }
+
+  displayError() {
+    const _this = this
+    _this.removeExistingErrors()
+    const shippingContainer = document.getElementById('shipping-data')
+    shippingContainer.classList.add('postal-code-error')
+    shippingContainer.classList.remove('visible')
+  }
+
+  showShippingStep() {
+    const shippingContainer = document.getElementById('shipping-data')
+    shippingContainer.classList.remove('postal-code-error')
+    shippingContainer.classList.add('visible')
+  }
+
+  removeExistingErrors() {
+    const errorClass = document.querySelector('postal-code-error')
+    if (errorClass) {
+      errorClass.classList.remove('postal-code-error')
+    }
+  }
+
+  handleCouponSuccess() {
+    if (!window.vtexjs) return;
+
+    const { vtexjs = {} } = window;
+    const { checkout = {} } = vtexjs;
+    const { orderForm = {} } = checkout;
+    const { marketingData = {} } = orderForm;
+    const { totalizers = [] } = orderForm;
+
+    const cartTemplateGroup = document.querySelectorAll(".cart-template");
+
+    const existDiscount = totalizers.find(
+      (item) => item.id.toLowerCase() === "discounts"
+    );
+
+    if (marketingData && marketingData.coupon && existDiscount) {
+      return cartTemplateGroup.forEach((el) => {
+        el.classList.add("valid-coupon");
+      });
+    }
+
+    const vtexCustomMsgCouponEl = document.querySelector(
+      ".vcustom-showCustomMsgCoupon"
+    );
+
+    if (marketingData && marketingData.coupon && vtexCustomMsgCouponEl) {
+      return cartTemplateGroup.forEach((el) => {
+        el.classList.add("coupon-not-applicable");
+      });
+    }
+
+    return cartTemplateGroup.forEach((el) => {
+      el.classList.remove("valid-coupon");
+      el.classList.remove("coupon-not-applicable");
+    });
+  };
+
   bind() {
     const _this = this
 
@@ -1585,10 +1751,6 @@ class checkoutCustom {
       _this.update(_this.orderForm)
       _this.addStepsHeader()
       _this.paymentBuilder(_this.orderForm)
-
-      if (_this.orderForm.shippingData.selectedAddresses.length > 0) {
-        _this.buildShippingOptions()
-      }
     }
 
     _this.addEditButtoninLogin()
@@ -1624,6 +1786,7 @@ class checkoutCustom {
           _this.customAddressFormInit(_this.orderForm)
           _this.removeCILoader()
           _this.URLHasIncludePayment(_this.orderForm)
+          _this.validatePostalCode()
 
           _this.onDomMutation({
             targetNode: cartItems,
@@ -1635,6 +1798,8 @@ class checkoutCustom {
       $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
         _this.update(orderForm)
         _this.customAddressFormInit(orderForm)
+        _this.validatePostalCode()
+        _this.handleCouponSuccess()
       })
 
       $(window).load(function () {
@@ -1653,7 +1818,6 @@ class checkoutCustom {
       })
 
       // eslint-disable-next-line no-console
-      console.log(`🎉 Yay! You are using the vtex.checkout.ui customization !!`)
     } catch (e) {
       _this.general()
     }
