@@ -1,6 +1,13 @@
 {
   "flex-layout.row#simple-shelf-container-1": {
-    "title": "Vitrine Simples",
+    "title": "Vitrine Simples 1",
+    "children": ["flex-layout.col#shelf-container-1"],
+    "props": {
+      "blockClass": ["shelf-container", "home-content-container"]
+    }
+  },
+  "flex-layout.row#simple-shelf-container-2": {
+    "title": "Vitrine Simples 2",
     "children": ["flex-layout.col#shelf-container-1"],
     "props": {
       "blockClass": ["shelf-container", "home-content-container"]
@@ -54,7 +61,8 @@
     "blocks": ["product-summary.shelf#general"],
     "children": ["slider-layout#shelf-slider-1"],
     "props": {
-      "orderBy": "OrderByReleaseDateDESC"
+      "orderBy": "OrderByReleaseDateDESC",
+      "collection": "162"
     }
   },
   "slider-layout#shelf-slider-1": {

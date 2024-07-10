@@ -199,6 +199,11 @@
   background: #FFF;
   margin: unset;
 }
+@media screen and (max-width: 1024px) {
+  .searchBarContainer {
+    max-width: 100%;
+  }
+}
 .searchBarContainer .searchBarIcon--search-bar {
   background-image: url("assets/svgs/search-icon.svg");
   width: 20px;
