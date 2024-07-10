@@ -1,0 +1,46 @@
+.socialNetworkWrapper {
+
+  &::before {
+    content: "Nos siga nas redes sociais";
+    color: #FFF;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .socialNetworksContainer {
+    gap: 24px;
+    .socialNetworkLink {
+      height: 32px;
+      min-width: 32px;
+      margin: 0;
+
+      &--facebook {
+        background: url('assets/svgs/facebook-footer-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+      }
+
+      &--youtube {
+        background: url('assets/svgs/youtube-footer-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &--instagram {
+        background: url('assets/svgs/instagram-footer-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .socialNetworkImage {
+    display: none;
+  }
+}
