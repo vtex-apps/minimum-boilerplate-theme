@@ -258,17 +258,32 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
-    overflow: hidden;
-    max-width: 100vw;
+  &.mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 924px) {
+    padding: 8px 16px;
     overflow-x: auto;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-x: scroll;
-    max-width: 100vw;
-    padding: 8px 0;
+    &.desktop {
+      display: none;
+    }
+
+    &.mobile {
+      display: block;
+
+    }
+
+
+    &__list {
+      justify-content: flex-start;
+    }
+    // position: absolute;
+    // bottom: 0;
+    // overflow-x: auto;
+    // max-width: 100vw;
+    // padding: 8px 0;
+    // left: 0;
   }
 }
 

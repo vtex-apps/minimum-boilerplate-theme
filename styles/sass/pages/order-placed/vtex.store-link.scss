@@ -1,0 +1,53 @@
+.link--myOrders,
+.link--continueShopping {
+  border-radius: var(--radius-rounded-sm, 2px);
+  padding: 16px 32px;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 886px) {
+    width: 100%;
+
+    .label {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .label {
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
+}
+
+.link--myOrders {
+  background: var(--bg-brand-primary-subtle-base, #FDF2EC);
+
+  .label {
+    color: var(--text-brand-primary-base, #FF5A00);
+  }
+
+  &:hover {
+    background: var(--bg-brand-primary-subtle-hover, #FBE5D8);
+  }
+}
+
+.link--continueShopping {
+  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+
+  .label {
+    color: var(--text-inverse-bold, #FFF);
+
+  }
+
+  &:hover {
+    background: var(--bg-brand-secondary-bold-hover, #424250);
+  }
+}

@@ -56,6 +56,7 @@ body {
           @media screen and (max-width: 406px) {
             width: 45%;
             font-size: 12px;
+            line-height: 16px;
           }
         }
       }
@@ -65,9 +66,7 @@ body {
       }
 
       @media screen and (max-width: 768px) {
-        padding: 20px 16px {
-          bottom: 68px
-        };
+        padding: 20px 16px;
         position: relative;
 
         .store-logo svg {
