@@ -1,0 +1,20 @@
+
+//titles in third step checkout
+
+%steps-title {
+  color: var(--text-neutral-bold, #18181B);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+
+  @if $countingSteps {
+  	color: $muted1;
+	  border: none;
+	  font-size: 20px;
+	  text-transform: initial;
+	  margin-bottom: 0px;
+  }
+
+}

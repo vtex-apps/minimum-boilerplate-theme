@@ -1,0 +1,7 @@
+node_modules/
+coverage/
+*.snap.ts
+node/templates/
+node/__mocks__/fixtures/**
+checkout-ui-custom/checkout6-custom.js
+checkout-ui-custom/checkout6-custom.css

@@ -1,0 +1,355 @@
+.confirmationIconWrapper {
+  & :first-child {
+    display: none;
+  }
+
+  &::before {
+    content: url('data:image/svg+xml,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 12L18 34L8 24" stroke="%23EE8146" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.section--confirmation {
+  margin-bottom: 48px;
+}
+
+.orderPlacedWrapper {
+  @media screen and (max-width: 828px) {
+    padding: 0 {
+      top: 32px;
+    };
+    .orderPlacedHeader {
+      padding:  0 16px;
+
+    }
+  }
+}
+
+
+
+.confirmationTitle {
+  color: var(--text-neutral-bold, #18181B);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin-top: 24px;
+
+  &::before {
+    content: 'Obrigado pela sua compra!';
+    font-size: 32px;
+  }
+}
+
+.confirmationMessage {
+  color: var(--text-neutral-subtlest, #71717A);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+
+  & :first-child {
+    color: var(--text-neutral-bold, #18181B);
+    font-weight: 500;
+  }
+}
+
+.orderPlacedMainWrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0 16px {
+    bottom:32px; 
+  };
+  .orderList {
+    border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+    background: var(--elevation-raised, #FFF);
+    padding: 24px;
+    max-width: 1248px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+.orderNumber {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+
+.orderDatetime {
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin-top: 8px;
+}
+
+.customerInfoListContainer {
+  border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  padding: 24px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+
+  .customerInfoListName,
+  .customerInfoListEmail,
+  .customerInfoListDocument,
+  .customerInfoListPhone {
+    color: var(--text-neutral-subtle, #3F3F46);
+    padding: 0;
+  }
+  
+
+  &::before {
+    content: 'Dados pessoais';
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-neutral-bold, #18181B);
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
+}
+
+
+.orderPaymentItem {
+  margin: 0;
+  width: 100%;
+  border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  padding: 24px;
+  margin-top: 16px;
+
+
+  &::before {
+    content: 'Forma de Pagamento';
+    display: block;
+    margin-bottom: 20px;
+    color: var(--text-neutral-bold, #18181B);
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
+
+  .paymentGroup {
+    color: var(--text-neutral-subtle, #3F3F46);
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    letter-spacing: -0.14px;
+  }
+
+  :global(.vtex-button) {
+    border-radius: var(--radius-rounded-sm, 2px);
+    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+    padding: 16px 24px;
+    box-sizing: border-box;
+    border: none;
+
+    :global(.vtex-button__label) {
+      color: var(--text-inverse-bold, #FFF);
+      text-align: center;
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      display: flex;
+      text-transform: capitalize;
+      padding: 0 !important;
+     
+    }
+  }
+
+  .paymentValue,
+  :global(.vtex__icon-info) {
+    display: none;
+  }
+}
+
+
+.section {
+  border: none;
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  margin: 0 {
+    top: 16px;
+  };
+
+  .packageHeaderColumn, 
+  .productListItem {
+    border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+    padding: 24px;
+  }
+
+  .packageHeaderColumn {
+    margin-bottom: 20px;
+
+    .packageDeliveryTitle {
+      color: var(--text-neutral-bold, #18181B);
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      display: block;
+
+      margin: 0 ;
+    }
+
+    .packageShippingEstimate,
+    .packageSLA,
+    .addressContainer {
+        color: var(--text-neutral-subtle, #3F3F46);
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+    }
+  }
+
+  .productList {
+    width: 100%;
+
+    &Item {
+
+      .productPrice {
+        display: none;
+      }
+
+
+      .productName {
+        color: var(--text-neutral-subtle, #3F3F46);
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+      }
+
+      .productQuantity {
+        color: var(--text-neutral-subtlest, #71717A);
+        font-family: "Proxima Nova";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: -0.12px;
+      }
+
+      .productImageWrapper {
+        width: 48px;
+        height: 48px;
+      }
+
+
+    }
+  }
+}
+
+.totalListWrapper {
+  border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  border-top: none;
+  background: var(--bg-neutral-subtlest-base, #FFF);
+  padding: 24px;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: 'Resumo do pedido';
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .totalList {
+    width: 100%;
+      margin: 0;
+
+    .totalListItem {
+      padding: 0 ;
+      margin-bottom: 4px;
+    }
+
+    .totalListItemLabel {
+      color: var(--text-neutral-subtle, #3F3F46);
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+    }
+
+    .totalListItemValue {
+      color: var(--text-neutral-bold, #18181B);
+      text-align: right;
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+    }
+  }
+}
+
+.productWrapper {
+  @media screen and (max-width: 639px) {
+    display: flex;
+    gap: 24px;
+
+    .productImageColumn {
+      margin: 0;
+    }
+
+    .productInfoColumn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: start;
+    }
+  }
+}

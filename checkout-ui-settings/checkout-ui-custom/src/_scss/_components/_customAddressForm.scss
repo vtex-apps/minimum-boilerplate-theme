@@ -1,0 +1,245 @@
+
+
+
+#shipping-data .accordion-group.shipping-data:after {
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+.js-v-custom-is-loadAddress {
+  .vtex-omnishipping-1-x-warning {
+    display: none !important;
+  }
+
+  #shipping-data .accordion-group.shipping-data:after {
+    content: "";
+    display: block;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 2;
+    margin:0 0 20px 0;
+    border-radius: 3px;
+    @extend %loading-shimmer;
+  }
+
+  #postalCode-finished-loading + .mb5 {
+    display: none !important;
+  }
+
+}
+
+
+.vcustom--vtex-omnishipping-1-x-address {
+  display: none;
+}
+body.v-custom-addressForm-on {
+
+
+  &.v-custom-step-shipping {
+    .vcustom--vtex-omnishipping-1-x-address {
+      display: block;
+    }
+    .v-custom-ship-info {
+      display:flex;
+      .ship-number {
+        margin-right: 10px;
+      }
+    }
+    .vtex-omnishipping-1-x-addressForm, .vtex-omnishipping-1-x-deliveryGroup, .vtex-omnishipping-1-x-submitPaymentButton {
+      display: none;
+    }
+  }
+
+}
+
+.vtex-omnishipping-1-x-submitShippingStepButton {
+  margin: 20px 0 0 0;
+}
+
+
+body.v-custom-googleForm-on {
+  .pac-container.pac-logo {
+    //display: block !important;
+  }
+
+  .vtex-omnishipping-1-x-deliveryGroup,
+  .vtex-omnishipping-1-x-addressForm,
+  .vtex-omnishipping-1-x-submitPaymentButton,
+  .vtex-omnishipping-1-x-btnDelivery {
+      display:none
+  }
+
+  .alert-noStreet {
+    display: none;
+  }
+
+}
+
+.v-custom-googleFormScript-added.v-custom-googleForm-on .accordion-inner.shipping-container  > * {
+  display: none;
+}
+
+
+
+body.v-custom-fnsCustomAddressForm {
+
+  .accordion-inner.shipping-container {
+    padding-top:0 !important;
+  }
+
+
+  .accordion-inner.shipping-container {
+    transition:all ease 0.3s;
+  }
+
+  .vtex-omnishipping-1-x-selectDeliveryText + div {margin:0 !important;}
+
+  .orderform-template-holder p.vtex-omnishipping-1-x-submitPaymentButton.btn-submit-wrapper.btn-go-to-payment-wrapper {
+    margin-bottom:0 !important;
+  }
+
+  .vtex-omnishipping-1-x-addressFormPart1 {
+    .input.ship-country,
+    .input.ship-addressQuery,
+    .input.ship-postalCode {display: none;}
+  }
+
+  &.returningUser {
+    .vtex-omnishipping-1-x-addressFormPart1 {
+      .input.ship-postalCode {display: block;}
+    }
+  }
+
+  .vtex-omnishipping-1-x-container.shp-pickup-receiver +
+  .vtex-omnishipping-1-x-shippingSectionTitle +
+  #back-to-address-list +
+  .vtex-omnishipping-1-x-addressFormPart1 p.input.ship-postalCode,
+  .vtex-omnishipping-1-x-container.shp-pickup-receiver +
+  .vtex-omnishipping-1-x-shippingSectionTitle +
+  .vtex-omnishipping-1-x-addressFormPart1 p.input.ship-postalCode {
+      display:block;
+  }
+
+  .orderform-template-holder {
+    .step.shipping-data .box-step {
+      .vtex-omnishipping-1-x-addressFormPart1 {order: 1;}
+    }
+  }
+
+  .pac-logo[style*="none"] {
+    border:0;
+  }
+  .pac-logo[style*="none"]:after {
+      display: none;
+  }
+
+  #shipping-data .accordion-inner + .vcustom--vtex-omnishipping-1-x-address {
+    display: none;
+  }
+
+  div#shipping-data {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      width:100%;
+    }
+
+    .step.accordion-group.shipping-data {order: 1;}
+    .vcustom--vtex-omnishipping-1-x-address {order: 3;}
+  }
+
+
+
+}
+
+.js-v-custom-is-loading {
+
+  .accordion-inner.shipping-container,
+  .vcustom--vtex-omnishipping-1-x-address {
+    overflow: hidden;
+  }
+
+  .vcustom--vtex-omnishipping-1-x-address {
+    height: 120px;
+    position:relative;
+
+    &:before {
+      content:"";
+      display:block;
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      z-index:2;
+      @extend %loading-shimmer;
+    }
+  }
+
+  .accordion-inner.shipping-container > *,
+  .vcustom--vtex-omnishipping-1-x-address > * {
+    opacity:0.5
+  }
+
+}
+
+.vcustom--vtex-omnishipping-1-x-address {
+  transition:all ease 0.3s;
+
+  p.input {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  label {
+    @extend %label;
+  }
+
+  span.help.error {display: none;}
+
+  input {
+    @extend %input-style;
+    max-width: initial;
+    width: 100%;
+
+
+  }
+
+  input.error + span.help.error,
+  select.error + span.help.error {display: block;}
+
+  &__state {
+    display: flex;
+    margin: 0 -5px;
+    p.input {
+      margin:0 5px;
+    }
+    @media (max-width:768px) {
+      flex-wrap:wrap;
+      margin: 0;
+      p.input.ship-state {margin:0;}
+    }
+  }
+
+}
+
+//google address form
+
+.pac-container.pac-logo {border: 1px solid $muted4; border-radius: $borderRadius;}
+
+.pac-logo:after {
+  background: #fbfbfb url(https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png) no-repeat 10px center;
+  padding: 14px;
+  background-size: 110px;
+}
+
+
+.address-list.vtex-omnishipping-1-x-addressList + p.input.ship-addressQuery.text {display:none;}
+
+.alert-noStreet {
+  margin: 30px auto 0 auto;
+  text-align: center;
+}

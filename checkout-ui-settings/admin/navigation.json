@@ -1,0 +1,20 @@
+[
+  {
+    "section": "storeSetup",
+    "titleId": "admin/checkout-ui.navigation.title",
+    "path": "/admin/vtex-checkout-ui-custom/",
+    "LMProductId": "27"
+  },
+  {
+    "section": "storeSettings",
+    "subSection": "storeFront",
+    "adminVersion": 4,
+    "LMProductId": "27",
+    "subSectionItems": [
+      {
+        "labelId": "admin/checkout-ui.navigation.title",
+        "path": "/admin/vtex-checkout-ui-custom/"
+      }
+    ]
+  }
+]

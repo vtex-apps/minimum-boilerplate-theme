@@ -1,0 +1,32 @@
+.wrapper--notice-text {
+  width: 100%;
+  .paragraph--notice-text {
+    color: var(--text-neutral-subtle, #3F3F46);
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 {
+      bottom: 12px;
+    };
+
+    @media screen and (max-width: 768px) {
+      text-align: start;
+    }
+    
+
+    &::before {
+      content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3327 4L5.99935 11.3333L2.66602 8" stroke="%23EE8146" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+

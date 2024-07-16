@@ -1,0 +1,83 @@
+{
+  "name": "checkout-ui-settings",
+  "vendor": "roland",
+  "version": "0.0.1",
+  "title": "Checkout Custom",
+  "description": "Make possible to customize the checkout layout using a easy to use interface from the admin",
+  "builders": {
+    "docs": "0.x",
+    "admin": "0.x",
+    "react": "3.x",
+    "node": "6.x",
+    "graphql": "1.x",
+    "messages": "1.x",
+    "checkout-ui-custom": "0.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.store-resources": "0.x",
+    "vtex.checkout-ui-settings-server": "0.x",
+    "vtex.email-checkout-conflict": "0.x"
+  },
+  "policies": [
+    {
+      "name": "vtex.checkout-ui-settings-server:save-build"
+    },
+    {
+      "name": "read-write-any-workspace"
+    },
+    {
+      "name": "update-app-settings"
+    },
+    {
+      "name": "POWER_USER_DS"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "LogisticsViewer"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "platform.io.vtex.com",
+        "path": "/{{account}}/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/dataentities/checkoutcustom/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/logistics/pvt/configuration/holidays/"
+      }
+    }
+  ],
+  "scripts": {},
+  "credentialType": "absolute",
+  "billingOptions": {
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

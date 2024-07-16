@@ -1,0 +1,293 @@
+//steps
+
+  $numberStepSize:26px;
+
+
+  %countingStepsNormal {
+    border-radius: var(--radius-rounded-full, 9999px);
+    background: var(--bg-accent-brand-primary-subtlest, #FBE5D8);
+    width: 32px;
+    height: 32px;
+    color: var(--text-accent-brand-subtle, #EE8146);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+
+  }
+
+  %countingStepsActive {
+    background: #EE8146;
+    border: none;
+    color:#FFF
+  }
+
+  %countingStepsFilled {
+    @extend %countingStepsActive;
+  }
+
+
+
+  //keep attention changing anything below
+
+  @if $countingSteps {
+    .client-pre-email h3.client-pre-email-h span:before,
+    .client-profile-data .accordion-toggle > span:before,
+    .shipping-data .accordion-toggle:before,
+    .payment-data .accordion-toggle > span:not(.payment-edit-link):before {
+
+      @extend %countingStepsNormal;
+
+      text-align: center;
+      margin-right:16px;
+      border-radius: 100%;
+      vertical-align: middle;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .client-pre-email h3.client-pre-email-h span:before { content: "1" }
+    .client-profile-data .accordion-toggle > span:before { content: "2" }
+    .shipping-data .accordion-toggle:before { content: "3" }
+    .payment-data .accordion-toggle > span:not(.payment-edit-link):before { content: "4" }
+  }
+
+
+  //mobile
+  @media(max-width: $mobileWidth) {
+    body {
+      &:before {
+        width: 0;
+        height: 4px;
+        background:$actionPrimary;
+        display: block;
+        content:"";
+        position: fixed;
+        top: 0;
+        transition: all ease 0.3s;
+        z-index: 999;
+      }
+      &.v-custom-step-email:before {width: 23%;}
+      &.v-custom-step-profile:before {width: 46%;}
+      &.v-custom-step-shipping:before {width: 69%;}
+      &.v-custom-step-payment:before {width: 92%;}
+    }
+
+  }
+
+
+  %checkout-steps-active {
+    color:$muted1;
+    font-weight: bold;
+    pointer-events: initial;
+  }
+
+  body {
+    &.v-custom-step-cart .checkout-steps_item_cart {
+      opacity: 1;
+      .text {@extend %checkout-steps-active;pointer-events: none;}
+      &:before {background: $actionPrimary;border-color: $actionPrimary;}
+    }
+    &.v-custom-step-email,
+    &.v-custom-step-profile{
+
+      .checkout-steps_bar_inner-active {width: 20%;}
+      .checkout-steps_item_cart,
+      .checkout-steps_item_identification {
+        opacity: 1;
+        .text {@extend %checkout-steps-active;}
+        &:before {background: $actionPrimary;border-color: $actionPrimary;}
+      }
+      .checkout-steps_item_identification .text {pointer-events: none;}
+
+      .client-pre-email h3.client-pre-email-h span:before {
+        @extend %countingStepsActive;
+      }
+    }
+
+    &.v-custom-step-shipping {
+      .checkout-steps_bar_inner-active {width: 40%;}
+      .checkout-steps_item_cart,
+      .checkout-steps_item_identification,
+      .checkout-steps_item_shipping {
+        opacity: 1;
+        .text {@extend %checkout-steps-active;}
+        &:before {background: $actionPrimary;border-color: $actionPrimary;}
+      }
+      .checkout-steps_item_shipping .text {pointer-events: none;}
+    }
+
+    &.v-custom-step-payment {
+      .checkout-steps_bar_inner-active {width: 60%;}
+      .checkout-steps_item_cart,
+      .checkout-steps_item_identification,
+      .checkout-steps_item_shipping,
+      .checkout-steps_item_payment {
+        opacity: 1;
+        .text {@extend %checkout-steps-active;}
+        &:before {background: $actionPrimary;border-color: $actionPrimary;}
+      }
+      .checkout-steps_item_payment .text {pointer-events: none;}
+    }
+
+    &.v-custom-step-profile {
+      .client-pre-email h3.client-pre-email-h span:before {
+        @extend %countingStepsFilled;
+      }
+
+      .client-profile-data .accordion-toggle > span:before {@extend %countingStepsActive;}
+    }
+    &.v-custom-step-shipping {
+
+      .client-pre-email h3.client-pre-email-h span:before,
+      .client-profile-data .accordion-toggle > span:before {
+        @extend %countingStepsFilled;
+      }
+
+      .shipping-data .accordion-toggle:before {@extend %countingStepsActive;}
+    }
+    &.v-custom-step-payment {
+
+      .client-pre-email h3.client-pre-email-h span:before,
+      .client-profile-data .accordion-toggle > span:before,
+      .shipping-data .accordion-toggle:before {
+        @extend %countingStepsFilled;
+      }
+
+      .payment-data .accordion-toggle > span:not(.payment-edit-link):before {@extend %countingStepsActive;}
+    }
+  }
+.checkout-steps {
+
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  &__item {
+    padding-right: 12px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+
+      span {
+        color: var(--Gray-Scale-Black, #000);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+      }
+    }
+
+    &:first-child {
+      .checkout-steps__item-icon {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &.completed {
+      svg:not(.completed) {
+        display: none;
+      }
+
+      svg.completed {
+        display: block;
+
+        path:last-child {
+          fill: #FDF2EC;
+          stroke: #EE8146;
+        }
+      }
+    }
+
+    &.active {
+
+      .checkout-steps__item-icon {
+        &::before {
+          background-color: #EE8146;
+        }
+      }
+
+      span {
+        color: #EE8146;
+      }
+
+      svg {
+        fill: #EE8146;
+
+        path {
+          stroke: #FFF;
+        }
+      }
+      .completed {
+        display: none;
+      }
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+
+      .completed {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 1px;
+        background-color: #71717A;
+      }
+    }
+  }
+
+  &.mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 924px) {
+    padding: 8px 16px;
+    overflow-x: auto;
+    &.desktop {
+      display: none;
+    }
+
+    &.mobile {
+      display: block;
+
+    }
+
+
+    &__list {
+      justify-content: flex-start;
+    }
+    // position: absolute;
+    // bottom: 0;
+    // overflow-x: auto;
+    // max-width: 100vw;
+    // padding: 8px 0;
+    // left: 0;
+  }
+}
+
+
+
+
+//end steps

@@ -1,0 +1,7 @@
+/* /files/checkout5-custom.css */
+
+/* Displays the option to enter a foreign document */
+.document-box { display: block; }
+
+/* Displays the option to enter an international phone */
+.phone-box { display: block; }
