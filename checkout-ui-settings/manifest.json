@@ -1,7 +1,7 @@
 {
   "name": "checkout-ui-settings",
   "vendor": "roland",
-  "version": "0.18.7",
+  "version": "0.18.8",
   "title": "Checkout Custom",
   "description": "Make possible to customize the checkout layout using a easy to use interface from the admin",
   "builders": {
