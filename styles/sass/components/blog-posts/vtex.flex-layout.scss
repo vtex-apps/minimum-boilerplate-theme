@@ -13,9 +13,7 @@
 
 .flexCol--blog-posts-content {
   max-width: 1248px;
-  margin: 0 auto {
-    right: 80px;
-  };
+  margin: 0 auto;
 
   @media screen and (max-width: 768px) {
     margin-right: 0;

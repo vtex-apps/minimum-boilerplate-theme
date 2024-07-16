@@ -9,6 +9,61 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
+:global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer {
+  width: fit-content !important;
+  right: 32px;
+}
+:global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button) {
+  padding: 12px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 4px;
+  border: 1.25px solid #E1E3E1;
+  background: #FFF;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button)::before {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0013 15.8333L10.0013 4.16659M10.0013 4.16659L4.16797 9.99992M10.0013 4.16659L15.8346 9.99992" stroke="%23130C0E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer {
+    position: unset;
+    z-index: 1;
+    margin: 16px auto;
+  }
+  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button) {
+    padding: 12px 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button)::before {
+    content: "Voltra ao topo";
+    color: #130C0E;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    width: fit-content;
+    text-transform: math-auto;
+  }
+  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button)::after {
+    content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0013 15.8333L10.0013 4.16659M10.0013 4.16659L4.16797 9.99992M10.0013 4.16659L15.8346 9.99992" stroke="%23130C0E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+
 .infoCardContainer--our-categories-main-image {
   max-width: 680px;
   background-color: black;
@@ -159,61 +214,6 @@
 
 .imageElement--mobile {
   width: 100%;
-}
-
-:global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer {
-  width: fit-content !important;
-  right: 32px;
-}
-:global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button) {
-  padding: 12px;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 4px;
-  border: 1.25px solid #E1E3E1;
-  background: #FFF;
-  box-shadow: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-:global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button)::before {
-  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0013 15.8333L10.0013 4.16659M10.0013 4.16659L4.16797 9.99992M10.0013 4.16659L15.8346 9.99992" stroke="%23130C0E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer {
-    position: unset;
-    z-index: 1;
-    margin: 16px auto;
-  }
-  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button) {
-    padding: 12px 20px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button)::before {
-    content: "Voltra ao topo";
-    color: #130C0E;
-    font-family: "Proxima Nova";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-    width: fit-content;
-    text-transform: math-auto;
-  }
-  :global(.vtex-flex-layout-0-x-flexRow--back-to-top-button) .backToTopButtonContainer :global(.vtex-button)::after {
-    content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0013 15.8333L10.0013 4.16659M10.0013 4.16659L4.16797 9.99992M10.0013 4.16659L15.8346 9.99992" stroke="%23130C0E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-    width: 20px;
-    height: 20px;
-    display: block;
-  }
 }
 
 .imageElement--payment-method {
