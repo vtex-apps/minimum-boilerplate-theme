@@ -1,7 +1,7 @@
 {
   "name": "checkout-ui-settings",
   "vendor": "roland",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "Checkout Custom",
   "description": "Make possible to customize the checkout layout using a easy to use interface from the admin",
   "builders": {
@@ -75,9 +75,7 @@
       "url": "https://support.vtex.com/hc/requests"
     },
     "type": "free",
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
