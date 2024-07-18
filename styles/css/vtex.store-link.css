@@ -9,6 +9,27 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
+.link--section-title {
+  text-decoration: none;
+  margin-right: 17px;
+}
+@media screen and (max-width: 768px) {
+  .link--section-title {
+    margin-right: 8px;
+  }
+}
+
+.label--section-title {
+  color: #000;
+  text-align: right;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
 .link--myOrders,
 .link--continueShopping {
   border-radius: var(--radius-rounded-sm, 2px);
@@ -58,27 +79,6 @@
 }
 .link--continueShopping:hover {
   background: var(--bg-brand-secondary-bold-hover, #424250);
-}
-
-.link--section-title {
-  text-decoration: none;
-  margin-right: 17px;
-}
-@media screen and (max-width: 768px) {
-  .link--section-title {
-    margin-right: 8px;
-  }
-}
-
-.label--section-title {
-  color: #000;
-  text-align: right;
-  font-family: "Proxima Nova";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.16px;
 }
 
 .link--talk-to-us-link {
