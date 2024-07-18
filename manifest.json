@@ -1,7 +1,7 @@
 {
   "vendor": "roland",
   "name": "store-theme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
