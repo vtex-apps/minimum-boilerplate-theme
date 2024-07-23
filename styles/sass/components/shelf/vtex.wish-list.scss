@@ -3,6 +3,7 @@
   top: 0;
   width: fit-content!important;
   position: absolute;
+  z-index: 1;
 
   :global(.vtex-button),
   :global(.vtex-button__label) {

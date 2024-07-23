@@ -30,6 +30,58 @@
   letter-spacing: -0.16px;
 }
 
+
+.link--myOrders,
+.link--continueShopping {
+  border-radius: var(--radius-rounded-sm, 2px);
+  padding: 16px 32px;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 886px) {
+  .link--myOrders,
+  .link--continueShopping {
+    width: 100%;
+  }
+  .link--myOrders .label,
+  .link--continueShopping .label {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.link--myOrders .label,
+.link--continueShopping .label {
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.link--myOrders {
+  background: var(--bg-brand-primary-subtle-base, #FDF2EC);
+}
+.link--myOrders .label {
+  color: var(--text-brand-primary-base, #FF5A00);
+}
+.link--myOrders:hover {
+  background: var(--bg-brand-primary-subtle-hover, #FBE5D8);
+}
+
+.link--continueShopping {
+  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+}
+.link--continueShopping .label {
+  color: var(--text-inverse-bold, #FFF);
+}
+.link--continueShopping:hover {
+  background: var(--bg-brand-secondary-bold-hover, #424250);
+}
+
 .link--talk-to-us-link {
   display: flex;
   align-items: center;

@@ -1,0 +1,7 @@
+### SublimeText ###
+*.sublime-workspace
+
+# App specific
+node_modules/
+npm-debug.log
+build/

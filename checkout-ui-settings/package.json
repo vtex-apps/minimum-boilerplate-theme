@@ -1,0 +1,33 @@
+{
+  "name": "checkout-ui-custom",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\""
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "12.12.21",
+    "@vtex/intl-equalizer": "^2.5.0",
+    "@vtex/prettier-config": "0.1.4",
+    "eslint": "7.12.1",
+    "eslint-config-vtex": "^14.1.1",
+    "eslint-config-vtex-react": "^6.8.3",
+    "husky": "4.2.3",
+    "lint-staged": "10.1.1",
+    "prettier": "2.0.2",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.6.0"
+  }
+}

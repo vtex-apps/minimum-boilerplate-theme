@@ -1,0 +1,24 @@
+.default-modal {
+  border-radius:$borderRadius;
+  height:auto;
+}
+
+.modal {
+  .btn {
+    background: #FFF;
+  }
+}
+
+.modal.guest-login-modal {}
+    .modal.guest-login-modal button.btn {width:auto;}
+
+.modal.guest-login-modal,
+.modal.modal-email-template ,
+.modal.modal-payment-template,
+.modal.modal-masked-info-template {
+    background:$success;
+}
+
+.payment-confirmation-message {
+  width:100%;
+}

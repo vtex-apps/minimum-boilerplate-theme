@@ -2,3 +2,7 @@
     background-color: #FF5A00;
     border-color: #FF5A00!important;
   }
+
+  .vtex-order-placed-2-x-orderPaymentItem .t-body .c-muted-1.mb3{
+    display: none;
+  }

@@ -1,0 +1,26 @@
+
+
+body.js-vcustom-hideEmailStep {
+  .orderform-template-holder #client-profile-data form.client-pre-email.client-pre-email {
+    display:none !important;
+  }
+
+  .client-profile-data .accordion-toggle>span:before {
+    content:"1";    
+  }
+
+  .shipping-data .accordion-toggle:before {
+    content:"2";  
+  }
+
+  .payment-data .accordion-toggle>span:not(.payment-edit-link):before {
+    content:"3";
+  }
+
+  .client-profile-data .accordion-toggle > span:before {@extend %countingStepsActive;}
+
+  .client-pre-email+.client-profile-data .accordion-body .accordion-inner {
+    display: block;
+  }
+}
+

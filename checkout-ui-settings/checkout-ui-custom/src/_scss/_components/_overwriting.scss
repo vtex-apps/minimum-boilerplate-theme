@@ -1,0 +1,111 @@
+
+.payment-data .gift-card-section, .payment-data .payment-discounts-alert {
+  margin: 0;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.input-append, .input-prepend {
+  display: flex !important;
+  align-items: stretch;
+
+  .btn,
+  .add-on {
+    height: $inputHeight;
+    line-height:$inputHeight;
+    box-sizing: border-box;
+    padding: 0;
+    width:20px;
+  }
+  .add-on {
+    height: initial !important;
+  }
+  input {
+    border-radius: 0 $borderRadius $borderRadius 0 !important;
+    width:100% !important;
+    max-width: 100px !important;
+  }
+}
+
+.payment-discoints-table .number, .gift-card-provider-group .number, .payment-discoints-table .action, .gift-card-provider-group .action {
+  text-align:right;
+}
+
+
+@media (max-width: $mobileWidth) {
+  .orderform-template-holder .client-profile-data input[type="text"] {
+    width:100% !important;
+  }
+
+}
+
+//imported from io.vtex (just changing the @media width)
+@media (max-width: $mobileWidth) {
+  .item-quantity-change {
+    display: inline-block;
+  }
+  .item-quantity-change {
+    float: left;
+    padding: 3px 5px 3px 0px;
+  }
+  .item-quantity-change-increment {
+    padding-left: 5px;
+    padding-right: 0;
+  }
+  .full-cart .cart table {
+    display: block;
+    margin-top: 0 !important;
+  }
+  .full-cart .cart table thead {
+    display: none;
+  }
+  .full-cart .cart table tbody {
+    display: block;
+  }
+
+  .full-cart .cart table tbody tr td {
+    display: inline-block;
+    padding: 4px 0;
+  }
+
+  .full-cart .cart table tbody tr td.quantity input {
+    float: left;
+    margin: 0;
+    width: 25px;
+  }
+  .full-cart .cart table tbody tr td.product-price {
+    text-align: right;
+    float: right;
+    margin-right: 5px;
+    padding: 0;
+  }
+  .full-cart .cart table tbody tr td.quantity-price {
+    display: none;
+  }
+  .more {
+    margin-right: 0;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header {
+    top: auto;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header:after {
+    content: none;
+  }
+  .full-cart .cart table tbody tr.item-attachments-head .item-attachments-header strong {
+    box-shadow: none;
+  }
+  .full-cart .cart table tbody tr.item-attachments-content {
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+  .full-cart .cart table tbody tr.item-attachments-content .item-attachments-item-fields {
+    margin-left: 5px;
+    width: 95%;
+  }
+}

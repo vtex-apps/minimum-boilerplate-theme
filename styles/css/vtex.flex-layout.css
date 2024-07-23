@@ -9,20 +9,6 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
-.flexRowContent--home-content-container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  max-width: 100%;
-}
-
-.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
-.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
-  padding: 0 !important;
-}
-
 .flexRow--blog-posts {
   background: #18181B;
   padding: 48px 0;
@@ -38,7 +24,6 @@
 .flexCol--blog-posts-content {
   max-width: 1248px;
   margin: 0 auto;
-  margin-right: 80px;
 }
 @media screen and (max-width: 768px) {
   .flexCol--blog-posts-content {
@@ -246,6 +231,102 @@
 
 .flexCol--mobile-double-banner-content {
   gap: 16px;
+}
+
+.flexRowContent--home-content-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  max-width: 100%;
+}
+
+.flexRow--shelf-container :global(.vtex-store-components-3-x-container),
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  padding: 0 !important;
+}
+
+.flexRowContent--confirmationButtons {
+  margin: 0 auto;
+}
+.flexRowContent--confirmationButtons :global(.vtex-button) {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+  padding: 16px 24px;
+  box-sizing: border-box;
+  border: none;
+  max-width: 192px;
+}
+@media screen and (max-width: 639px) {
+  .flexRowContent--confirmationButtons :global(.vtex-button) {
+    margin: 0 auto;
+    display: block;
+  }
+}
+.flexRowContent--confirmationButtons :global(.vtex-button) :global(.vtex-button__label) {
+  color: var(--text-inverse-bold, #FFF);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-transform: capitalize;
+  padding: 0 !important;
+}
+.flexRowContent--confirmationButtons :global(.vtex-button) :global(.vtex-button__label)::before {
+  content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6V4.2C18 3.0799 18 2.51984 17.782 2.09202C17.5903 1.71569 17.2843 1.40973 16.908 1.21799C16.4802 1 15.9201 1 14.8 1H9.2C8.0799 1 7.51984 1 7.09202 1.21799C6.71569 1.40973 6.40973 1.71569 6.21799 2.09202C6 2.51984 6 3.0799 6 4.2V6M6 17C5.07003 17 4.60504 17 4.22354 16.8978C3.18827 16.6204 2.37962 15.8117 2.10222 14.7765C2 14.395 2 13.93 2 13V10.8C2 9.11984 2 8.27976 2.32698 7.63803C2.6146 7.07354 3.07354 6.6146 3.63803 6.32698C4.27976 6 5.11984 6 6.8 6H17.2C18.8802 6 19.7202 6 20.362 6.32698C20.9265 6.6146 21.3854 7.07354 21.673 7.63803C22 8.27976 22 9.11984 22 10.8V13C22 13.93 22 14.395 21.8978 14.7765C21.6204 15.8117 20.8117 16.6204 19.7765 16.8978C19.395 17 18.93 17 18 17M15 9.5H18M9.2 21H14.8C15.9201 21 16.4802 21 16.908 20.782C17.2843 20.5903 17.5903 20.2843 17.782 19.908C18 19.4802 18 18.9201 18 17.8V16.2C18 15.0799 18 14.5198 17.782 14.092C17.5903 13.7157 17.2843 13.4097 16.908 13.218C16.4802 13 15.9201 13 14.8 13H9.2C8.0799 13 7.51984 13 7.09202 13.218C6.71569 13.4097 6.40973 13.7157 6.21799 14.092C6 14.5198 6 15.0799 6 16.2V17.8C6 18.9201 6 19.4802 6.21799 19.908C6.40973 20.2843 6.71569 20.5903 7.09202 20.782C7.51984 21 8.07989 21 9.2 21Z" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  position: relative;
+  top: 5px;
+}
+
+.flexRowContent--orderHeader {
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 886px) {
+  .flexRowContent--orderHeader {
+    flex-direction: column;
+  }
+}
+
+.flexRow--notices-wrapper {
+  max-width: 824px;
+  margin: 0 auto;
+  border-top: 1px solid #E4E4E7;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.flexRowContent--orderHeaderOptions {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 8px;
+  display: flex;
+  gap: 24px;
+}
+@media screen and (max-width: 886px) {
+  .flexRowContent--orderHeaderOptions {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 886px) {
+  .flexRow--orderHeaderOptions {
+    width: 100%;
+  }
+  .flexRow--orderHeaderOptions :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
 }
 
 .flexRow--footer {

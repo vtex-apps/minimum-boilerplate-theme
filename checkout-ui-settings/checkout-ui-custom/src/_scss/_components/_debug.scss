@@ -1,0 +1,3 @@
+body.debug-on > *:not(.container-main, .main-header, .main-footer, #vtexIdContainer,.vtex-front-messages-placeholder, .pac-container) {
+  display:none;
+}

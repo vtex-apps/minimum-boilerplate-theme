@@ -1,0 +1,59 @@
+type Query {
+  getSetupConfig: GetSetupConfigResponse @cacheControl(scope: PRIVATE)
+  getHistory: [GetHistoryResponse] @cacheControl(scope: PRIVATE)
+  getLast(workspace: String): GetLastResponse @cacheControl(scope: PRIVATE)
+  getById(id: String): ConfigResponse @cacheControl(scope: PRIVATE)
+}
+
+type Mutation {
+  saveChanges(
+    email: String
+    workspace: String
+    layout: CustomFields
+    javascript: String
+    css: String
+    javascriptActive: Boolean
+    cssActive: Boolean
+    colors: CustomFields
+  ): String @cacheControl(scope: PRIVATE)
+}
+
+scalar CustomFields
+type ConfigResponse {
+  layout: CustomFields
+  colors: CustomFields
+  javascript: String
+  css: String
+  javascriptActive: Boolean
+  cssActive: Boolean
+}
+type GetLastResponse {
+  id: String
+  email: String
+  workspace: String
+  creationDate: String
+  appVersion: String
+  layout: CustomFields
+  colors: CustomFields
+  javascript: String
+  css: String
+  javascriptActive: Boolean
+  cssActive: Boolean
+}
+
+type GetHistoryResponse {
+  id: String
+  email: String
+  workspace: String
+  creationDate: String
+  appVersion: String
+}
+
+type GetSetupConfigResponse {
+  adminSetup: AdminSetupResponse
+}
+type AdminSetupResponse {
+  hasSchema: Boolean
+  schemaVersion: String
+  appVersion: String
+}

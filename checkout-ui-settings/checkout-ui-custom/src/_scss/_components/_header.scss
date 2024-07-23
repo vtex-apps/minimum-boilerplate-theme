@@ -1,0 +1,83 @@
+// _global.scss
+
+
+body {
+  .headerContainer {
+    display: none;
+  }
+
+  &.v-custom-cart-empty {
+    .header.new {
+      .header-wrapper {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .header.new {
+    display: block!important;
+
+    border-top: 8px solid #FF5A00;
+    background-color: #fff;
+
+    .header-wrapper {
+      max-width: 1248px;
+      margin: 0 auto;
+      padding: 12px 0 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+
+
+      .seal-safe-environment {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        @media screen and (max-width: 406px) {
+          justify-content: flex-end;
+        }
+
+        .safe-environment-icon {
+          height: 20px;
+        }
+
+        span {
+          color:  #000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+
+          @media screen and (max-width: 406px) {
+            width: 45%;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1260px) {
+        padding: 12px 16px 20px 16px;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 20px 16px;
+        position: relative;
+
+        .store-logo svg {
+          width: 116px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      border-top: 0;
+    }
+  }
+}
+
