@@ -12,7 +12,6 @@ const {
   parseDateBd,
   getVtexAddress,
   getAddressByViaCep,
-  validateRangePostalCode,
 } = require('./_utils.js')
 const {
   _countriesrules,
@@ -123,7 +122,7 @@ class checkoutCustom {
     }
   }
 
-  buildHorizontal() {}
+  buildHorizontal() { }
 
   showDeliveryOptions() {
     const { hash } = window.location
@@ -186,8 +185,7 @@ class checkoutCustom {
   addEditButtoninLogin() {
     $('#v-custom-edit-login-data').remove()
     $('.client-pre-email h3.client-pre-email-h span').append(`
-      <a id="v-custom-edit-login-data" class="link-box-edit btn btn-small" style="" title="${
-        this.lang ? this.lang.editLabel : true
+      <a id="v-custom-edit-login-data" class="link-box-edit btn btn-small" style="" title="${this.lang ? this.lang.editLabel : true
       }">
         <i class="icon-edit"></i>
         <i class="icon-spinner icon-spin icon-3x"></i>
@@ -207,29 +205,24 @@ class checkoutCustom {
           </span>
           <div class="checkout-steps_items">
             <span class="checkout-steps_item checkout-steps_item_cart js-checkout-steps-item" data-url="/checkout/#/cart">
-              <span class="text">${
-                this.lang.checkoutStepsLabelCart || 'Cart'
-              }</span>
+              <span class="text">${this.lang.checkoutStepsLabelCart || 'Cart'
+      }</span>
             </span>
             <span class="checkout-steps_item checkout-steps_item_identification js-checkout-steps-item" data-url="/checkout/#/profile">
-              <span class="text">${
-                this.lang.checkoutStepsLabelIdentification || 'Identification'
-              }</span>
+              <span class="text">${this.lang.checkoutStepsLabelIdentification || 'Identification'
+      }</span>
             </span>
             <span class="checkout-steps_item checkout-steps_item_shipping js-checkout-steps-item" data-url="/checkout/#/shipping">
-              <span class="text">${
-                this.lang.checkoutStepsLabelShipping || 'Shipping'
-              }</span>
+              <span class="text">${this.lang.checkoutStepsLabelShipping || 'Shipping'
+      }</span>
             </span>
             <span class="checkout-steps_item checkout-steps_item_payment js-checkout-steps-item" data-url="/checkout/#/payment">
-              <span class="text">${
-                this.lang.checkoutStepsLabelPayment || 'Payment'
-              }</span>
+              <span class="text">${this.lang.checkoutStepsLabelPayment || 'Payment'
+      }</span>
             </span>
             <span class="checkout-steps_item checkout-steps_item_confirmation js-checkout-steps-item">
-              <span class="text">${
-                this.lang.checkoutStepsLabelConfirmation || 'Confirmation'
-              }</span>
+              <span class="text">${this.lang.checkoutStepsLabelConfirmation || 'Confirmation'
+      }</span>
             </span>
           </div>
         </div>
@@ -318,16 +311,16 @@ class checkoutCustom {
         accumulator +
         (item.priceTags.length
           ? item.priceTags.filter(_pricetag => {
-              return _pricetag.ratesAndBenefitsIdentifier
-                ? _pricetag.ratesAndBenefitsIdentifier.matchedParameters[
-                    'couponCode@Marketing'
-                  ] === _coupon
-                : 0
-            }).length
+            return _pricetag.ratesAndBenefitsIdentifier
+              ? _pricetag.ratesAndBenefitsIdentifier.matchedParameters[
+              'couponCode@Marketing'
+              ] === _coupon
+              : 0
+          }).length
           : 0)
       )
     },
-    0)
+      0)
 
     // Match coupon with rateAndBenefitsIdentifiers
     let couponMatch = null
@@ -376,8 +369,8 @@ class checkoutCustom {
             this.priceTags.filter(_pricetag => {
               return _pricetag.ratesAndBenefitsIdentifier
                 ? _pricetag.ratesAndBenefitsIdentifier.matchedParameters[
-                    'couponCode@Marketing'
-                  ] === _coupon
+                'couponCode@Marketing'
+                ] === _coupon
                 : false
             }).length > 0
           ) {
@@ -481,31 +474,26 @@ class checkoutCustom {
 
           $(`.mini-cart .cart-items > li:eq(${key}) > .v-custom-bundles`)
             .append(`
-            <div class="hproduct item v-custom-indexed-item ${
-              iiItem.sellingPrice ? '' : 'free-item'
-            }" data-sku="${iiItem.id}">
+            <div class="hproduct item v-custom-indexed-item ${iiItem.sellingPrice ? '' : 'free-item'
+              }" data-sku="${iiItem.id}">
               <a href="${iiItem.detailUrl}" class="url">
-                <img height="45" width="45" class="photo" src="${
-                  iiItem.imageUrl
-                }" alt="${iiItem.name}">
+                <img height="45" width="45" class="photo" src="${iiItem.imageUrl
+              }" alt="${iiItem.name}">
               </a>
-              <span class="fn product-name" title="${iiItem.name}" href="${
-            iiItem.detailUrl
-          }">${iiItem.name}</span>
+              <span class="fn product-name" title="${iiItem.name}" href="${iiItem.detailUrl
+              }">${iiItem.name}</span>
               <span class="quantity badge">${iiItem.quantity}</span>
               <div class="description">
                 <strong class="price pull-right" data-bind="text: sellingPriceLabel">
-                ${
+                ${iiItem.sellingPrice
+                ? `${_this.orderForm.storePreferencesData.currencySymbol
+                } ${formatCurrency(
+                  _this.orderForm.clientPreferencesData.locale,
+                  _this.orderForm.storePreferencesData.currencyCode,
                   iiItem.sellingPrice
-                    ? `${
-                        _this.orderForm.storePreferencesData.currencySymbol
-                      } ${formatCurrency(
-                        _this.orderForm.clientPreferencesData.locale,
-                        _this.orderForm.storePreferencesData.currencyCode,
-                        iiItem.sellingPrice
-                      ).toFixed(2)}`
-                    : `Free`
-                } </strong>
+                ).toFixed(2)}`
+                : `Free`
+              } </strong>
               </div>
             </div>
           `)
@@ -624,9 +612,9 @@ class checkoutCustom {
       } else {
         d.setDate(
           d.getDate() +
-            n +
-            (day === 6 ? 2 : +!day) +
-            Math.floor((n - 1 + (day % 6 || 1)) / 5) * 2
+          n +
+          (day === 6 ? 2 : +!day) +
+          Math.floor((n - 1 + (day % 6 || 1)) / 5) * 2
         )
       }
 
@@ -650,9 +638,9 @@ class checkoutCustom {
 
         dhd.setDate(
           dhd.getDate() +
-            (n + bdHolidays) +
-            (dhdDay === 6 ? 2 : +!dhdDay) +
-            Math.floor((n + bdHolidays - 1 + (dhdDay % 6 || 1)) / 5) * 2
+          (n + bdHolidays) +
+          (dhdDay === 6 ? 2 : +!dhdDay) +
+          Math.floor((n + bdHolidays - 1 + (dhdDay % 6 || 1)) / 5) * 2
         )
       }
 
@@ -717,9 +705,8 @@ class checkoutCustom {
 
           const labelHtml = `
         <label class="vtex-omnishipping-1-x-leanShippingOption">
-          <input type="radio" name="delivery-option" value="${
-            option.value
-          }" class="radio-option-input" ${option.selected ? 'checked' : ''}>
+          <input type="radio" name="delivery-option" value="${option.value
+            }" class="radio-option-input" ${option.selected ? 'checked' : ''}>
           <div class="vtex-omnishipping-1-x-leanShippingIcon"></div>
           <div class="vtex-omnishipping-1-x-leanShippingText">
             <span>${text}</span>
@@ -1064,8 +1051,7 @@ class checkoutCustom {
         shippingPreviewPackges
           .hide()
           .after(
-            `<p class="black-50 mt3 mb0 js-shippingPreviewPackges">${
-              shippingPreviewPackges.text().split(':')[0]
+            `<p class="black-50 mt3 mb0 js-shippingPreviewPackges">${shippingPreviewPackges.text().split(':')[0]
             }: ${deliveryDates.join('; ')}</p>`
           )
           .addClass('v-changeShippingTimeInfo-active')
@@ -1121,13 +1107,11 @@ class checkoutCustom {
         const _eachprice = `
           <div class="v-custom-quantity-price vqc-ldelem">
             <span class="v-custom-quantity-price__list">
-              ${
-                _item.listPrice > _item.sellingPrice
-                  ? `<span class="v-custom-quantity-price__list--list">${
-                      orderForm.storePreferencesData.currencySymbol
-                    } ${(_item.listPrice / 100).toFixed(2)}</span>`
-                  : ''
-              }
+              ${_item.listPrice > _item.sellingPrice
+            ? `<span class="v-custom-quantity-price__list--list">${orderForm.storePreferencesData.currencySymbol
+            } ${(_item.listPrice / 100).toFixed(2)}</span>`
+            : ''
+          }
             </span>
           </div>
         `
@@ -1149,8 +1133,7 @@ class checkoutCustom {
           .find('td.product-price')
           .find('.v-custom-quantity-price__list--selling')
           .append(
-            `<span class="vqc-ldelem"> ${
-              _this.lang ? _this.lang.eachLabel : 'each'
+            `<span class="vqc-ldelem"> ${_this.lang ? _this.lang.eachLabel : 'each'
             }</span>`
           )
       })
@@ -1167,15 +1150,13 @@ class checkoutCustom {
     const tooltip = `
       <div class="vcustom-customTax-resume">
        ${customtax
-         .map(
-           i =>
-             `<p class="vcustom-customTax-resume__i"><span class="n">${
-               i.name
-             }</span><span class="v">${
-               orderForm.storePreferencesData.currencySymbol
-             } ${(i.value / 100).toFixed(2)}</span></p>`
-         )
-         .join('')}
+        .map(
+          i =>
+            `<p class="vcustom-customTax-resume__i"><span class="n">${i.name
+            }</span><span class="v">${orderForm.storePreferencesData.currencySymbol
+            } ${(i.value / 100).toFixed(2)}</span></p>`
+        )
+        .join('')}
       </div>
     `
 
@@ -1354,7 +1335,7 @@ class checkoutCustom {
     if (
       !this.accordionPayments ||
       $('.payment-group-list-btn').find('.v-custom-payment-item-wrap').length >
-        0
+      0
     ) {
       return false
     }
@@ -1363,8 +1344,7 @@ class checkoutCustom {
 
     $('.payment-group-item').each(function () {
       $(this).wrap(
-        `<div class='v-custom-payment-item-wrap ${
-          $(this).hasClass('active') ? 'active' : ''
+        `<div class='v-custom-payment-item-wrap ${$(this).hasClass('active') ? 'active' : ''
         }'></div>`
       )
     })
@@ -1415,11 +1395,10 @@ class checkoutCustom {
         $('.accordion-inner.shipping-container').length
       )
         $('.orderform-template-holder #shipping-data .accordion-inner').append(
-          `<div class="alert-noStreet"><span class="alert">${
-            _this.locale
-              ? _this.locale.noStreetAddress ||
-                'Your shipping information is missing a required field, please include a street'
-              : 'Your shipping information is missing a required field, please include a street'
+          `<div class="alert-noStreet"><span class="alert">${_this.locale
+            ? _this.locale.noStreetAddress ||
+            'Your shipping information is missing a required field, please include a street'
+            : 'Your shipping information is missing a required field, please include a street'
           }</span></div>`
         )
     } else {
@@ -1509,13 +1488,9 @@ class checkoutCustom {
 
     async function handlePostalCodeChange(postalCode) {
       try {
-        if (await _this.isOnPostalCodeRange(postalCode)) {
-          _this.removeExistingErrors()
-          await _this.handleVtexAddress(postalCode)
-          _this.showShippingStep()
-        } else {
-          _this.displayError()
-        }
+        _this.removeExistingErrors()
+        await _this.handleVtexAddress(postalCode)
+        _this.showShippingStep()
       } catch (error) {
         console.error('Erro ao validar o código postal:', error)
       }
@@ -1558,10 +1533,6 @@ class checkoutCustom {
     waitForPostalCodeInput()
   }
 
-  async isOnPostalCodeRange(postalCode) {
-    return await validateRangePostalCode(postalCode)
-  }
-
   async handleVtexAddress(postalCode) {
     const _this = this
     const existOnVtex = await getVtexAddress(postalCode)
@@ -1571,7 +1542,7 @@ class checkoutCustom {
       if (!addressViaCep.erro) {
         _this.fillAddressForm(addressViaCep)
       } else {
-        alert('CEP não encontrado')
+        console.error('CEP não encontrado')
       }
     }
   }

@@ -88,29 +88,3 @@ module.exports.getAddressByViaCep = async postalCode => {
     return { erro: true }
   }
 }
-
-module.exports.validateRangePostalCode = async postalCode => {
-  try {
-    const response = await fetch(
-      `/api/dataentities/CR/search?isActive=true&_fields=FinalRange,initialRange`
-    )
-
-    if (!response.ok)
-      throw new Error('Erro ao buscar intervalos de CEP na VTEX')
-    const addressRanges = await response.json()
-
-    const isWithinRange = addressRanges.some(range => {
-      const initialRange = parseInt(range.initialRange, 10)
-      const finalRange = parseInt(range.FinalRange, 10)
-      const code = parseInt(postalCode.replace('-', ''), 10)
-
-      return code >= initialRange && code <= finalRange
-    })
-
-    return isWithinRange
-  } catch (error) {
-    console.error('Error getting VTEX address', error)
-
-    return false
-  }
-}
