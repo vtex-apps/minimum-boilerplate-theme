@@ -1,0 +1,115 @@
+{
+  "header-row#topbar-desktop": {
+    "children": [
+      "flex-layout.row#topbar-interactions",
+      "flex-layout.row#topbar"
+    ],
+    "props": {
+      "blockClass": ["topbar-container"]
+    }
+  },
+  "header-row#topbar-mobile": {
+    "children": [
+      "flex-layout.row#topbar-interactions",
+      "flex-layout.row#topbar-mobile"
+    ],
+    "props": {
+      "blockClass": ["topbar-container"]
+    }
+  },
+  "flex-layout.row#topbar-interactions": {
+    "props": {
+      "blockClass": "topbar-interactions",
+      "preventHorizontalStretch": true
+    },
+    "children": ["flex-layout.row#brand-switcher", "link#help-center"]
+  },
+  "flex-layout.row#brand-switcher": {
+    "children": ["link#roland", "link#boss"],
+    "props": {
+      "blockClass": ["brand-switcher-container"]
+    }
+  },
+  "link#roland": {
+    "title": "Link para ROLAND",
+    "props": {
+      "href": "/",
+      "label": "roland",
+      "blockClass": ["link-roland"]
+    }
+  },
+  "link#boss": {
+    "title": "Link para BOSS",
+    "props": {
+      "href": "/loja/boss",
+      "label": "boss",
+      "blockClass": ["link-boss"]
+    }
+  },
+  "flex-layout.row#topbar": {
+    "children": ["list-context.topbar"],
+    "props": {
+      "blockClass": ["topbar-wrapper"]
+    }
+  },
+  "flex-layout.row#topbar-mobile": {
+    "children": ["list-context.topbar#mobile"],
+    "props": {
+      "blockClass": ["topbar-wrapper"]
+    }
+  },
+  "link#help-center": {
+    "title": "Central de Ajuda",
+    "props": {
+      "href": "https://www.roland.com/backstage/login",
+      "label": "Central de ajuda",
+      "blockClass": "help-center"
+    }
+  },
+  "list-context.topbar": {
+    "title":  "Lista de opções do Topbar - Desktop",
+    "children": ["slider-layout#topbar"],
+    "props": {
+      "items": [
+        {
+          "active": true,
+          "backgroundColor": "#27272A",
+          "color": "#FFF",
+          "text": "Frete grátis nas compras acima de R$199"
+        }
+      ]
+    }
+  },
+  "list-context.topbar#mobile": {
+    "title": "Lista de opções do Topbar - Mobile",
+    "children": ["slider-layout#topbar"],
+    "props": {
+      "items": [
+        {
+          "active": true,
+          "backgroundColor": "#27272A",
+          "color": "#FFF",
+          "text": "Frete grátis nas compras acima de R$199"
+        }
+      ]
+    }
+  },
+  "slider-layout#topbar": {
+    "title": "Slider Topbar",
+    "props": {
+      "blockClass": "topbar-slider",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": true
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never"
+    }
+  }
+}

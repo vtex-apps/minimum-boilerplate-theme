@@ -1,0 +1,38 @@
+.loginMobileWrapper {
+}
+
+.userWrapper {
+  width: 100%;
+}
+
+.userWrapper ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 16px;
+  margin: 0;
+}
+
+.userWrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.userWrapper ul li:first-child :where(span, a) {
+  font-size: 20px;
+  letter-spacing: -0.2px;
+  padding: 6px 0;
+}
+
+.userWrapper ul li :where(span, a) {
+  color: var(--bg-brand-secondary-bold-base, #2b2b3a);
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+  letter-spacing: -0.14px;
+}

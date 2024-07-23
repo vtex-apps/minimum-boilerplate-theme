@@ -1,0 +1,57 @@
+.imageContainer .image--product-summary-image-search-result {
+  width: 48px;
+  height: 48px!important;
+}
+
+.imageWrapper--product-summary-image-search-result {
+  margin-right: 24px;
+
+  @media screen and (max-width: 414px) {
+    margin-right: 13px;
+  } 
+}
+
+.container--product-summary-search-result {
+  max-width: 100%!important;
+  padding: 20px;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  position: relative;
+
+  &:hover {
+    background-color: #F4F4F5;
+  }
+}
+
+.element--product-summary-search-result {
+  padding: 0;
+}
+
+.nameContainer--product-summary-name-search-result {
+  
+  padding: 0;
+}
+
+.productBrand--product-summary-name-search-result {
+  overflow: hidden;
+  color: var(--text-neutral-subtle, #3F3F46);
+  text-overflow: ellipsis;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  max-width: 273px;
+  white-space: nowrap;
+  display: block;
+
+  @media screen and (max-width: 768px) {
+   white-space: unset;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   text-align: left;
+   max-width: 177px;
+  }
+}

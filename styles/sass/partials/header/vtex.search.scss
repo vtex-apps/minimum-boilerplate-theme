@@ -1,0 +1,246 @@
+.biggy-autocomplete-wrapper {
+  max-width: 698px;
+
+  @media screen and (max-width: 1025px) {
+    width: 91vw;
+  }
+
+  .itemList--history {
+    display: none;
+  }
+
+  .biggy-autocomplete {
+    flex-direction: row !important;
+    left: 17px;
+    top: 17px;
+    padding: 0;
+    border-radius: var(--radius-rounded, 4px);
+    border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+    background: var(--elevation-overlay, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05),
+      0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+
+    @media screen and (max-width: 1025px) {
+      flex-direction: column-reverse !important;
+    }
+
+
+    .itemList--suggestion {
+      max-width: 232px;
+
+      @media screen and (max-width: 1025px) {
+        border-top: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+        max-width: 100%;
+
+        .itemListTitle {
+          padding: 20px 24px;
+        }
+      }
+
+      .itemListTitle::before {
+        content: "Sugestões";
+        font-weight: 600;
+      }
+    }
+
+    .itemListTitle {
+      margin: 0;
+      padding: 20px;
+      font-size: 0;
+      text-transform: unset;
+
+      &::before {
+        content: 'Termos sugeridos';
+        color: var(--text-neutral-bold, #18181B);
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+      }
+
+      @media screen and (max-width: 1025px) {
+        padding: 20px;
+      }
+    }
+
+    .itemListList {
+      max-height: 216px;
+      overflow: scroll;
+      margin-right: 4px;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: var(--radius-rounded-full, 9999px);
+        background: var(--border-brand-primary-base, #EE8146);
+
+
+      }
+    }
+
+    .itemListItem {
+      .itemListSubItem {
+        display: none;
+      }
+    }
+
+    .itemListLink {
+      padding: 10px 12px;
+      margin: 0 12px;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+
+      max-width: 307px;
+
+      gap: 8px;
+
+      transition: all 0.1s ease-in-out;
+
+
+
+      .itemListPrefix {
+        height: fit-content;
+        color: var(--text-brand-secondary-base, #2B2B3A);
+        font-family: "Proxima Nova";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: -0.12px;
+
+        border-radius: var(--radius-rounded-full, 9999px);
+        background: var(--icon-accent-brand-subtlest, #FBE5D8);
+        width: 20px;
+        height: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .itemListLinkTitle {
+        color: var(--text-neutral-subtle, #3F3F46);
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+      }
+    }
+
+
+    .tileList {
+      .tileListTitle {
+        margin:0 {
+          top: 12px;
+          left: 12px;
+        }
+
+        padding: 0 {
+          bottom: 12px;
+        }
+
+
+        color: var(--text-neutral-bold, #18181B);
+
+        /* text-sm/medium */
+        font-family: "Proxima Nova";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        /* 142.857% */
+        letter-spacing: -0.14px;
+        text-transform: math-auto;
+      }
+
+      .tileListList {
+        margin: 0 {
+          top: 12px;
+        }
+        flex-direction: column !important;
+        max-height: 282px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #D4D4D8;
+          border-radius: 20px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+
+        .tileListItem {
+          :global(.vtex-product-summary-2-x-containerNormal) {
+            display: flex;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          max-height: 285px;
+          
+        }
+      }
+
+      .tileListFooter {
+        position: absolute;
+        top: 0;
+        right: 20px;
+
+        @media screen and (max-width: 768px) {
+          right: 12px;
+        }
+
+        .tileListSeeMore {
+          font-size: 0;
+          text-decoration: none;
+
+          &::before {
+            content: "Ver tudo";
+            border-radius: var(--radius-rounded-sm, 2px);
+            border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+            background: var(--Gray-Scale-White, #FFF);
+            color: var(--text-neutral-subtle, #3F3F46);
+            font-family: "Proxima Nova";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            padding: 4px 16px;
+            line-height: 20px;
+            letter-spacing: -0.14px;
+            transition: all 0.1s ease-in-out;
+          }
+
+          &:hover::before {
+            border-radius: var(--radius-rounded-sm, 2px);
+            border: 1.25px solid var(--border-brand-primary-base, #EE8146);
+            background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+            color: #FF5A00;
+          }
+        }
+      }
+    }
+  }
+}
+
+.close-btn {
+  display: none;
+}

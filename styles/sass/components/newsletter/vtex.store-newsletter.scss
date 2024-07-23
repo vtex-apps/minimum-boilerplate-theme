@@ -1,0 +1,172 @@
+.newsletterForm--newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 24px;
+
+  :global(.vtex-input-prefix__group) {
+    height: fit-content;
+    border: none;
+  }
+
+  :global(.vtex-styleguide-9-x-input) {
+    padding: 0;
+    color: #18181B;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    
+    &::placeholder {
+      color:  #71717A;
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      padding-top: 1px;
+    }
+  }
+
+  .nameInputContainer,
+  .emailInputContainer {
+    max-height: 48px;
+    width: 222px;
+    padding: 12px 16px;
+    border-radius: 2px;
+    border: 1px solid #D4D4D8;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    @media screen and (max-width: 1025px) {
+      width: 100%;
+    }
+  }
+
+  .nameInputContainer {
+    &::before {
+      content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 16.6667C4.44649 14.6021 7.08918 13.3333 10 13.3333C12.9108 13.3333 15.5535 14.6021 17.5 16.6667M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92893 10 6.25 8.32107 6.25 6.25C6.25 4.17893 7.92893 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+  }
+
+  .emailInputContainer {
+
+    &::before {
+      content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.66797 5.83325L8.47207 10.5961C9.02304 10.9818 9.29853 11.1746 9.59819 11.2493C9.86288 11.3153 10.1397 11.3153 10.4044 11.2493C10.7041 11.1746 10.9796 10.9818 11.5305 10.5961L18.3346 5.83325M5.66797 16.6666H14.3346C15.7348 16.6666 16.4348 16.6666 16.9696 16.3941C17.44 16.1544 17.8225 15.772 18.0622 15.3016C18.3346 14.7668 18.3346 14.0667 18.3346 12.6666V7.33325C18.3346 5.93312 18.3346 5.23306 18.0622 4.69828C17.8225 4.22787 17.44 3.84542 16.9696 3.60574C16.4348 3.33325 15.7348 3.33325 14.3346 3.33325H5.66797C4.26784 3.33325 3.56777 3.33325 3.03299 3.60574C2.56259 3.84542 2.18014 4.22787 1.94045 4.69828C1.66797 5.23306 1.66797 5.93312 1.66797 7.33325V12.6666C1.66797 14.0667 1.66797 14.7668 1.94045 15.3016C2.18014 15.772 2.56259 16.1544 3.03299 16.3941C3.56777 16.6666 4.26784 16.6666 5.66797 16.6666Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+  }
+
+  .formSubmitContainer {
+    border-radius: 2px;
+    border: 1.25px solid , #D4D4D8;
+    background: #FFF;
+    padding: 12px 20px;
+    max-height: 48px;
+    max-width: 136px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #EE8146;
+      background: #FDF2EC;
+
+      :global(.vtex-button__label) {
+        color: #FF5A00;
+
+        &::after {
+          content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.16669 10.0001H15.8334M15.8334 10.0001L10 4.16675M15.8334 10.0001L10 15.8334" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        }
+      }
+
+    }
+
+    @media screen and (max-width: 1025px) {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+
+    :global(.vtex-button) {
+      background-color: transparent;
+      border: none;
+      min-height: unset;
+    }
+
+    :global(.vtex-button__label) {
+      color:  #3F3F46;
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      text-transform: capitalize;
+      padding: 0!important;
+
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      &::after {
+        content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.16797 10.0001H15.8346M15.8346 10.0001L10.0013 4.16675M15.8346 10.0001L10.0013 15.8334" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+    }
+  }
+
+  .confirmationCheckboxContainer {
+    :global(.vtex-checkbox__label) {
+      color: #FFF;
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+    }
+
+    :global(.vtex-checkbox__inner-container) {
+      border-radius:  4px;
+      border: 1px solid  #D4D4D8;
+      
+    }
+
+    .labelLink {
+      color: #FFF;
+    }
+
+    @media screen and (max-width: 768px) {
+      :global(.vtex-checkbox__line-container) {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    row-gap: 16px;
+    .nameInputContainer,
+    .emailInputContainer,
+    .formSubmitContainer,
+    .confirmationCheckboxContainer {
+      margin: 0 32px;
+    }
+  }
+}
+

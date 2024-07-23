@@ -1,0 +1,47 @@
+.container--desconto-pix-boleto {
+  float: right;
+  margin-top: 4px;
+}
+
+.paragraph--desconto-pix-boleto {
+  color: var(--text-neutral-subtlest, #71717A);
+  text-align: right;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: -0.12px;
+
+  margin: 0;
+  margin-top: 4px;
+}
+
+.paragraph--titleEmptyState {
+  color: var(--text-neutral-bold, #18181B);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+ 
+}
+
+.paragraph--subtitleEmptyState {
+  color: var(--text-neutral-subtle, #3F3F46);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin: 0;
+}
+

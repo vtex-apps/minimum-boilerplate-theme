@@ -1,0 +1,17 @@
+.paragraph--section-title {
+  color: #3F3F46;
+  font-family: "Proxima Nova";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+}

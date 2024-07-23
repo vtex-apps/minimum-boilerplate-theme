@@ -1,0 +1,9 @@
+{
+  "extends": "vtex-react/io",
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/order": "off",
+    "no-console": "off"
+  }
+}

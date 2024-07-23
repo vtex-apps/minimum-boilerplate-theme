@@ -1,0 +1,50 @@
+.shippingBarWrapper {
+    padding: 20px 24px 24px;
+}
+
+.shippingBarText {
+    color: var(--text-neutral-subtle, #3f3f46);
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.12px;
+
+    margin-bottom: 12px;
+}
+
+.shippingBarText strong {
+    color: var(--text-neutral-strong, #ee8146);
+}
+
+.shippingBarLine {
+    background-color: #a1a1aa;
+    height: 2px;
+}
+
+.shippingBarProgress {
+    height: 2px;
+    background-color: #ee8146;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.shippingBarProgress::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ee8146;
+    position: absolute;
+    right: 0;
+}
+
+.shippingBarDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}

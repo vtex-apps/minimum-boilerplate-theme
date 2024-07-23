@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.currencyContainer--product-summary-spot-price-search-result {
+  overflow: hidden;
+  color: var(--text-neutral-bold, #18181B);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.currencyContainer--product-summary-price-search-result {
+  overflow: hidden;
+  color: var(--text-neutral-subtlest, #71717A);
+  text-overflow: ellipsis;
+  font-family: "Inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: -0.12px;
+  text-decoration: line-through;
+  margin-right: 4px;
+}

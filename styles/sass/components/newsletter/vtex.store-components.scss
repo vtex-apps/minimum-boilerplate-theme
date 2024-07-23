@@ -1,0 +1,9 @@
+.imageElement--newsletter-image {
+  height: fit-content;
+  align-self: center;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 32px;
+  }
+}

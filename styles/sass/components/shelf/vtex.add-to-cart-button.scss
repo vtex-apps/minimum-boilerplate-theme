@@ -1,0 +1,33 @@
+:global(.vtex-flex-layout-0-x-flexRowContent--product-card-actions) {
+  :global(.vtex-button) {
+    border: none;
+    width: 60px;
+    height: 36px;
+    min-height: unset;
+    background-color: #2B2B3A;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #424250;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 36px;
+    }
+  }
+
+  :global(.vtex-button__label) {
+    padding: 0!important;
+  }
+
+
+  .buttonText {
+    font-size: 0;
+    background: url('data:image/svg+xml,<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1_57)"><path d="M3.33343 13.3333H12.0906C12.7658 13.3333 13.1034 13.3333 13.3722 13.2074C13.6089 13.0966 13.8079 12.9185 13.9442 12.6954C14.099 12.4422 14.1363 12.1067 14.2109 11.4356L14.6009 7.92556C14.6236 7.72059 14.635 7.6181 14.6021 7.53877C14.5731 7.4691 14.5214 7.41131 14.4554 7.37485C14.3801 7.33333 14.277 7.33333 14.0708 7.33333H3.00009M1.33333 5.33333H2.16563C2.34204 5.33333 2.43025 5.33333 2.49926 5.36688C2.56001 5.39642 2.61036 5.44372 2.64362 5.50251C2.68141 5.56929 2.68692 5.65733 2.69792 5.8334L3.30208 15.4999C3.31308 15.676 3.31859 15.764 3.35637 15.8308C3.38964 15.8896 3.43999 15.9369 3.50074 15.9665C3.56975 16 3.65796 16 3.83437 16H12.6667M5 18.3333H5.00667M11 18.3333H11.0067M5.33333 18.3333C5.33333 18.5174 5.18409 18.6667 5 18.6667C4.8159 18.6667 4.66667 18.5174 4.66667 18.3333C4.66667 18.1492 4.8159 18 5 18C5.18409 18 5.33333 18.1492 5.33333 18.3333ZM11.3333 18.3333C11.3333 18.5174 11.1841 18.6667 11 18.6667C10.8159 18.6667 10.6667 18.5174 10.6667 18.3333C10.6667 18.1492 10.8159 18 11 18C11.1841 18 11.3333 18.1492 11.3333 18.3333Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><rect x="9.5" y="0.5" width="14" height="14" rx="7" fill="white"/><rect x="9.5" y="0.5" width="14" height="14" rx="7" stroke="%232B2B3A"/><path d="M16.5 4V11M13 7.5H20" stroke="%2327272A" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><defs><clipPath id="clip0_1_57"><rect width="16" height="16" fill="white" transform="translate(0 4)"/></clipPath></defs></svg>');
+    width: 25px;
+    height: 21px;
+    position: relative;
+    left: 2px;
+  }
+}
+

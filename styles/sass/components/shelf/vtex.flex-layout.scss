@@ -1,0 +1,45 @@
+.flexRowContent--shelf-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexRow--product-card-stars {
+  margin-bottom: 12px;
+}
+
+.flexCol--shelf-container {
+  padding: 48px 32px {
+    right: 16px;
+  };
+
+  @media screen and (max-width: 768px) {
+    padding: 16px {
+      bottom: 32px;
+      right: 8px;
+    }
+  }
+}
+
+.flexRow--shelf-container {
+  background: #F4F4F5;
+}
+
+.flexRow--shelf-title-container {
+  margin-bottom: 32px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.flexRowContent--product-card-actions {
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    gap: 8px;
+  }
+
+}

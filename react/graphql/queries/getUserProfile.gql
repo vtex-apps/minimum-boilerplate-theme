@@ -1,0 +1,6 @@
+query getUserProfile($customFields: String) {
+  profile(customFields: $customFields)
+    @context(provider: "vtex.store-graphql") {
+    firstName
+  }
+}
