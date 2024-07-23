@@ -29,5 +29,8 @@
   },
   "blog-posts": {
     "component": "BlogPosts"
+  },
+  "custom-banner": {
+    "component": "CustomBanner"
   }
 }

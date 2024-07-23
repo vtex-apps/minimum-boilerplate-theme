@@ -63,7 +63,8 @@
     "vtex.store-graphql": "2.x",
     "vtex.store-image": "0.x",
     "vtex.pixel-manager": "1.x",
-    "vtex.store-newsletter": "1.x"
+    "vtex.store-newsletter": "1.x",
+    "vtex.native-types": "0.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",

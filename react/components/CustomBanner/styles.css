@@ -1,0 +1,42 @@
+.bannerWrapper,
+.bannerContent,
+.bannerImage,
+.slideChildrenContainer {
+  max-width: 100%!important;
+  max-height: 100%!important;
+  height: 100%;
+  width: 100%;
+  margin: 0!important;
+}
+
+.bannerWrapper {
+  .sliderLayoutContainer {
+    .paginationDotsContainer {
+      border-radius: 200px;
+      background: #FFF;
+      display: inline-flex;
+      padding: var(--spacing-1, 4px) 8px;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-2, 8px);
+      width: fit-content;
+      margin: 0 auto;
+      height: 16px;
+      bottom: 8px;
+
+    }
+
+
+    .paginationDot {
+      width: 6px !important;
+      height: 6px !important;
+      border-radius: 9999px !important;
+      background: var(--bg-accent-brand-secondary-subtle, #71717C);
+
+      &--isActive {
+        background: var(--bg-brand-primary-bold-base, #FF5A00);
+      }
+    }
+  }
+
+}

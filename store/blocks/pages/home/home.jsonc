@@ -37,7 +37,10 @@
     "props": {
       "blockClass": ["main-banner"]
     },
-    "children": ["list-context.image-list#home.slider-main"]
+    "children": ["custom-banner#main-banner"]
+  },
+  "custom-banner#main-banner": {
+    "title": "Configuração"
   },
   "flex-layout.row#explore-our-categories": {
     "title": "Expore nossas categorias",
