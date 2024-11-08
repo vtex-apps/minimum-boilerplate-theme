@@ -90,7 +90,10 @@
     "props": {
       "blockClass": "modal-tooltip-content"
     },
-    "children": ["rich-text#tooltip-content", "modal-actions.close#tooltip-close"]
+    "children": [
+      "rich-text#tooltip-content",
+      "modal-actions.close#tooltip-close"
+    ]
   },
   "rich-text#tooltip-content": {
     "props": {
@@ -115,7 +118,7 @@
   "link#boss": {
     "title": "Link para BOSS",
     "props": {
-      "href": "/loja/boss?sc=1",
+      "href": "/loja/boss-black-friday?sc=1",
       "label": "boss",
       "blockClass": ["link-boss"]
     }

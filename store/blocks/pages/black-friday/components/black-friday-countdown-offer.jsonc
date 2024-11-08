@@ -17,11 +17,13 @@
       "responsive-layout.mobile#rich-text-title",
       "responsive-layout.desktop#rich-text-title",
       "rich-text#black-friday-countdown-offer-text",
-      "countdown"
+      "countdown#roland"
     ]
   },
-  "countdown": {
+  "countdown#roland": {
     "props": {
+      "targetDate": "2024-11-30T23:59:59.000Z",
+      "active": true,
       // a extensão do bloco deve estar no blockclass do bloco
       "targetToBeDesabled": [
         "flex-layout.row#black-friday-countdown-offer",
@@ -58,7 +60,7 @@
   "rich-text#black-friday-countdown-offer-text": {
     "title": "Subtítulo",
     "props": {
-      "text": "Essas ofertas se\nencerram em:",
+      "text": "Essas ofertas se\n encerram em:",
       "blockClass": "black-friday-countdown-offer-text"
     }
   }

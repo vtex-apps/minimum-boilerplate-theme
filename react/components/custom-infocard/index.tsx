@@ -25,8 +25,6 @@ const CustomInfoCard = ({ cards, cardSeeAll }: CustomInfoCardProps) => {
 
   const filteredCards = cards.slice(0, isMobile ? 5 : 7)
 
-  console.log('cards', isMobile, filteredCards)
-
   return (
     <div className={styles['cards-container']}>
       {filteredCards.map((card: any) => {

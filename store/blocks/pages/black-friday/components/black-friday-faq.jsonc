@@ -22,10 +22,7 @@
     "props": {
       "blockClass": "black-friday-FAQ-questions"
     },
-    "children": [
-      "rich-text#title-faq-wrapper",
-      "disclosure-list"
-    ]
+    "children": ["rich-text#title-faq-wrapper", "disclosure-list#roland"]
   },
   "rich-text#title-faq-wrapper": {
     "title": "Título e subtitulo da lista de perguntas",
@@ -35,9 +32,36 @@
       "blockClass": "title-faq-wrapper"
     }
   },
-  "disclosure-list": {
+  "disclosure-list#roland": {
     "props": {
-      "width": "100%"
+      "width": "100%",
+      "questions": [
+        {
+          "__editorItemTitle": "Pergunta 1",
+          "question": "Quais são os produtos Roland que costumam ter desconto no Black November?",
+          "answer": "'Durante o Black November, a Roland costuma oferecer descontos em uma ampla gama de produtos, incluindo:\n\n * **Teclados e pianos**: Desde modelos mais acessíveis até workstations profissionais, ideais para músicos de todos os níveis.\n\n* **Sintetizadores** : Ótimas opções para quem busca sonoridades únicas e versatilidade na criação musical.\n\n* **Baterias eletrônicas**: Perfeitas para quem busca praticar em casa ou em estúdio, sem incomodar os vizinhos.\n\n* **Guitarras e baixos**: Modelos com tecnologias inovadoras e sonoridades autênticas.\n\n* **Acessórios**: Pedais, cabos, fones de ouvido e outros itens essenciais para músicos.'"
+        },
+        {
+          "__editorItemTitle": "Pergunta 2",
+          "question": " Quais as formas de pagamento oferecidas pela Roland durante o Black November?",
+          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n"
+        },
+        {
+          "__editorItemTitle": "Pergunta 3",
+          "question": "Existe alguma garantia especial para produtos adquiridos durante o Black November?",
+          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n"
+        },
+        {
+          "__editorItemTitle": "Pergunta 4",
+          "question": "Como posso garantir que estou comprando um produto original da Roland?",
+          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n"
+        },
+        {
+          "__editorItemTitle": "Pergunta 5",
+          "question": "Quais são as melhores dicas para aproveitar o Black November da Roland?",
+          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n"
+        }
+      ]
     }
   }
 }

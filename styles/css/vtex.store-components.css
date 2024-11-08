@@ -140,10 +140,6 @@
   height: 100%;
 }
 
-.discountContainer .discountInsideContainer {
-  display: none;
-}
-
 .imageElement--newsletter-image {
   height: fit-content;
   align-self: center;
@@ -153,6 +149,10 @@
     width: 100%;
     margin-top: 32px;
   }
+}
+
+.discountContainer .discountInsideContainer {
+  display: none;
 }
 
 .imageElement--simple-banner-image-1 {
@@ -275,53 +275,6 @@
   object-fit: cover;
 }
 
-.infoCardContainer--info-card-pre-owned-benefits {
-  flex-direction: column-reverse;
-  border-radius: var(--radius-rounded-sm, 2px);
-  background: #FFF;
-  padding: 16px 32px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 16px;
-  width: 100%;
-}
-.infoCardContainer--info-card-pre-owned-benefits .infoCardTextContainer {
-  width: 100%;
-  font-family: "Proxima Nova";
-  font-style: normal;
-  padding: 0;
-}
-.infoCardContainer--info-card-pre-owned-benefits .infoCardTextContainer .infoCardHeadline {
-  color: var(--Neutral-darkest, #13171B);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.16px;
-  margin: 0;
-  margin-bottom: 8px;
-}
-.infoCardContainer--info-card-pre-owned-benefits .infoCardTextContainer .infoCardBodyText {
-  color: var(--text-brand-secondary-base, #2B2B3A);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: -0.12px;
-  margin: 0;
-}
-@media screen and (max-width: 768px) {
-  .infoCardContainer--info-card-pre-owned-benefits {
-    padding: 8px 16px;
-    display: flex;
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .imageElement--pre-owned-seo-image {
-    display: none;
-  }
-}
-
 .container {
   padding: 0;
 }
@@ -392,6 +345,53 @@
 @media screen and (max-width: 768px) {
   .imageElement--pre-owned-banner-image {
     position: unset;
+  }
+}
+
+.infoCardContainer--info-card-pre-owned-benefits {
+  flex-direction: column-reverse;
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: #FFF;
+  padding: 16px 32px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 16px;
+  width: 100%;
+}
+.infoCardContainer--info-card-pre-owned-benefits .infoCardTextContainer {
+  width: 100%;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  padding: 0;
+}
+.infoCardContainer--info-card-pre-owned-benefits .infoCardTextContainer .infoCardHeadline {
+  color: var(--Neutral-darkest, #13171B);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.infoCardContainer--info-card-pre-owned-benefits .infoCardTextContainer .infoCardBodyText {
+  color: var(--text-brand-secondary-base, #2B2B3A);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .infoCardContainer--info-card-pre-owned-benefits {
+    padding: 8px 16px;
+    display: flex;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imageElement--pre-owned-seo-image {
+    display: none;
   }
 }
 

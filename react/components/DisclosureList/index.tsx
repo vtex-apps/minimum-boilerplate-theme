@@ -15,8 +15,6 @@ interface Props {
 }
 
 const DisclosureList = ({ questions }: Props) => {
-  console.log('questions', questions)
-
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const toggleAccordion = (index: number) => {

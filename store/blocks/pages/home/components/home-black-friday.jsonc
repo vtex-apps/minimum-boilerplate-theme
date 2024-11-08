@@ -1,16 +1,38 @@
 {
-  "store.home#black-friday-home": {
+  "store.home": {
     "blocks": [
       "global-styles",
-      "flex-layout.row#main-banner",
+      "flex-layout.row#main-banner-black-friday",
       "responsive-layout.phone#black-friday",
       "responsive-layout.desktop#black-friday"
-      
     ],
     "parent": {
       "header": "header",
       "footer": "flex-layout.row#footer-roland",
       "challenge": "challenge.seller-channel-condition"
+    }
+  },
+  "flex-layout.row#main-banner-black-friday": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": ["main-banner"]
+    },
+    "children": ["custom-banner#main-banner-black-friday"]
+  },
+  "custom-banner#main-banner-black-friday": {
+    "title": "Configuração",
+    "props": {
+      "items": [
+        {
+          "visible": true,
+          "itemLink": "",
+          "initialDate": "",
+          "finalDate": "",
+          "__editorItemTitle": "Banner black friday",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/059c2251-ba68-4903-9a9e-92f2ce29c8aa___d6e795e6eb51e66156a910b934c49c20.png",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/a4df309a-144e-4234-a4c3-0085f7d273b0___779f8efddcd3d2d67b675afe6d0d824c.png"
+        }
+      ]
     }
   },
   "responsive-layout.phone#black-friday": {
@@ -44,10 +66,7 @@
       "preventHorizontalStretch": true,
       "blockClass": "home-black-friday-banner-redirect"
     },
-    "children": [
-      "rich-text#banner-redirect-link",
-      "link#banner-redirect-link"
-    ]
+    "children": ["rich-text#banner-redirect-link", "link#banner-redirect-link"]
   },
   "rich-text#banner-redirect-link": {
     "props": {

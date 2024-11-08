@@ -1,5 +1,5 @@
 {
-  "store.home": {
+  "store.home#normal": {
     "blocks": [
       "global-styles",
       "flex-layout.row#main-banner",
@@ -22,18 +22,14 @@
     }
   },
   "pre-owned-section-condition": {
-    "children": [
-      "flex-layout.row#pre-owned-section"
-    ]
+    "children": ["flex-layout.row#pre-owned-section"]
   },
   "flex-layout.row#pre-owned-section": {
     "title": "Seção - Seminovos",
     "props": {
       "blockClass": "pre-owned-section"
     },
-    "children": [
-      "flex-layout.col#pre-owned-section.content"
-    ]
+    "children": ["flex-layout.col#pre-owned-section.content"]
   },
   "flex-layout.row#back-to-top-button": {
     "title": "Back to Top Button",
@@ -44,7 +40,7 @@
     "children": ["back-to-top-button#home"]
   },
   "back-to-top-button#home": {
-    "props":{
+    "props": {
       "displayThreshold": 800
     }
   },
